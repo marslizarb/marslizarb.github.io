@@ -1,0 +1,15 @@
+body {
+	font-family: garamond;
+}
+.epigraph {
+	font: georgia;
+	font-size: 15px;
+	line-height: 30px;
+	padding: 1000px; 
+}
+
+::selection {
+  background: black;
+  color: white;
+  text-shadow: none;
+}

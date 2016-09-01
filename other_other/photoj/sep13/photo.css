@@ -1,0 +1,41 @@
+body {
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-top: 50px;
+    margin-bottom: 25px;
+  font-family: courier, monospace;
+  background-color: #003049;
+}
+
+::selection {
+  background: black;
+  color: white;
+}
+
+a {
+  color: lightslategray;
+    text-decoration: none;
+}
+
+a:hover {
+    color: mediumpurple;
+}
+
+.figdisplay { /* displaying images together */
+    background-color: moccasin;
+    color: black;
+    float: inline;
+    margin: 10px;
+}
+
+.figdisplay img {
+    max-height: 620px;
+    max-width: 1200px;
+    padding: 10px;
+}
+
+.figdisplay p {
+    font-size: 3em;
+    margin: 0px;
+    padding: none;
+}
