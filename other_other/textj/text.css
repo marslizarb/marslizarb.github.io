@@ -1,0 +1,22 @@
+body {
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-top: 50px;
+    margin-bottom: 25px;
+  font-family: courier, monospace;
+  font-size: 1.5em;
+  line-height: 1.4;
+  background-color: darkblue;
+    color: deeppink;
+}
+
+::selection {
+  background: black;
+  color: white;
+}
+
+img {
+    max-height: 700px;
+    max-width: 600px;
+    align-items: center;
+}

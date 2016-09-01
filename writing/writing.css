@@ -1,0 +1,72 @@
+body {
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-top: 50px;
+    margin-bottom: inherit;
+  font-family: Verdana, sans-serif;
+  font-size: .9em;
+  line-height: 1.4;
+  background-color: #FDC389;
+    color: #AD7193;
+}
+
+::selection {
+  background: black;
+  color: white;
+}
+
+a {
+  color: #F47477;
+    text-decoration: none;
+}
+
+footer {
+    font-size: .7em;
+    font-style: italic;
+}
+
+/* writing */
+
+#writing {
+    margin-left: 0;
+    margin-top: 70px;
+    margin-bottom: 50px;
+    font-size: 1.2em;
+}
+
+/* displays */
+    
+.display { /* centered images */
+    background: white;
+    color: black;
+    font-family: lucida console, monospace;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 800px;
+}
+
+.display figcaption {
+    font-size: .8em;
+    font-family: lucida console, monospace;
+    width: 800px;
+}
+
+.display p {
+    font-size: 3em;
+    margin: 0;
+    position: fixed;
+    left: 100px;
+    top: 340px;
+}
+
+.display span a { /* for hidden links */
+    color: white;
+}
+
+.display span a:hover {
+    color:gainsboro;
+}
