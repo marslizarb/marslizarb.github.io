@@ -57,18 +57,16 @@ font-family: 'Creepster', cursive;
 
 /* UFO */
 
-
-#ufo {
-    top: 250px;
-    left: 1100px;
+div {
+    margin: 5% 0 80% auto;
     position: fixed;
 }
 
-#ufo a {
+div a {
     color: #003049;
 }
 
-#ufo a:hover {
+div a:hover {
     color: springgreen;
 }
 
@@ -152,7 +150,7 @@ font-family: 'Creepster', cursive;
 
 /* the cluster */
 
-#cluster {
+.cluster {
     width: auto;
     margin-left: 20px;
     margin-right: 20px;
@@ -293,6 +291,8 @@ pre a {
 
 #lists {
     color: white;
+    font-family: arial, sans-serif;
+    line-height: 1.5em;
     width: 750px;
     margin-left: 50px;
     background: #FF5F6D; /* fallback for old browsers */
@@ -302,10 +302,12 @@ pre a {
 
 #lists h1 {
     color: lightcyan;
+    font-family: 'GEOGRAM';
 }
 
 #lists a {
     color: #C0F5F7;
+    font-style: oblique;
 }
 
 #lists a:hover {
