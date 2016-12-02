@@ -1,0 +1,188 @@
+/* COOL PALETTES - - - - - - - - 
+
+~CAMPFIRE~
+dark blue: #003049
+red: #D62828
+orange: #F77F00
+yellow: #FCBF49
+light yellow: #EAE2B7
+
+#013240: dark blue
+#164353: lighter blue
+#555A45: greenish
+#FF821C: orange
+#E9611A: red orange
+
+END OF COOL PALETTES */
+
+/* base */
+
+body {
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-bottom: 2em;
+    line-height: 1.4em;
+    font-family: lucida console, monospace;
+    font-size: 1em;
+    background-color: #003049;
+    color: #FF821C;
+}
+
+h1 {
+    text-align: center;
+    font-size: 1.7em;
+    font-family: avenir, arial, sans-serif;
+}
+
+::selection {
+  background: black;
+  color: aliceblue;
+}
+
+a {
+  color: #FCBF49;
+    text-decoration: none;
+}
+
+a:hover {
+    color: aliceblue;
+    font-style: italic;
+}
+
+footer {
+    font-size: .5em;
+    position: absolute;
+    padding-top: 10px;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+/* index display */
+
+.display {
+    min-width: 600px;
+    max-width: 950px;
+    margin-left: 20em;
+}
+
+.display img {
+    float: left;
+    padding: 20px;
+    width: 120px;
+}
+
+.display nav { /* list navigation */
+    position: fixed;
+    min-width: 300px;
+    max-width: 420px;
+    left: 5%;
+    top: 33%;
+    border-style: dashed;
+    border-width: .2em;
+    padding: 1.5em 2em 1.5em 2em;
+    border-color: aliceblue;
+}
+
+ul {
+    list-style: square;
+    padding-left: 20px;
+    font-size: .9em;
+}
+
+
+h5 {
+    font-style: italic;
+}
+
+/* trash */
+
+#hidden {
+    color: #003049;
+    position: fixed;
+    right: 5%;
+    top: 80%;
+    line-height: 1.2em;
+    font-size: .2em;
+}
+
+:hover#hidden {
+    color: greenyellow;
+    font-style: normal;
+}
+
+/* snowpeople */
+
+span {
+    display:block;
+   width: 0;
+   height: 100%;
+   margin: 0 auto;
+    color: aliceblue;
+    font-size: 2em;
+}
+
+/* game thingy */
+
+#game :hover {
+    text-decoration:line-through;
+}
+
+#game img {
+    width: 350px;
+    float: inherit;
+}
+
+#title {
+     -ms-transform: rotate(-10deg); /* IE 9 */
+    -webkit-transform: rotate(-10deg); /* Chrome, Safari, Opera */
+    font-size: 4em;
+    color: aliceblue;
+    font-style: italic; 
+}
+
+#title :hover {
+    color: black !important;
+}
+
+/* resume */
+
+#resume {
+    color: #FCBF49;
+    font-size: .9em;
+    font-family: avenir, arial, sans-serif;
+    margin-left: 17%;
+    margin-right: 17%;
+    position: absolute;
+    line-height: 1.5em;
+}
+
+#resume b {
+    color: #F77F00;
+}
+
+#resume a {
+    color: #EAE2B7;
+}
+
+#resume a:hover {
+    color: #F77F00;
+}
+
+h2 {
+    float: right;
+    text-decoration: underline;
+    font-size: 2em;
+}
+
+#fixed, #fixed a { /* hand */
+    position: fixed;
+    left: 5%;
+    top: 50%;
+    color: aliceblue;
+}
+
+div {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
