@@ -1,4 +1,4 @@
-/* COOL PALETTES - - - - - - - - 
+/* PALETTE - - - - - - - - 
 
 ~CAMPFIRE~
 dark blue: #003049
@@ -7,13 +7,7 @@ orange: #F77F00
 yellow: #FCBF49
 light yellow: #EAE2B7
 
-#013240: dark blue
-#164353: lighter blue
-#555A45: greenish
-#FF821C: orange
-#E9611A: red orange
-
-END OF COOL PALETTES */
+END OF PALETTE */
 
 /* base */
 
@@ -58,12 +52,15 @@ footer {
     text-align: center;
 }
 
+
+
 /* index display */
 
 .display {
     min-width: 600px;
     max-width: 950px;
-    margin-left: 20em;
+    margin-left: 42%;
+    overflow: hidden;
 }
 
 .display img {
@@ -75,12 +72,12 @@ footer {
 .display nav { /* list navigation */
     position: fixed;
     min-width: 300px;
-    max-width: 420px;
+    max-width: 400px;
     left: 5%;
     top: 33%;
     border-style: dashed;
     border-width: .2em;
-    padding: 1.5em 2em 1.5em 2em;
+    padding: 1.5em 1.5em 1.5em 2em;
     border-color: aliceblue;
 }
 
@@ -89,7 +86,6 @@ ul {
     padding-left: 20px;
     font-size: .9em;
 }
-
 
 h5 {
     font-style: italic;
@@ -102,8 +98,8 @@ h5 {
     position: fixed;
     right: 5%;
     top: 80%;
-    line-height: 1.2em;
-    font-size: .2em;
+    line-height: 1.4em;
+    font-size: 4px;
 }
 
 :hover#hidden {
@@ -122,7 +118,7 @@ span {
     font-size: 2em;
 }
 
-/* game thingy */
+/* game title */
 
 #game :hover {
     text-decoration:line-through;
@@ -139,6 +135,7 @@ span {
     font-size: 4em;
     color: aliceblue;
     font-style: italic; 
+    line-height: 1em;
 }
 
 #title :hover {
@@ -185,4 +182,57 @@ h2 {
 div {
     padding-top: 15px;
     padding-bottom: 15px;
+}
+
+#art ul {
+    font-size: 1.2em;
+    line-height: 2em;
+}
+
+/* art pages */
+
+.art {
+    background-color: white;
+    margin-left: 20%;
+    margin-right: 20%;
+    color: #FF821C;
+}
+
+.figart { /* displaying images together */
+    background-color: white;
+    color: black;
+    margin-left: 10%;
+    margin-right: 5%;
+}
+
+.figart img {
+    max-height: 700px;
+    max-width: 650px;
+}
+
+.art img {
+    max-width: 700px;
+    max-height: 800px;
+    padding: 20px;
+}
+
+
+
+#fixedart, #fixedart a { /* hand on art pages */
+    position: fixed;
+    left: 5%;
+    top: 50%;
+    color: black;
+}
+
+#fixedart a:hover {
+    color: orangered;
+}
+
+#fixedart {
+    
+}
+
+.lost img {
+    width: 200px;
 }
