@@ -28,6 +28,11 @@ h1 {
     font-family: avenir, arial, sans-serif;
 }
 
+h6 {
+    margin-left: 15em;
+    
+}
+
 ::selection {
   background: black;
   color: aliceblue;
@@ -51,8 +56,6 @@ footer {
     right: 0;
     text-align: center;
 }
-
-
 
 /* index display */
 
