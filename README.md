@@ -1,3 +1,3 @@
 # marslizarb.github.io
 
-hi thanks for visiting
+hi this is my portfolio. thanks for visiting
