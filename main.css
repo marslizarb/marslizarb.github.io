@@ -198,14 +198,7 @@ div {
     background-color: white;
     margin-left: 20%;
     margin-right: 20%;
-    color: deeppink;
-}
-
-.figart { /* displaying images together */
-    background-color: white;
-    color: black;
-    margin-left: 10%;
-    margin-right: 5%;
+    color: #FF821C;
 }
 
 .other {
@@ -218,6 +211,13 @@ div {
 
 .other a {
     color: deeppink;
+}
+
+.figart { /* displaying images together */
+    background-color: white;
+    color: black;
+    margin-left: 10%;
+    margin-right: 5%;
 }
 
 .figart img {
@@ -242,6 +242,10 @@ div {
 
 #fixedart a:hover {
     color: orangered;
+}
+
+#fixedart {
+    
 }
 
 .lost img {
