@@ -1,0 +1,58 @@
+body {
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-bottom: 2em;
+    font-family: andale mono, monospace;
+    font-size: 11px;
+    color: #FF821C;
+    background: #003366;
+  background: -webkit-linear-gradient(#003366, #ff4d6b);
+  background:    -moz-linear-gradient(#003366, #ff4d6b);
+  background:         linear-gradient(#003366, #ff4d6b);
+    color: white;
+    line-height: 2em;
+}
+
+a {
+    color: cyan;
+    text-decoration: none;
+}
+
+a:hover {
+    color: white;
+    text-decoration: line-through;
+}
+
+h1 {
+    text-align: center;
+    font-size: 1.7em;
+    font-family: avenir, arial, sans-serif;
+}
+
+::selection {
+  background: cyan;
+}
+
+/* game title */
+
+#game :hover {
+    text-decoration:line-through;
+}
+
+#game img {
+    width: 350px;
+    float: inherit;
+}
+
+#title {
+     -ms-transform: rotate(-10deg); /* IE 9 */
+    -webkit-transform: rotate(-10deg); /* Chrome, Safari, Opera */
+    font-size: 80px;
+    color: aliceblue;
+    font-style: italic; 
+    line-height: 70px;
+}
+
+#title :hover {
+    color: black !important;
+}

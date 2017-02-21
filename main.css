@@ -251,3 +251,12 @@ div {
 .lost img {
     width: 200px;
 }
+
+.AnAfternoon {
+    background: #67b11c;
+    background: linear-gradient(#72c41f, #5c9e19);
+    color: white;
+    line-height: 2em;
+    text-shadow: 5px 1px 100px cyan;
+    font-family: monospace;
+}
