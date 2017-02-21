@@ -14,7 +14,7 @@ body {
 }
 
 a {
-    color: cyan;
+    color: paleturquoise;
     text-decoration: none;
 }
 
@@ -30,7 +30,7 @@ h1 {
 }
 
 ::selection {
-  background: cyan;
+  background: paleturquoise;
 }
 
 /* game title */
