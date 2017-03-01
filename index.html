@@ -7,7 +7,17 @@
     
 <body> 
     
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script>
+		$(function(){
+  $('a').click(function(){
+      $('html, body').animate({
+          scrollTop: $( $(this).attr('href') ).offset().top
+      }, 500);
+      return false;
+  });
+});
+	</script>
 
 
 <a href="The Immortal Cage.html"><p><xmp id="hidden">
