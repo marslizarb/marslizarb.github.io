@@ -51,7 +51,8 @@ a:hover {
 footer {
     font-size: .5em;
     position: absolute;
-    padding-top: 10px;
+    padding-top: 4em;
+    padding-bottom: 1em;
     left: 0;
     right: 0;
     text-align: center;
@@ -128,7 +129,6 @@ span {
 #resume {
     color: #FCBF49;
     font-size: .9em;
-    font-family: avenir, arial, sans-serif;
     margin-left: 17%;
     margin-right: 17%;
     position: absolute;
@@ -150,7 +150,8 @@ span {
 h2 {
     float: right;
     text-decoration: underline;
-    font-size: 2em;
+    font-size: 1em;
+    color: white;
 }
 
 #fixed, #fixed a { /* hand */
@@ -224,3 +225,27 @@ div {
 .lost img {
     width: 2em;
 }
+#resume h3 {
+    color: #F77F00;
+    margin-top: 5%;
+}
+
+xmp {
+    line-height: 1em;
+    color: #EAE2B7;
+    margin-left: 17.5%;
+    margin-right: 17.5%;
+    padding-top: 4%;
+}
+
+th {
+    text-align: left;
+    color: #F77F00;
+    font-size: 1.2em;
+    padding: 1.5em 0 .5em 0;
+}
+
+table {
+    width: 115%;
+}
+
