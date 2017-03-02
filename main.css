@@ -12,11 +12,11 @@ END OF PALETTE */
 /* base */
 
 body {
-    margin-left: 200px;
-    margin-right: 200px;
-    margin-bottom: 2em;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 1%;
     line-height: 1.4em;
-    font-family: lucida console, monospace;
+    font-family: 'Inconsolata', Lucida console, monospace;
     font-size: 1em;
     background-color: #003049;
     color: #FF821C;
@@ -24,7 +24,7 @@ body {
 
 h1 {
     text-align: center;
-    font-size: 1.7em;
+    font-size: 1.9em;
     font-family: avenir, arial, sans-serif;
 }
 
@@ -74,18 +74,18 @@ footer {
 
 .display nav { /* list navigation */
     position: fixed;
-    min-width: 300px;
-    max-width: 400px;
-    left: 5%;
-    top: 33%;
+    min-width: 10em;
+    max-width: 50em;
+    left: 8%;
+    top: 30%;
     border-style: dashed;
     border-width: .2em;
-    padding: 1.5em 1.5em 1.5em 2em;
+    padding: 1em 1.5em 1em 2em;
     border-color: aliceblue;
 }
 
 ul {
-    list-style: square;
+    list-style: none;
     padding-left: 20px;
     font-size: .9em;
 }
@@ -114,36 +114,14 @@ h5 {
 
 span {
     display:block;
-   width: 0;
-   height: 100%;
-   margin: 0 auto;
+    width: 0;
+    height: 100%;
+    margin: 10% auto;
     color: aliceblue;
-    font-size: 2em;
+    font-size: 1em;
 }
 
-/* game title */
 
-#game :hover {
-    text-decoration:line-through;
-}
-
-#game img {
-    width: 350px;
-    float: inherit;
-}
-
-#title {
-     -ms-transform: rotate(-10deg); /* IE 9 */
-    -webkit-transform: rotate(-10deg); /* Chrome, Safari, Opera */
-    font-size: 4em;
-    color: aliceblue;
-    font-style: italic; 
-    line-height: 1em;
-}
-
-#title :hover {
-    color: black !important;
-}
 
 /* resume */
 
@@ -232,7 +210,6 @@ div {
 }
 
 
-
 #fixedart, #fixedart a { /* hand on art pages */
     position: fixed;
     left: 5%;
@@ -244,19 +221,6 @@ div {
     color: orangered;
 }
 
-#fixedart {
-    
-}
-
 .lost img {
-    width: 200px;
-}
-
-.AnAfternoon {
-    background: #67b11c;
-    background: linear-gradient(#72c41f, #5c9e19);
-    color: white;
-    line-height: 2em;
-    text-shadow: 5px 1px 100px cyan;
-    font-family: monospace;
+    width: 2em;
 }
