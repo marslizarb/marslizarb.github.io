@@ -1,0 +1,65 @@
+body {
+    line-height: 1.4em;
+    font-family: 'Inconsolata', andale mono, Lucida console, monospace;
+    font-size: 1em;
+    background-color: white;
+    color: black;
+    margin: 10% 7% 10% 7%;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    text-decoration: line-through;
+}
+
+.return {
+    position: fixed;
+    top: 80%;
+    left: 4%;
+    font-size: 2em;
+    color: #61DBF7;
+    border-color: #AB64F6;
+    border-style: solid;
+    padding: 0 30px 0 30px;
+}
+
+.return p {
+    text-align: left;
+}
+
+.return:hover {
+    color: #AB64F6;
+    border-color: #61DBF7;
+    text-decoration: line-through;
+}
+
+.shorts {
+    background-color: black;
+    color: white;
+    margin-left: 30%;
+    margin-top: 3%;
+}
+
+iframe {
+    padding-top: 50px;
+}
+
+.sound {
+    margin: 0 10% 0 25%;
+}
+
+.art {
+    margin: 0 10% 0 10%;
+}
+
+.art img {
+    max-width: 50%;
+    min-height: 100%;
+    width:auto;
+    display: inline-flex;
+    padding: 25px;
+}
