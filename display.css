@@ -53,13 +53,12 @@ iframe {
 }
 
 .art {
-    margin: 0 10% 0 10%;
+    margin: 1%;
 }
 
 .art img {
-    max-width: 50%;
-    min-height: 100%;
-    width:auto;
+    max-height: 600px;
+    max-width: 44%;
     display: inline-flex;
-    padding: 25px;
+    padding: 30px 70px 30px 70px;
 }
