@@ -277,10 +277,21 @@ footer {
     }
 }
 
+@media screen and (max-width: 1440px) {
+    body {
+        font-size: .5em;
+    }
+    
+    #index img {
+        max-width: 170px;
+    }
+}
+
 @media screen and (max-width: 1680px) {
     
     body {
-        font-size: 1.5em;
+        font-size: 1.1em;
+        line-height: 1.7em
     }
     
     .wrapper {
