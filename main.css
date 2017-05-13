@@ -138,14 +138,11 @@ a:hover h1 {
 .colright {
     float: right;
     width: 750px;
-    height: auto;
     margin-left: 70px;
 }
 
 .colright img {
-    width: 48%;
-    display: inline-block;
-    clear: both;
+    width: 100%;
 }
 
 
@@ -174,6 +171,18 @@ a:hover h1 {
 
 .proj img {
     width: 100%;
+}
+
+.bio {
+    margin: 5% 20% 5% 20%;
+}
+
+.bio img {
+    max-width: 235px;
+}
+
+.bio h4 {
+    font-style: italic;
 }
 
 footer {
@@ -354,16 +363,4 @@ footer {
         margin-right: 15%;
         padding: 50px 80px 50px 80px;
     }
-}
-
-.bio {
-    margin: 5% 20% 5% 20%;
-}
-
-.bio img {
-    max-width: 235px;
-}
-
-.bio h4 {
-    font-style: italic;
 }
