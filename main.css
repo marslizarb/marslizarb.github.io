@@ -355,3 +355,15 @@ footer {
         padding: 50px 80px 50px 80px;
     }
 }
+
+.bio {
+    margin: 5% 20% 5% 20%;
+}
+
+.bio img {
+    max-width: 235px;
+}
+
+.bio h4 {
+    font-style: italic;
+}
