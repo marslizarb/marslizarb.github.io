@@ -24,7 +24,7 @@ p {
     font-size: 1.5em
 }
 
-h2 {
+h2 { /* subsection headings */
     font-style: italic;
 }
 
@@ -37,13 +37,21 @@ a:hover {
     text-decoration: none;
 }
 
-a h1 {
+#about a:hover {
+    background: black;
+}
+
+/* name at top of page*/
+
+a h1 { 
     color: white;
 }
 
 a:hover h1 {
     text-decoration: line-through;
 }
+
+/* index */
 
 #index {
     overflow: hidden;
@@ -106,6 +114,11 @@ a:hover h1 {
     right: 10%;
 }
 
+
+
+
+/* demo reel */
+
 .video {
     position: relative;
     padding-bottom: 56.26%;
@@ -121,30 +134,30 @@ a:hover h1 {
     height: 100%;
 }
 
-#about {
-    margin-left: 20%;
-    margin-right: 20%;
-    margin-bottom: 7%;
-    padding: 15px;
-    border-style: solid;
-    border-color: #AB64F6;
-    font-size: .7em;
+
+
+
+/* short films display */
+
+.film { /* subsection */
+    overflow: hidden;
+    margin-bottom: 100px;
 }
 
-.text a:hover {
-    background-color: black;
-}
-
-.colright {
+.colright { /* videos*/
     float: right;
     width: 750px;
     margin-left: 70px;
 }
 
-.colright img {
+.colright img { /* thumbnails */
     width: 100%;
 }
 
+
+
+
+/* projects display */
 
 .left {
     width: 45%;
@@ -159,12 +172,7 @@ a:hover h1 {
     float: left;
 }
 
-.film {
-    overflow: hidden;
-    margin-bottom: 100px;
-}
-
-.proj, {
+.proj, { /* individual project */
     margin-bottom: 100px;
     overflow: hidden;
 }
@@ -173,39 +181,38 @@ a:hover h1 {
     width: 100%;
 }
 
-.bio {
-    margin: 5% 20% 5% 20%;
+
+
+
+/* about section */
+
+#about {
+    margin-left: 20%;
+    margin-right: 20%;
+    padding: 35px;
+    border-style: solid;
+    border-color: #AB64F6;
+    font-size: .6em;
 }
 
-.bio img {
-    max-width: 235px;
-}
 
-.bio h4 {
-    font-style: italic;
-}
+
+
 
 footer {
     text-align: center;
-    font-size: .8em;
-    margin-bottom: 1%;
+    font-size: .7em;
+    margin-bottom: .5%;
 }
 
-.lost {
+.lost { /* 404 page */
     margin-top: 20%;
     margin-bottom: 20%;
 }
 
 
 
-/*
-320px
-480px
-600px
-768px
-900px
-1200px
-*/
+
 
 /* screen responsiveness */
 
@@ -219,6 +226,10 @@ footer {
     nav {
         font-size: 8vw;
         line-height: 1.3em;
+    }
+    
+    .wrapper {
+        padding-top: 0px;
     }
     
     #index img {
@@ -247,7 +258,8 @@ footer {
     
     .colright {
         float: none;
-        width: 100%;
+        width: 200%;
+        padding: none;
     }
     
     .left {
@@ -265,9 +277,10 @@ footer {
     }
     
     #about {
-        margin-left: 5%;
-        margin-right: 5%;
-        padding: 5px;
+        margin-left: 2%;
+        margin-right: 2%;
+        padding: 25px;
+        line-height: 2.5em;
     }
 }
 
@@ -326,7 +339,6 @@ footer {
     
     #about {
         margin-top: 20%;
-        padding: 50px;
         margin-bottom: 8%;
     }
     

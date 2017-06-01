@@ -18,9 +18,9 @@ a:hover {
 
 .return {
     position: fixed;
-    top: 80%;
-    left: 4%;
-    font-size: 2em;
+    bottom: 5%;
+    right: 3%;
+    font-size: 1.5em;
     color: #61DBF7;
     border-color: #AB64F6;
     border-style: solid;
@@ -40,8 +40,8 @@ a:hover {
 .shorts {
     background-color: black;
     color: white;
-    margin-left: 30%;
-    margin-top: 3%;
+    margin-right: 34%;
+    font-size: .8em;
 }
 
 iframe {
@@ -60,5 +60,5 @@ iframe {
     max-height: 600px;
     max-width: 44%;
     display: inline-flex;
-    padding: 30px 60px 30px 60px;
+    padding: 50px;
 }
