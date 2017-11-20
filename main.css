@@ -1,5 +1,5 @@
 body {
-    line-height: 1.4em;
+    line-height: 1em;
     font-family: 'Inconsolata', andale mono, Lucida console, monospace;
     font-size: 1em;
      background-color: #61DBF7;
@@ -76,7 +76,7 @@ a:hover h1 {
 }
 
 #index h1 {
-    font-size: 5vw;
+    font-size: 4vw;
     position: fixed;
     margin-top: -25%;
     z-index: 10;
