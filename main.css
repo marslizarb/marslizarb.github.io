@@ -30,6 +30,10 @@ h2 { /* subsection headings */
     line-height: 1.2em;
 }
 
+h5 {
+    line-height: 1.5em;
+}
+
 a {
     text-decoration: underline;
     color: white;
@@ -191,7 +195,7 @@ a:hover h1 {
 #about {
     margin-left: 20%;
     margin-right: 20%;
-    padding: 35px;
+    padding: 10px;
     border-style: solid;
     border-color: #AB64F6;
     font-size: .6em;
