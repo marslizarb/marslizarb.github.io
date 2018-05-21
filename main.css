@@ -21,11 +21,13 @@ body {
 
 p {
     text-align: center;
-    font-size: 1.5em
+    font-size: 1.5em;
+    line-height: 1.5em;
 }
 
 h2 { /* subsection headings */
     font-style: italic;
+    line-height: 1.2em;
 }
 
 a {
@@ -219,7 +221,7 @@ footer {
 @media screen and (max-width: 800px) {
     
     body {
-        line-height: 1.3em;
+        line-height: 1.5em;
         font-size: .9em;
     }
     
