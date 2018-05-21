@@ -154,6 +154,7 @@ a:hover h1 {
     float: right;
     width: 750px;
     margin-left: 70px;
+    margin-bottom: 20px;
 }
 
 .colright img { /* thumbnails */
