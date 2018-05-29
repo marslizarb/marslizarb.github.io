@@ -19,10 +19,14 @@ body {
     padding-top: 25%;
 }
 
+nav {
+    line-height: .5em;
+}
+
 p {
     text-align: center;
     font-size: 1.5em;
-    line-height: 1.5em;
+    line-height: 1.3em;
 }
 
 h2 { /* subsection headings */
