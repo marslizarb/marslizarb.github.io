@@ -48,7 +48,7 @@ a {
 }
 
 a:hover {
-    text-decoration: overline;
+    text-decoration: none;
 }
 
 #about a:hover {
@@ -198,7 +198,7 @@ a:hover {
     padding: 50px;
     border-style: solid;
     border-color: #164684;
-    font-size: .6em;
+    font-size: .8em;
 }
 
 
