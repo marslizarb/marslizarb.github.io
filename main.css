@@ -1,8 +1,8 @@
 body {
     line-height: 1em;
-    font-family: 'Inconsolata', andale mono, Lucida console, monospace;
+    font-family: 'Source Code Pro', monospace;
     font-size: 1em;
-    background-image: linear-gradient(to top, #d299c2 0%, #fef9d7 100%);
+    background-image: linear-gradient(to top, #d299c2 0%, #164684 100%);
     /*background-color: #61DBF7;
     background: -webkit-linear-gradient(-80deg, #AB64F6, #61DBF7);
     background:    -moz-linear-gradient(-80deg, #AB64F6, #61DBF7);
@@ -28,17 +28,18 @@ nav {
 
 p {
     text-align: center;
-    font-size: 1.5em;
-    line-height: 1.3em;
+    font-size: 1em;
+    line-height: 1.5em;
 }
 
 h2 { /* subsection headings */
-    font-style: italic;
-    line-height: 1.2em;
+    font-style: bold;
+    line-height: 0;
 }
 
 h5 {
-    line-height: 1.5em;
+    line-height: 2em;
+    font-size: .7em;
 }
 
 a {
@@ -47,7 +48,7 @@ a {
 }
 
 a:hover {
-    text-decoration: none;
+    text-decoration: overline;
 }
 
 #about a:hover {
@@ -196,7 +197,7 @@ a:hover {
     margin-right: 20%;
     padding: 50px;
     border-style: solid;
-    border-color: #fef9d7;
+    border-color: #164684;
     font-size: .6em;
 }
 
