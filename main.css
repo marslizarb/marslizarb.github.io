@@ -63,7 +63,7 @@ a:hover {
 }
 
 #index h1 { /* name at top of page */
-    color: #fef9d7;
+    color: white;
     font-size: 2vw;
     position: fixed;
     margin-top: -25%;
