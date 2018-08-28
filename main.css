@@ -34,7 +34,7 @@ p {
 
 h2 { /* subsection headings */
     font-style: bold;
-    line-height: 0;
+    line-height: 1em;
 }
 
 h5 {
