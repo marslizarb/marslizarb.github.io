@@ -27,17 +27,18 @@ nav {
 p {
     text-align: center;
     font-size: .8em;
-    line-height: 1.7em;
+    line-height: 2em;
 }
 
 h2 { /* subsection headings */
-    font-style: bold;
-    line-height: 1.4em;
+    font-style: none;
+    font-size: 1em;
+    line-height: 1.5em;
 }
 
 h5 {
     line-height: 2em;
-    font-size: .7em;
+    font-size: .5em;
 }
 
 a {
@@ -68,6 +69,10 @@ a:hover {
     z-index: 10;
     -ms-transform: rotate(5deg); /* IE 9 */
     -webkit-transform: rotate(5deg); /* Chrome, Safari, Opera */
+}
+
+.wrapper h1 {
+    font-size: 1em;
 }
 
 #index a:hover h1 {
