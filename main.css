@@ -1,7 +1,5 @@
 body {
-    line-height: .7em;
     font-family: 'Source Code Pro', monospace;
-    font-size: .7em;
     background-image: linear-gradient(to top, #d299c2 0%, #164684 100%);
     /*background-color: #61DBF7;
     background: -webkit-linear-gradient(-80deg, #AB64F6, #61DBF7);
@@ -28,13 +26,13 @@ nav {
 
 p {
     text-align: center;
-    font-size: .7em;
-    line-height: 1.2em;
+    font-size: .8em;
+    line-height: 1.7em;
 }
 
 h2 { /* subsection headings */
     font-style: bold;
-    line-height: 1em;
+    line-height: 1.4em;
 }
 
 h5 {
@@ -222,14 +220,16 @@ footer {
 
 @media screen and (max-width: 800px) {
     
-    body {
-        line-height: 1.5em;
-        font-size: .9em;
+    h5 {
+        font-size: 1em;
+    }
+    
+    h2 {
+        font-size: 2.5em;
     }
     
     nav {
-        font-size: 8vw;
-        line-height: 1.3em;
+        font-size: 6.5vw;
     }
     
     .wrapper {
@@ -256,14 +256,13 @@ footer {
         right: 0;
     }
     
-    .film {
-        width: 100%;
+    .video iframe {
+        display: block;
     }
     
     .colright {
         float: none;
-        width: 200%;
-        padding: none;
+        display: block;
     }
     
     .left {
