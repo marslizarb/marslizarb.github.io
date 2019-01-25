@@ -387,3 +387,7 @@ footer {
 .bio {
     margin: 2% 15% 2% 15%;
 }
+
+.thumb {
+    width: 100%;
+}
