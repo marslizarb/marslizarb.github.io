@@ -92,7 +92,7 @@ a:hover {
 
 #index a:hover {
     text-decoration: none;
-    color: #d299c2;
+    color: #51D0BF;
     background-color: transparent;
 }
 
@@ -246,7 +246,7 @@ footer {
     }
     
     #index a {
-        color: #d299c2;
+        color: #51D0BF;
         height: auto;
     }
 
