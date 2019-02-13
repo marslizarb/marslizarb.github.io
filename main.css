@@ -1,6 +1,6 @@
 body {
     font-family: 'Source Code Pro', monospace;
-    background-image: linear-gradient(to top, #d299c2 0%, #164684 100%);
+    background-image: linear-gradient(to top, #51D0BF 0%, #164684 100%);
     /*background-color: #61DBF7;
     background: -webkit-linear-gradient(-80deg, #AB64F6, #61DBF7);
     background:    -moz-linear-gradient(-80deg, #AB64F6, #61DBF7);
@@ -92,7 +92,7 @@ a:hover {
 
 #index a:hover {
     text-decoration: none;
-    color: #d299c2;
+    color: #51D0BF;
     background-color: transparent;
 }
 
@@ -196,9 +196,9 @@ a:hover {
 /* about section */
 
 #about {
-    margin-left: 20%;
-    margin-right: 20%;
-    padding: 50px;
+    margin-left: 15%;
+    margin-right: 15%;
+    padding: 30px;
     border-style: solid;
     border-color: #164684;
     font-size: .8em;
@@ -246,7 +246,7 @@ footer {
     }
     
     #index a {
-        color: #d299c2;
+        color: #51D0BF;
         height: auto;
     }
 
