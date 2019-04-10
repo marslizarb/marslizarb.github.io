@@ -1,10 +1,11 @@
 body {
     font-family: 'Source Code Pro', monospace;
-    background-image: linear-gradient(to top, #51D0BF 0%, #164684 100%);
-    /*background-color: #61DBF7;
+    background-color: black;
+    /*background-image: linear-gradient(to top, #51D0BF 0%, #164684 100%);*/
+    background-color: #61DBF7;
     background: -webkit-linear-gradient(-80deg, #AB64F6, #61DBF7);
     background:    -moz-linear-gradient(-80deg, #AB64F6, #61DBF7);
-    background:         linear-gradient(-150deg, #AB64F6, #61DBF7);*/
+    background:         linear-gradient(-150deg, #AB64F6, #61DBF7);
     color: white;
     margin: 0 !important;
     padding: 0 !important;
@@ -92,7 +93,7 @@ a:hover {
 
 #index a:hover {
     text-decoration: none;
-    color: #51D0BF;
+    color: #61DBF7;
     background-color: transparent;
 }
 
@@ -200,14 +201,14 @@ a:hover {
     margin-right: 15%;
     padding: 30px;
     border-style: solid;
-    border-color: #164684;
+    border-color: #AB64F6;
     font-size: .8em;
 }
 
 
 footer {
     text-align: center;
-    font-size: .6em;
+    font-size: .5em;
     margin-top: 11%;
     margin-bottom: .5%;
 }
@@ -378,9 +379,8 @@ footer {
     }
     
     .text {
-        margin-left: 15%;
-        margin-right: 15%;
-        padding: 50px 80px 50px 80px;
+        margin-left: 10%;
+        margin-right: 10%;
     }
 }
 
