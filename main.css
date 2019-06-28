@@ -19,6 +19,7 @@ body {
     margin: 5%;
     overflow: hidden;
     padding-top: 25%;
+    
 }
 
 nav {
@@ -39,7 +40,7 @@ h2 { /* subsection headings */
 
 h5 {
     line-height: 2em;
-    font-size: .5em;
+    font-size: .6em;
 }
 
 a {
@@ -391,3 +392,12 @@ footer {
 .thumb {
     width: 100%;
 }
+
+marquee {
+    font-style: italic;
+    color: black;
+    font-size: .7em;
+    padding-bottom: 15px;
+}
+
+/* Start http://www.cursors-4u.com */ * {cursor: url(http://ani.cursors-4u.net/cursors/cur-12/cur1103.ani), url(http://ani.cursors-4u.net/cursors/cur-12/cur1103.png), auto !important;} /* End http://www.cursors-4u.com */
