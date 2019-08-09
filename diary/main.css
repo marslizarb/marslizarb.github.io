@@ -1,0 +1,26 @@
+/* diary */
+
+body {
+    font-size: 1em;
+    font-family: andale mono, monospace;
+    background-color: black;
+    color: white;
+    margin: 10%;
+     -ms-transform: rotate(-8deg); /* IE 9 */
+    -webkit-transform: rotate(-8deg); /* Chrome, Safari, Opera */
+    transform: rotate(-8deg);
+    line-height: 1.4em;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color:blue;
+}

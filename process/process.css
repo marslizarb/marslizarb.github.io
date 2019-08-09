@@ -1,0 +1,16 @@
+body {
+    background-color: floralwhite;
+    font: font-family: palatino, georgia, garamond, times new roman, serif;
+    color: darkslategray;
+    font-size: 1.2em;
+    margin: 30px 250px 10px 250px;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    max-width: 700px;
+    max-height: 600px;
+}

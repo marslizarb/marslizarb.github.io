@@ -1,0 +1,21 @@
+/* COOL PALETTES - - - - - - - - 
+
+~CAMPFIRE~
+dark blue: #003049
+red: #D62828
+orange: #F77F00
+yellow: #FCBF49
+light yellow: #EAE2B7
+
+END OF COOL PALETTES */
+
+body {
+    margin: 0;            /* Reset default margin */
+}
+iframe {
+    display: block;       /* iframes are inline by default */
+    background: #000;
+    border: none;         /* Reset default border */
+    height: 100vh;        /* Viewport-relative units */
+    width: 100vw;
+}
