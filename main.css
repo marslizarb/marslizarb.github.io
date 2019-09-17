@@ -389,8 +389,32 @@ footer {
     margin: 2% 15% 2% 15%;
 }
 
+.bio p {
+    line-height: 1em;
+    text-align: left;
+    font-size: .8em;
+}
+
+.bio h2 {
+    padding-top: 3%;
+    font-size: 1.2em;
+}
+
+.bio li {
+    font-size: .8em;
+}
+
 .thumb {
     width: 100%;
+}
+
+.bio a {
+    text-decoration: none;
+    color: yellow;
+}
+
+.bio a:hover {
+    background-color: black;
 }
 
 marquee {
@@ -399,5 +423,3 @@ marquee {
     font-size: .7em;
     padding-bottom: 15px;
 }
-
-/* Start http://www.cursors-4u.com */ * {cursor: url(http://ani.cursors-4u.net/cursors/cur-12/cur1103.ani), url(http://ani.cursors-4u.net/cursors/cur-12/cur1103.png), auto !important;} /* End http://www.cursors-4u.com */
