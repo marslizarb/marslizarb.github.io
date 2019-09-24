@@ -13,7 +13,7 @@ body {
 
 .wrapper {
     height: auto;
-    margin: 5%;
+    margin: 10%;
     overflow: hidden;
     padding-top: 25%;
     
@@ -62,9 +62,17 @@ a:hover {
     top: 0;
     text-align: center;
     color: black;
-    background-color: hotpink;
+    background-color: greenyellow;
     height: 6%;
     z-index: 50;
+}
+
+#banner a {
+    color: #AB64F6;
+}
+
+#banner a:hover {
+    background-color: #61DBF7;
 }
 
 /* index */
@@ -75,7 +83,7 @@ a:hover {
 }
 
 #index h1 { /* name at top of page */
-    color: white;
+    color: deeppink;
     font-size: 1vw;
     position: fixed;
     margin-top: -28.7%;
@@ -107,7 +115,6 @@ a:hover {
     background-color: transparent;
 }
 
-
 #aboutimg {
     position: absolute;
     bottom: 5%;
@@ -128,7 +135,7 @@ a:hover {
 
 #anafternoonimg {
     position: absolute;
-    top: 10%;
+    top: 18%;
     right: 20%;
 }
 
@@ -137,8 +144,6 @@ a:hover {
     bottom: 2%;
     right: 10%;
 }
-
-
 
 
 /* demo reel */
@@ -159,8 +164,6 @@ a:hover {
 }
 
 
-
-
 /* video display */
 
 .film { /* subsection */
@@ -174,7 +177,6 @@ a:hover {
     margin-left: 70px;
     margin-bottom: 20px;
 }
-
 
 
 /* project display */
@@ -193,7 +195,7 @@ a:hover {
 }
 
 .proj, { /* individual project */
-    margin-bottom: 100px;
+    margin: 0;
     overflow: hidden;
 }
 
@@ -201,6 +203,11 @@ a:hover {
     width: 100%;
 }
 
+
+.proj a:hover {
+    background-color: transparent;
+    text-decoration: line-through;
+}
 
 
 
@@ -428,7 +435,7 @@ footer {
 
 marquee {
     font-style: italic;
-    color: black;
+    color: deeppink;
     font-size: .5em;
     padding-bottom: 15px;
 }
