@@ -11,9 +11,6 @@ body {
     padding: 0 !important;
 }
 
-
-
-
 .wrapper {
     height: auto;
     margin: 5%;
@@ -44,16 +41,30 @@ h5 {
 }
 
 a {
-    text-decoration: underline;
-    color: white;
+    color: yellow;
+    text-decoration: none;
 }
 
 a:hover {
-    text-decoration: none;
+    background-color: black;
 }
 
 #about a:hover {
     background: black;
+}
+
+/* banner */
+
+#banner {
+    font-size: .7em;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    text-align: center;
+    color: black;
+    background-color: hotpink;
+    height: 6%;
+    z-index: 50;
 }
 
 /* index */
@@ -65,12 +76,10 @@ a:hover {
 
 #index h1 { /* name at top of page */
     color: white;
-    font-size: 2vw;
+    font-size: 1vw;
     position: fixed;
-    margin-top: -25%;
-    z-index: 10;
-    -ms-transform: rotate(5deg); /* IE 9 */
-    -webkit-transform: rotate(5deg); /* Chrome, Safari, Opera */
+    margin-top: -28.7%;
+    z-index: 50;
 }
 
 .wrapper h1 {
@@ -420,6 +429,6 @@ footer {
 marquee {
     font-style: italic;
     color: black;
-    font-size: .7em;
+    font-size: .5em;
     padding-bottom: 15px;
 }

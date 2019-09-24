@@ -7,10 +7,168 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="Marcie LaCerte, animation, experimental animation, internet videos, new york city, new york animator, freelance animator, motion graphics, motion designer" />
     <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+    
+    <!--bubble-->
+    <script type="text/javascript">
+// <![CDATA[
+var colours=new Array("#a6f", "#60f", "#60f", "#a6f", "#ccc"); // colours for top, right, bottom and left borders and background of bubbles
+var bubbles=66; // how many bubbles are moving at any given time
+var over_or_under="over"; // set to "over" for bubbles to always be on top, or "under" to allow them to float behind other objects
+
+/****************************
+*   JavaScript Bubble Bath  *
+*(c)2010-13 mf2fm web-design*
+*  http://www.mf2fm.com/rv  *
+* DON'T EDIT BELOW THIS BOX *
+****************************/
+
+var swide=800;
+var shigh=600;
+var bubb=new Array();
+var bubbx=new Array();
+var bubby=new Array();
+var bubbs=new Array();
+var boddie;
+var ie_version=(navigator.appVersion.indexOf("MSIE")!=-1)?parseFloat(navigator.appVersion.split("MSIE")[1]):false;
+
+function addLoadEvent(funky) {
+  var oldonload=window.onload;
+  if (typeof(oldonload)!='function') window.onload=funky;
+  else window.onload=function() {
+    if (oldonload) oldonload();
+    funky();
+  }
+}
+
+addLoadEvent(bubba);
+
+function bubba() { if (document.getElementById) {
+  var i, rats, div;
+  boddie=document.createElement("div");
+  boddie.style.position="fixed";
+  boddie.style.top="0px";
+  boddie.style.left="0px";
+  boddie.style.overflow="visible";
+  boddie.style.width="1px";
+  boddie.style.height="1px";
+  boddie.style.backgroundColor="transparent";
+  boddie.style.zIndex="0";
+  document.body.appendChild(boddie);
+  set_width();
+  for (i=0; i<bubbles; i++) {
+    rats=createDiv("3px", "3px");
+
+	div=createDiv("auto", "auto");
+    rats.appendChild(div);
+	div=div.style;
+    div.top="1px";
+    div.left="0px";
+	div.bottom="1px";
+	div.right="0px";
+	div.borderLeft="1px solid "+colours[3];
+	div.borderRight="1px solid "+colours[1];
+
+    div=createDiv("auto", "auto");
+	rats.appendChild(div);
+	div=div.style;
+    div.top="0px";
+    div.left="1px";
+	div.right="1px";
+	div.bottom="0px"
+	div.borderTop="1px solid "+colours[0];
+	div.borderBottom="1px solid "+colours[2];
+
+	div=createDiv("auto", "auto");
+	rats.appendChild(div);
+	div=div.style;
+	div.left="1px";
+	div.right="1px";
+    div.bottom="1px";
+	div.top="1px";
+	div.backgroundColor=colours[4];
+    if (ie_version && ie_version<10) div.filter="alpha(opacity=50)";
+    else div.opacity=0.5;
+
+    boddie.appendChild(rats);
+	bubb[i]=rats.style;
+	bubb[i].zIndex=(over_or_under=="over")?"1001":"0";
+  }
+  bubble();
+}}
+
+function bubble() {
+  var c;
+  for (c=0; c<bubbles; c++) if (!bubby[c] && Math.random()<0.333) {
+    bubb[c].left=(bubbx[c]=Math.floor(swide/6+Math.random()*swide/1.5)-10)+"px";
+    bubb[c].top=(bubby[c]=shigh)+"px";
+    bubb[c].width="3px";
+	bubb[c].height="3px"
+	bubb[c].visibility="visible";
+	bubbs[c]=3;
+    break;
+  }
+  for (c=0; c<bubbles; c++) if (bubby[c]) update_bubb(c);
+  setTimeout("bubble()", 40);
+}
+
+function update_bubb(i) {
+  if (bubby[i]) {
+    bubby[i]-=bubbs[i]/2+i%2;
+    bubbx[i]+=(i%5-2)/5;
+    if (bubby[i]>0 && bubbx[i]>0 && bubbx[i]<swide) {
+	  if (Math.random()<bubbs[i]/shigh*2 && bubbs[i]++<8) {
+		bubb[i].width=bubbs[i]+"px";
+		bubb[i].height=bubbs[i]+"px";
+	  }
+      bubb[i].top=bubby[i]+"px";
+      bubb[i].left=bubbx[i]+"px";
+    }
+    else {
+      bubb[i].visibility="hidden";
+      bubby[i]=0;
+      return;
+    }
+  }
+}
+
+window.onresize=set_width;
+function set_width() {
+  var sw_min=999999;
+  var sh_min=999999;
+  if (document.documentElement && document.documentElement.clientWidth) {
+    if (document.documentElement.clientWidth>0) sw_min=document.documentElement.clientWidth;
+    if (document.documentElement.clientHeight>0) sh_min=document.documentElement.clientHeight;
+  }
+  if (typeof(self.innerWidth)=='number' && self.innerWidth) {
+    if (self.innerWidth>0 && self.innerWidth<sw_min) sw_min=self.innerWidth;
+    if (self.innerHeight>0 && self.innerHeight<sh_min) sh_min=self.innerHeight;
+  }
+  if (document.body.clientWidth) {
+    if (document.body.clientWidth>0 && document.body.clientWidth<sw_min) sw_min=document.body.clientWidth;
+    if (document.body.clientHeight>0 && document.body.clientHeight<sh_min) sh_min=document.body.clientHeight;
+  }
+  if (sw_min==999999 || sh_min==999999) {
+    sw_min=800;
+    sh_min=600;
+  }
+  swide=sw_min;
+  shigh=sh_min;
+}
+
+function createDiv(height, width) {
+  var div=document.createElement("div");
+  div.style.position="absolute";
+  div.style.height=height;
+  div.style.width=width;
+  div.style.overflow="hidden";
+  div.style.backgroundColor="transparent";
+  return (div);
+}
+// ]]>
+</script>
 </head>
     
 <body> 
-
     
 <!--scrolling script -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -25,9 +183,12 @@
     });
         </script>
 
-
+<div id="banner">
+    <h5>・・・・★・・・・★ ・・・・ <a href="/afternoon/index.html">play <i>An Afternoon Rippling</i></a> ・・・・★・・・・★ ・・・・</h5>
+</div>
+    
 <div class="wrapper" id="index">
-    <a href="#index"><h1>marcie lacerte</h1></a>
+    <a href="#index"><h1>marcie lacerte ☀</h1></a>
     <nav>
         <a id="aboutimg" href="#about"><img src="gifs/aboutme.gif"><p>ABOUT</p></a>
         <a id="reelimg" href="#reel"><img src="gifs/ship.gif"><p>REELS</p></a>
@@ -232,7 +393,7 @@
             </div>
             <h5>
                 <a href="https://www.whnpa.org/main/contests/2019-multimedia-contest-rules/2019-eyes-of-history-multimedia-contest-results/">White House Press Association, Second Place for Explainers, 2019</a><br>
-                Featured on <a href="https://aeon.co/videos/why-racial-segregation-is-a-design-feature-not-a-bug-of-us-cities">Aeon.co.</a><br>
+                Featured on <a href="https://aeon.co/videos/why-racial-segregation-is-a-design-feature-not-a-bug-of-us-cities">Aeon</a>.<br>
                 Roles: animator, co-editor
             </h5>     
         </div>
@@ -285,7 +446,7 @@
 
     
 <div class="wrapper">
-    <marquee behavior="scroll" direction="left" scrollamount="20">just some other stuff ive done that i kind of want to show off a lil</marquee><br>
+    <marquee behavior="scroll" direction="left" scrollamount="20">some other stuff i've done check it out dude</marquee><br>
     <div class="left" id="projects">
         <div class="proj">
             <a href="/afternoon" target="_blank"><img src="images/interiorcar.png">
@@ -358,9 +519,9 @@
     <div class="text">
         <p>I'm an animator and video producer in NYC. I once wore a <a href="https://www.youtube.com/watch?v=bDShFasYq9M">mustache</a> on camera.<br><br>
         Please send cool pics and compliments to <a href="mailto:marcielacerte@gmail.com">marcielacerte@gmail.com</a>.<br><br>
-        SELECTED PRESS: <a href="https://www.rockpapershotgun.com/2019/09/09/an-afternoon-rippling-wants-to-take-you-on-a-very-peculiar-hike/">Rock Paper Shotgun</a>, <a href="http://www.itsnicethat.com/articles/marcie-lacerte-summer-of-love-animation-240717" target="_blank">It's Nice That</a>, <a href="https://www.cartoonbrew.com/cartoon-brew-pick/short-pick-of-the-day-summer-of-love-by-marcie-lacerte-161625.html">Cartoon Brew</a>, <a href="http://girlsinfilm.net/videos/summer-of-love" target="_blank">Girls in Film</a>, <a href="http://www.sothetheorygoes.com/summer-of-love/" target="_blank">So The Theory Goes</a><br><br>
+        SELECTED ARTICLES: <a href="https://game-curator.com/indie/an-afternoon-rippling/">Game Curator</a>, <a href="https://www.rockpapershotgun.com/2019/09/09/an-afternoon-rippling-wants-to-take-you-on-a-very-peculiar-hike/">Rock Paper Shotgun</a>, <a href="http://www.itsnicethat.com/articles/marcie-lacerte-summer-of-love-animation-240717" target="_blank">It's Nice That</a>, <a href="https://www.cartoonbrew.com/feature-film/200-artists-collaborated-on-a-remake-of-dreamworks-shrek-166803.html">Cartoon Brew</a><!--, <a href="http://girlsinfilm.net/videos/summer-of-love" target="_blank">Girls in Film</a>, <a href="http://www.sothetheorygoes.com/summer-of-love/" target="_blank">So The Theory Goes</a>--><br><br>
 
-        <!--<a target="_blank" href="marcielacerte_Resume.pdf">resume</a> /--><a target="_blank" href="http://instagram.com/marslizard">instagram</a> / <a target="_blank" href="https://vimeo.com/marcielacerte">vimeo</a> / <a target="_blank" href="https://twitter.com/marslizarb">twitter</a> / <a href="https://giphy.com/marslizard">giphy</a> / <a href="https://workingnotworking.com/26046-marcie">Working Not Working</a> / <a href="thecluster.html">notebook</a> / <a href="CV.html">CV</a></p>
+        <!--<a target="_blank" href="marcielacerte_Resume.pdf">resume</a> /--><a target="_blank" href="http://instagram.com/marslizard">instagram</a> / <a target="_blank" href="https://vimeo.com/marcielacerte">vimeo</a> / <a target="_blank" href="https://twitter.com/marslizarb">twitter</a> / <a href="https://giphy.com/marslizard">giphy</a> / <a href="https://workingnotworking.com/26046-marcie">working not working</a> / <a href="CV.html">CV</a> / <a href="thecluster.html">notebook</a></p>
     </div>
     <marquee behavior="scroll" direction="left" scrollamount="20">thanks for visiting</marquee>
 </div>
