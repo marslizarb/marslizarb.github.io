@@ -72,7 +72,8 @@ a:hover {
 }
 
 #banner a:hover {
-    background-color: #61DBF7;
+    background-color: black;
+    color: white;
 }
 
 /* index */
