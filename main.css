@@ -1,11 +1,6 @@
 body {
     font-family: 'Source Code Pro', monospace;
-    background-color: black;
-    /*background-image: linear-gradient(to top, #51D0BF 0%, #164684 100%);*/
-    background-color: #61DBF7;
-    background: -webkit-linear-gradient(-80deg, #AB64F6, #61DBF7);
-    background:    -moz-linear-gradient(-80deg, #AB64F6, #61DBF7);
-    background:         linear-gradient(-150deg, #AB64F6, #61DBF7);
+    background-color: #09012e;
     color: white;
     margin: 0 !important;
     padding: 0 !important;
@@ -15,7 +10,7 @@ body {
     height: auto;
     margin: 10%;
     overflow: hidden;
-    padding-top: 25%;
+    padding-top: 20%;
     
 }
 
@@ -25,7 +20,7 @@ nav {
 
 p {
     text-align: center;
-    font-size: .9em;
+    font-size: 1em;
     line-height: 2em;
 }
 
@@ -37,11 +32,11 @@ h2 { /* subsection headings */
 
 h5 {
     line-height: 2em;
-    font-size: .6em;
+    font-size: .5em;
 }
 
 a {
-    color: yellow;
+    color: #a3a7b8;
     text-decoration: none;
 }
 
@@ -61,14 +56,14 @@ a:hover {
     position: fixed;
     top: 0;
     text-align: center;
-    color: black;
-    background-color: greenyellow;
-    height: 6%;
+    color: white;
+    background-color: #ed2438;
+    height: 2.5em;
     z-index: 50;
 }
 
 #banner a {
-    color: #AB64F6;
+    color: white;
 }
 
 #banner a:hover {
@@ -84,10 +79,10 @@ a:hover {
 }
 
 #index h1 { /* name at top of page */
-    color: deeppink;
+    color: whitesmoke;
     font-size: 1vw;
     position: fixed;
-    margin-top: -28.7%;
+    margin-top: -40%;
     z-index: 50;
 }
 
@@ -112,7 +107,7 @@ a:hover {
 
 #index a:hover {
     text-decoration: none;
-    color: #61DBF7;
+    color: #ed2438;
     background-color: transparent;
 }
 
@@ -219,8 +214,8 @@ a:hover {
     margin-right: 15%;
     padding: 30px;
     border-style: solid;
-    border-color: #AB64F6;
-    font-size: .8em;
+    border-color: #ed2438;
+    font-size: .6em;
 }
 
 
@@ -436,7 +431,7 @@ footer {
 
 marquee {
     font-style: italic;
-    color: deeppink;
+    color: #ed2438;
     font-size: .5em;
     padding-bottom: 15px;
 }
