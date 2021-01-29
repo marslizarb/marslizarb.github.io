@@ -36,16 +36,16 @@ h5 {
 }
 
 a {
-    color: #a3a7b8;
+    color: #5356f5;
     text-decoration: none;
 }
 
 a:hover {
-    background-color: black;
+    background-color: red;
 }
 
 #about a:hover {
-    background: black;
+    background: red;
 }
 
 /* banner */
@@ -79,10 +79,10 @@ a:hover {
 }
 
 #index h1 { /* name at top of page */
-    color: whitesmoke;
-    font-size: 1vw;
+    color: #5356f5;
+    font-size: 2vw;
     position: fixed;
-    margin-top: -40%;
+    margin-top: -20%;
     z-index: 50;
 }
 
@@ -260,7 +260,7 @@ footer {
     }
     
     #index a {
-        color: #51D0BF;
+        color: #5356f5;
         height: auto;
     }
 
@@ -422,16 +422,16 @@ footer {
 
 .bio a {
     text-decoration: none;
-    color: yellow;
+    color: #5356f5;
 }
 
 .bio a:hover {
-    background-color: black;
+    background-color: #5356f5;
 }
 
 marquee {
     font-style: italic;
-    color: #ed2438;
+    color: #5356f5;
     font-size: .5em;
     padding-bottom: 15px;
 }
