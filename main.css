@@ -36,16 +36,16 @@ h5 {
 }
 
 a {
-    color: #5356f5;
+    color: #ed2438;
     text-decoration: none;
 }
 
 a:hover {
-    background-color: red;
+    background-color: #5356f5;
 }
 
 #about a:hover {
-    background: red;
+    background: #5356f5;
 }
 
 /* banner */
@@ -57,7 +57,7 @@ a:hover {
     top: 0;
     text-align: center;
     color: white;
-    background-color: #ed2438;
+    background-color: #5356f5;
     height: 2.5em;
     z-index: 50;
 }
@@ -79,7 +79,7 @@ a:hover {
 }
 
 #index h1 { /* name at top of page */
-    color: #5356f5;
+    color: #ed2438;
     font-size: 2vw;
     position: fixed;
     margin-top: -20%;
@@ -91,7 +91,7 @@ a:hover {
 }
 
 #index a:hover h1 {
-    text-decoration: line-through;
+    text-decoration: underline;
 }
 
 #index img { /* gifs */
@@ -202,7 +202,7 @@ a:hover {
 
 .proj a:hover {
     background-color: transparent;
-    text-decoration: line-through;
+    text-decoration: underline;
 }
 
 
