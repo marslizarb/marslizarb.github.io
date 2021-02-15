@@ -1,5 +1,6 @@
 body {
-    font-family: 'Source Code Pro', monospace;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Xanh Mono', monospace;    
     background-color: #09012e;
     color: white;
     margin: 0 !important;
@@ -20,18 +21,21 @@ nav {
 
 p {
     text-align: center;
+    font-family: 'Roboto', monospace;
     font-size: 1em;
     line-height: 2em;
 }
 
 h2 { /* subsection headings */
     font-style: none;
+    font-family: 'Roboto', monospace;
     font-size: 1em;
     line-height: 1.5em;
 }
 
 h5 {
     line-height: 2em;
+    font-family: 'Roboto', monospace;
     font-size: .5em;
 }
 
@@ -87,7 +91,8 @@ a:hover {
 }
 
 .wrapper h1 {
-    font-size: 1em;
+    font-size: 2em;
+    line-height: 1.5em;
 }
 
 #index a:hover h1 {
