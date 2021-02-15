@@ -164,6 +164,8 @@ sub { /* subscript */
 
 .nav ul {
     list-style: square;
+        font-family: 'Roboto', monospace;
+
 }
 
 .nav a {
