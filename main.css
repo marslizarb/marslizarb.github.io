@@ -28,7 +28,7 @@ p {
 
 h2 { /* subsection headings */
     font-style: none;
-    font-family: 'Roboto', monospace;
+    font-family: 'Xanh Mono', monospace;
     font-size: 1em;
     line-height: 1.5em;
 }
@@ -439,4 +439,7 @@ marquee {
     color: #5356f5;
     font-size: .5em;
     padding-bottom: 15px;
+}
+h3 {
+    font-size: .9em;
 }
