@@ -22,21 +22,21 @@ nav {
 p {
     text-align: center;
     font-family: 'Roboto', monospace;
-    font-size: 1em;
-    line-height: 2em;
+    font-size: 20px;
+    line-height: 30px;
 }
 
 h2 { /* subsection headings */
     font-style: none;
     font-family: 'Xanh Mono', monospace;
-    font-size: 1em;
-    line-height: 1.5em;
+    font-size: 30px;
+    line-height: 40px;
 }
 
 h5 {
-    line-height: 2em;
+    line-height: 25px;
     font-family: 'Roboto', monospace;
-    font-size: .7em;
+    font-size: 15px;
 }
 
 a {
@@ -55,14 +55,13 @@ a:hover {
 /* banner */
 
 #banner {
-    font-size: .7em;
+    font-size: 15px;
     width: 100%;
     position: fixed;
     top: 0;
     text-align: center;
     color: white;
     background-color: #5356f5;
-    height: 2.5em;
     z-index: 50;
 }
 
@@ -91,8 +90,8 @@ a:hover {
 }
 
 .wrapper h1 {
-    font-size: 2em;
-    line-height: 1.5em;
+    font-size: 40px;
+    line-height: 50px;
 }
 
 #index a:hover h1 {
@@ -220,13 +219,13 @@ a:hover {
     padding: 30px;
     border-style: solid;
     border-color: #ed2438;
-    font-size: .6em;
+    font-size: 20px;
 }
 
 
 footer {
     text-align: center;
-    font-size: .5em;
+    font-size: 10px;
     margin-top: 11%;
     margin-bottom: .5%;
 }
