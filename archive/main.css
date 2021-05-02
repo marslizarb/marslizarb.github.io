@@ -1,0 +1,444 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Xanh Mono', monospace;    
+    background-color: #09012e;
+    color: white;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.wrapper {
+    height: auto;
+    margin: 10%;
+    overflow: hidden;
+    padding-top: 20%;
+    
+}
+
+nav {
+    line-height: .5em;
+}
+
+p {
+    text-align: center;
+    font-family: 'Roboto', monospace;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+h2 { /* subsection headings */
+    font-style: none;
+    font-family: 'Xanh Mono', monospace;
+    font-size: 30px;
+    line-height: 40px;
+}
+
+h5 {
+    line-height: 25px;
+    font-family: 'Roboto', monospace;
+    font-size: 15px;
+}
+
+a {
+    color: #ed2438;
+    text-decoration: none;
+}
+
+a:hover {
+    background-color: #5356f5;
+}
+
+#about a:hover {
+    background: #5356f5;
+}
+
+/* banner */
+
+#banner {
+    font-size: 15px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    text-align: center;
+    color: white;
+    background-color: #5356f5;
+    z-index: 50;
+}
+
+#banner a {
+    color: white;
+}
+
+#banner a:hover {
+    background-color: black;
+    color: white;
+}
+
+/* index */
+
+#index {
+    overflow: hidden;
+    margin-bottom: 250px;
+}
+
+#index h1 { /* name at top of page */
+    color: #ed2438;
+    font-size: 2vw;
+    position: fixed;
+    margin-top: -20%;
+    z-index: 50;
+}
+
+.wrapper h1 {
+    font-size: 40px;
+    line-height: 50px;
+}
+
+#index a:hover h1 {
+    text-decoration: underline;
+}
+
+#index img { /* gifs */
+    min-width: 120px;
+    max-width: 150px;
+    height: auto;
+}
+
+#index a { /* links under images */
+    text-decoration: none;
+    color: transparent;
+}
+
+#index a:hover {
+    text-decoration: none;
+    color: #ed2438;
+    background-color: transparent;
+}
+
+#aboutimg {
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+}
+
+#reelimg {
+    position: absolute;
+    top: 30%;
+    left: 25%;
+}
+
+#shortsimg {
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+}
+
+#anafternoonimg {
+    position: absolute;
+    top: 18%;
+    right: 20%;
+}
+
+#projectsimg {
+    position: absolute;
+    bottom: 2%;
+    right: 10%;
+}
+
+
+/* demo reel */
+
+.video {
+    position: relative;
+    padding-bottom: 56.26%;
+    height: 0;
+    overflow: hidden;
+}
+
+.video iframe {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* video display */
+
+.film { /* subsection */
+    overflow: hidden;
+    margin-bottom: 100px;
+}
+
+.colright { /* videos */
+    float: right;
+    width: 750px;
+    margin-left: 70px;
+    margin-bottom: 20px;
+}
+
+
+/* project display */
+
+.left {
+    width: 45%;
+    display: block;
+    float: left;
+    padding-right: 10%;
+}
+
+.right {
+    width: 45%;
+    display: block;
+    float: left;
+}
+
+.proj, { /* individual project */
+    margin: 0;
+    overflow: hidden;
+}
+
+.proj img { /* thumbnail */
+    width: 100%;
+}
+
+
+.proj a:hover {
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+
+
+/* about section */
+
+#about {
+    margin-left: 15%;
+    margin-right: 15%;
+    padding: 30px;
+    border-style: solid;
+    border-color: #ed2438;
+    font-size: 20px;
+}
+
+
+footer {
+    text-align: center;
+    font-size: 10px;
+    margin-top: 11%;
+    margin-bottom: .5%;
+}
+
+.lost { /* 404 page */
+    margin-top: 20%;
+    margin-bottom: 20%;
+}
+
+
+
+
+
+/* screen responsiveness */
+
+@media screen and (max-width: 800px) {
+    
+    h5 {
+        font-size: 1em;
+    }
+    
+    h2 {
+        font-size: 2.5em;
+    }
+    
+    nav {
+        font-size: 6.5vw;
+    }
+    
+    .wrapper {
+        padding-top: 0px;
+    }
+    
+    #index img {
+        display: none;
+    }
+    
+    #index a {
+        color: #5356f5;
+        height: auto;
+    }
+
+    #index a:hover {
+        text-decoration: line-through;
+    }
+
+    #aboutimg, #reelimg, #shortsimg, #anafternoonimg, #projectsimg {
+        position: relative;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+    
+    .video iframe {
+        display: block;
+    }
+    
+    .colright {
+        float: none;
+    }
+    
+    .left {
+        width: 100%;
+        display: block;
+    }
+
+    .right {
+        width: 100%;
+        display: block;
+    }
+    
+    .proj {
+        margin-bottom: 100px;
+    }
+    
+    #about {
+        margin-left: 2%;
+        margin-right: 2%;
+        padding: 25px;
+        line-height: 2.5em;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    
+    #index img {
+        max-width: 100px;
+    }
+    
+    .colright {
+        width: 10%;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    body {
+        font-size: .5em;
+    }
+    
+    #index img {
+        max-width: 170px;
+    }
+}
+
+@media screen and (max-width: 1680px) {
+    
+    body {
+        font-size: 1.1em;
+        line-height: 1.7em
+    }
+    
+    .wrapper {
+        margin: 4% 7% 0 7%;
+        padding-bottom: 80px;
+    }
+    
+    #index h1 {
+        margin-left: -3%;
+    }
+    
+    #index {
+        margin-bottom: 20%;
+    }
+    
+    #index p {
+        font-size: 1em;
+    }
+    
+    #index img {
+        min-width: 130px;
+    }
+    
+    .colright {
+        width: 55%;
+    }
+    
+    #about {
+        margin-top: 20%;
+        margin-bottom: 8%;
+    }
+    
+    .proj {
+        margin-bottom: 100px;
+    }
+}
+
+@media screen and (min-width: 1680px) {
+    body {
+        font-size: 1.7em;
+    }
+    
+    #index img {
+        min-width: 200px;
+    }
+    
+    .wrapper {
+        padding-bottom: 40px;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    
+    .colright {
+        width: 60%;
+    }
+    
+    .proj {
+        margin-bottom: 200px;
+    }
+    
+    .text {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+}
+
+.bio {
+    margin: 2% 15% 2% 15%;
+}
+
+.bio p {
+    line-height: 1em;
+    text-align: left;
+    font-size: .8em;
+}
+
+.bio h2 {
+    padding-top: 3%;
+    font-size: 1.2em;
+}
+
+.bio li {
+    font-size: .8em;
+}
+
+.thumb {
+    width: 100%;
+}
+
+.bio a {
+    text-decoration: none;
+    color: #5356f5;
+}
+
+.bio a:hover {
+    background-color: #5356f5;
+}
+
+marquee {
+    font-style: italic;
+    color: #5356f5;
+    font-size: .5em;
+    padding-bottom: 15px;
+}
+h3 {
+    font-size: .9em;
+}
