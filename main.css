@@ -53,6 +53,19 @@ h1 {
     padding-top: 60px;
 }
 
+.bio {
+    font-family: 'Roboto', monospace;
+    font-size: 18px;
+    line-height: 30px;
+    margin-left: 500px;
+    margin-right: 500px;
+}
+
+.bio h1, h2 {
+        font-family: 'Xanh Mono', monospace;    
+
+}
+
 #left p {
     font-family: 'Roboto', monospace;
     font-size: 18px;
