@@ -7,10 +7,10 @@ body {
     height: 100%;
     width: 30%;
     position: fixed;
-    top: 0px;
+    bottom: 0px;
     left: 0px;
-    text-align: left;
     overflow-y: scroll;
+    text-align: left;
     font-size: 20px;
     color: white;
     background: blue; 
