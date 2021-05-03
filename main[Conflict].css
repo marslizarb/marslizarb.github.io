@@ -9,7 +9,7 @@ body {
     height: 100%;
     width: 30%;
     position: fixed;
-    top: 0px;
+    bottom: 0px;
     left: 0px;
     overflow-y: scroll;
     text-align: left;
@@ -24,8 +24,26 @@ body {
     padding-right: 40px;
         }
 
+#navbar {
+    height: 10%;
+    width: 70%;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    overflow-y: scroll;
+    text-align: left;
+    font-size: 10px;
+    color: blue;
+    background: white; 
+}
+#navbarcontent {
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+        }
+
 #right {
-    height: 100%;
+    height: 90%;
     width: 70%;
     position: fixed;
     bottom: 0px;
@@ -38,89 +56,127 @@ body {
 }
 
 #rightcontent {
+    padding-top: 20px;
     padding-left: 40px;
     padding-right: 40px;
-    padding-top: 60px;
         }
 
-#left p {
+.wrapper {
+    height: auto;
+    margin: 10%;
+    overflow: hidden;
+    padding-top: 5%;
+    
+}
+
+nav {
+    line-height: .5em;
+}
+
+p {
     font-family: 'Roboto', monospace;
     font-size: 18px;
     line-height: 30px;
 }
 
-a {
-    text-decoration: none;
+h2 { /* subsection headings */
+    font-style: none;
+    font-family: 'Xanh Mono', monospace;
+    font-size: 30px;
+    line-height: 40px;
 }
 
-#leftcontent a {
-    color: lawngreen;
-    text-decoration: none;
-}
-
-#right p {
+h5 {
+    line-height: 25px;
     font-family: 'Roboto', monospace;
     font-size: 15px;
-    line-height: 20px;
 }
 
-#rightcontent a {
-    color: magenta;
+a {
+    color: orange;
+    text-decoration: none;
 }
 
-#right a:hover {
-    background-color: blue;
+a:hover {
+    background-color: yellow;
+}
+
+#about a:hover {
+    background: #5356f5;
+}
+
+/* banner */
+
+#banner {
+    font-size: 15px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    text-align: center;
+    color: white;
+    background-color: #5356f5;
+    z-index: 50;
+}
+
+#banner a {
     color: white;
 }
 
-#left a:hover {
-    background-color: white;
+#banner a:hover {
+    background-color: black;
+    color: white;
+}
+
+/* index */
+
+#index a:hover h1 {
+    text-decoration: underline;
+}
+
+#index img { /* gifs */
+    min-width: 5px;
+    max-width: 10px;
+    height: auto;
+}
+
+#index a { /* links under images */
+    text-decoration: none;
+    color: transparent;
+}
+
+#index a:hover {
+    text-decoration: none;
     color: blue;
-}
-
-
-.center {
-    display: block;
-    height: 50px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 100px;
-    margin-bottom: 100px;
-}
-
-.project {
-     display: block;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
+    background-color: transparent;
 }
 
 #aboutimg {
     position: absolute;
-    top: 2%;
+    left: 0%;
 }
 
 #reelimg {
     position: absolute;
-    top: 20%;
+    left: 20%;
 }
 
 #shortsimg {
     position: absolute;
-    top: 35%;
+    left: 40%;
 }
 
 #anafternoonimg {
     position: absolute;
-    top: 60%;
+    left: 60%;
 }
 
 #projectsimg {
     position: absolute;
-    top: 80%;
+    left: 80%;
 }
 
-/* videos */
+
+/* demo reel */
 
 .video {
     position: relative;
@@ -136,6 +192,22 @@ a {
     width: 100%;
     height: 100%;
 }
+
+
+/* video display */
+
+.film { /* subsection */
+    overflow: hidden;
+    margin-bottom: 100px;
+}
+
+.colright { /* videos */
+    float: right;
+    width: 750px;
+    margin-left: 70px;
+    margin-bottom: 20px;
+}
+
 
 /* project display */
 
@@ -167,6 +239,20 @@ a {
     text-decoration: underline;
 }
 
+
+
+/* about section */
+
+#about {
+    margin-left: 15%;
+    margin-right: 15%;
+    padding: 30px;
+    border-style: solid;
+    border-color: #ed2438;
+    font-size: 20px;
+}
+
+
 footer {
     text-align: center;
     font-size: 10px;
@@ -193,6 +279,10 @@ footer {
     
     h2 {
         font-size: 2.5em;
+    }
+    
+    nav {
+        font-size: 6.5vw;
     }
     
     .wrapper {
