@@ -53,6 +53,10 @@ h1 {
     padding-top: 60px;
 }
 
+.wrapper {
+    padding-bottom: 50px;   
+}
+
 #left p {
     font-family: 'Roboto', monospace;
     font-size: 18px;
