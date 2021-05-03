@@ -12,6 +12,7 @@ body {
     top: 0px;
     left: 0px;
     text-align: left;
+    overflow-y: scroll;
     font-size: 20px;
     color: white;
     background: blue; 
@@ -27,7 +28,7 @@ body {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 85%
+    width: 80%
 }
 
 #right {
