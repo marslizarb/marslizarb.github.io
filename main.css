@@ -99,7 +99,7 @@ a {
 }
 
 .project {
-     display: block;
+    display: block;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
@@ -128,6 +128,10 @@ a {
 #projectsimg {
     position: absolute;
     top: 80%;
+}
+
+.wrapper {
+    padding-bottom: 60px;
 }
 
 /* videos */
