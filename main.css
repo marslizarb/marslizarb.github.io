@@ -22,9 +22,7 @@ body {
     padding-right: 40px;
 }
 
-#bioimg {    
-    width: 85%
-}
+
 
 #right {
     height: 100%;
@@ -39,14 +37,18 @@ body {
     background: white; 
 }
 
-h1 {
-    line-height: normal;
-}
-
 #rightcontent {
     padding-left: 60px;
     padding-right: 60px;
     padding-top: 60px;
+}
+
+h1 {
+    line-height: normal;
+}
+
+#bioimg {    
+    width: 85%
 }
 
 .bio {
@@ -58,7 +60,7 @@ h1 {
 }
 
 .bio h1, h2 {
-        font-family: 'Xanh Mono', monospace;    
+    font-family: 'Xanh Mono', monospace;    
 
 }
 
@@ -97,7 +99,6 @@ a {
     color: blue;
 }
 
-
 .center {
     display: block;
     height: 50px;
@@ -112,31 +113,6 @@ a {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-}
-
-#aboutimg {
-    position: absolute;
-    top: 2%;
-}
-
-#reelimg {
-    position: absolute;
-    top: 20%;
-}
-
-#shortsimg {
-    position: absolute;
-    top: 35%;
-}
-
-#anafternoonimg {
-    position: absolute;
-    top: 60%;
-}
-
-#projectsimg {
-    position: absolute;
-    top: 80%;
 }
 
 .wrapper {
@@ -172,4 +148,42 @@ footer {
 .lost { /* 404 page */
     margin-top: 20%;
     margin-bottom: 20%;
+}
+
+@media all and (max-width: 900px) {
+      #left {
+        height: 100%;
+        width: 100%;
+        top: 0px;
+        position: fixed;
+        overflow-y: scroll;
+        text-align: left;
+        font-size: 20px;
+        color: white;
+        background: blue; 
+    }
+
+    #leftcontent {
+        padding-top: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    #right {
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        overflow-y: scroll;
+        text-align: left;
+        font-size: 20px;
+        color: blue;
+        background: white; 
+    }
+
+    #rightcontent {
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 10px;
+    }
+
 }
