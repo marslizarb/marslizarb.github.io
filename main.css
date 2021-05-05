@@ -22,8 +22,6 @@ body {
     padding-right: 40px;
 }
 
-
-
 #right {
     height: 100%;
     width: 70%;
@@ -61,7 +59,6 @@ h1 {
 
 .bio h1, h2 {
     font-family: 'Xanh Mono', monospace;    
-
 }
 
 #left p {
@@ -155,7 +152,7 @@ footer {
         height: 100%;
         width: 100%;
         top: 0px;
-        position: fixed;
+        position: absolute;
         overflow-y: scroll;
         text-align: left;
         font-size: 20px;
@@ -164,20 +161,28 @@ footer {
     }
 
     #leftcontent {
-        padding-top: 10px;
-        padding-left: 10px;
-        padding-right: 10px;
+        padding-top: 0px;
+        padding-left: 30px;
+        padding-right: 30px;
     }
+    
+    #left p {
+    font-family: 'Roboto', monospace;
+    font-size: 20px;
+    line-height: 35px;
+    }
+
 
     #right {
         height: 100%;
         width: 100%;
-        position: fixed;
+        position: absolute;
         overflow-y: scroll;
         text-align: left;
         font-size: 20px;
         color: blue;
         background: white; 
+        z-index: -1;
     }
 
     #rightcontent {
