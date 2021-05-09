@@ -93,8 +93,7 @@ a {
 }
 
 #left a:hover {
-    background-color: white;
-    color: blue;
+    color: magenta;
 }
 
 .center {
