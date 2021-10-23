@@ -13,7 +13,7 @@ body {
     text-align: left;
     font-size: 20px;
     color: white;
-    background: #0A6D1A; 
+    background: blue; 
 }
 
 #leftcontent {
@@ -32,7 +32,7 @@ body {
     text-align: left;
     font-size: 20px;
     color: blue;
-    background: #F8E7CC; 
+    background: white; 
 }
 
 #rightcontent {
@@ -93,7 +93,7 @@ a {
 }
 
 #left a:hover {
-    color: #E4792B;
+    color: magenta;
 }
 
 .center {
