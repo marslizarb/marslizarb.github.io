@@ -3,6 +3,46 @@ body {
     font-family: 'Lora', serif;
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: seashell;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: darkseagreen;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: wheat;
+}
+
+details {
+    color: darkseagreen;
+    font-size: 15px;
+}
+
+details > summary {
+    list-style-type: '◑ ';
+    color: wheat;
+}
+
+details[open] > summary {
+    list-style-type: '◒ ';
+}
+
+details {
+    border: 1px solid seagreen;
+    border-radius: 0.2rem;
+    padding: 10px;
+}
+
 #left {
     height: 100%;
     width: 30%;
@@ -79,7 +119,7 @@ a {
 }
 
 #rightcontent a {
-    color: yellowgreen;
+    color: darkseagreen;
 }
 
 #right a:hover {
@@ -88,7 +128,8 @@ a {
 }
 
 #left a:hover {
-    color: yellowgreen;
+    color: seashell;
+    background-color: darkseagreen;
 }
 
 .center {
@@ -150,8 +191,8 @@ footer {
         overflow-y: scroll;
         text-align: left;
         font-size: 20px;
-        color: white;
-        background: blue; 
+        color: wheat;
+        background: seagreen; 
     }
 
     #leftcontent {
@@ -174,8 +215,8 @@ footer {
         overflow-y: scroll;
         text-align: left;
         font-size: 20px;
-        color: blue;
-        background: white; 
+        color: seagreen;
+        background: wheat; 
         z-index: -1;
     }
 
@@ -198,26 +239,3 @@ footer {
     display: block;
 }
 
-details {
-    color: darkseagreen;
-    font-size: 15px;
-}
-
-details > summary {
-    list-style-type: '◑ ';
-    color: wheat;
-}
-
-details[open] > summary {
-    list-style-type: '◒ ';
-}
-
-details {
-    border: .5px solid seagreen;
-    border-radius: 0.2rem;
-    padding: 10px;
-}
-
-details[open] > summary {
-    margin-bottom: 0.5rem;
-}
