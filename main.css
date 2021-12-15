@@ -16,11 +16,15 @@ body {
     background: seagreen; 
 }
 
+#leftcontent details {
+    color: seashell;
+}
+
 #leftcontent {
     padding-top: 20px;
     padding-bottom: 20px;
-    padding-left: 45px;
-    padding-right: 45px;
+    padding-left: 80px;
+    padding-right: 80px;
 }
 
 #right {
@@ -128,7 +132,7 @@ footer {
     text-align: center;
     font-family: sans-serif;
     font-size: 10px;
-    margin-top: 10%;
+    margin-bottom: 1%;
     color: darkseagreen;
 }
 
