@@ -1,0 +1,98 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Lora', serif;
+    background-color: black;
+    padding: 20px;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: black;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: white;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: chartreuse;
+}
+
+.screen {
+    margin-left: 300px;
+    margin-right: 300px;
+    padding: 70px;
+}
+
+.text {
+    margin: auto;
+    width: 20%;
+    border: 1px solid white;
+    padding: 40px;
+}
+
+h1 {
+    color: white;
+    font-family: 'Lora', serif;
+    font-size: 27px;
+    line-height: 37px;
+}
+
+p {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    text-align: left;
+    font-size: 17px;
+    line-height: 25px;
+}
+
+a {
+    color: chartreuse;
+    text-decoration: none;
+}
+
+a:hover {
+    color: blue;
+}
+
+
+details {
+    color: white;
+    font-size: 15px;
+    padding: 10px;
+
+}
+
+summary {
+    cursor: pointer;
+}
+
+details > summary {
+    list-style-type: '◑ ';
+    font-family: 'Lora', serif;
+}
+
+details[open] > summary {
+    list-style-type: '◒ ';
+}
+
+nav {
+    margin: auto;
+}
+
+nav p {
+    font-size: 12px;
+    text-align: center;
+}
+
+li {
+    font-family: 'Roboto', sans-serif;
+    line-height: 30px;
+}

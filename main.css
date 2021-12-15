@@ -32,6 +32,12 @@ body {
 details {
     color: darkseagreen;
     font-size: 15px;
+    padding: 10px;
+    line-height: 5px;
+}
+
+summary {
+    cursor: pointer;
 }
 
 details > summary {
@@ -41,11 +47,6 @@ details > summary {
 
 details[open] > summary {
     list-style-type: '◒ ';
-}
-
-details {
-    border: 1px solid seagreen;
-    padding: 10px;
 }
 
 #left {
@@ -249,5 +250,19 @@ footer a {
     display: block;
 }
 
+
+
+
+.colleft {
+    margin-right: 50%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.colright {
+    margin-left: 50%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
 
 
