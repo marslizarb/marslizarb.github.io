@@ -23,6 +23,12 @@ body {
   background: wheat;
 }
 
+.heading {
+    text-align: center;
+    padding: 50px;
+    color: darkseagreen;
+}
+
 details {
     color: darkseagreen;
     font-size: 15px;
@@ -39,13 +45,12 @@ details[open] > summary {
 
 details {
     border: 1px solid seagreen;
-    border-radius: 0.2rem;
     padding: 10px;
 }
 
 #left {
     height: 100%;
-    width: 30%;
+    width: 25%;
     position: fixed;
     bottom: 0px;
     left: 0px;
@@ -63,13 +68,13 @@ details {
 #leftcontent {
     padding-top: 20px;
     padding-bottom: 20px;
-    padding-left: 80px;
-    padding-right: 80px;
+    padding-left: 60px;
+    padding-right: 60px;
 }
 
 #right {
     height: 100%;
-    width: 70%;
+    width: 75%;
     position: fixed;
     bottom: 0px;
     right: 0px;
@@ -173,8 +178,13 @@ footer {
     text-align: center;
     font-family: sans-serif;
     font-size: 10px;
+    margin-top: 5%;
     margin-bottom: 1%;
     color: darkseagreen;
+}
+
+footer a {
+    color: seagreen;
 }
 
 .lost { /* 404 page */
@@ -238,4 +248,6 @@ footer {
     padding-right: 50px;
     display: block;
 }
+
+
 
