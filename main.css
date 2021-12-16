@@ -40,6 +40,11 @@ summary {
     cursor: pointer;
 }
 
+details {
+    cursor: pointer;
+}
+
+
 details > summary {
     list-style-type: '◑ ';
     color: wheat;
