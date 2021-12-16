@@ -60,7 +60,7 @@ details[open] > summary {
     position: fixed;
     bottom: 0px;
     left: 0px;
-    overflow-y: scroll;
+    overflow-y: auto;
     text-align: left;
     font-size: 20px;
     color: seashell;
@@ -84,7 +84,7 @@ details[open] > summary {
     position: fixed;
     bottom: 0px;
     right: 0px;
-    overflow-y: scroll;
+    overflow-y: auto;
     text-align: left;
     font-size: 20px;
     color: seagreen;
@@ -211,7 +211,7 @@ footer a {
         width: 100%;
         top: 0px;
         position: absolute;
-        overflow-y: scroll;
+        overflow-y: auto;
         text-align: left;
         font-size: 20px;
         color: wheat;
@@ -235,7 +235,7 @@ footer a {
         height: 100%;
         width: 100%;
         position: absolute;
-        overflow-y: scroll;
+        overflow-y: auto;
         text-align: left;
         font-size: 20px;
         color: seagreen;
