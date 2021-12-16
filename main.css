@@ -134,7 +134,6 @@ a {
 }
 
 #right a:hover {
-    background-color: wheat;
     color: seagreen;
 }
 
@@ -274,7 +273,9 @@ footer a {
     padding-bottom: 50px;
 }
 
-
+img {
+    width: 100%;
+}
 .ascii {
     font-size: .7em;
     color: darkseagreen;
