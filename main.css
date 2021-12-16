@@ -3,6 +3,10 @@ body {
     font-family: 'Lora', serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* width */
 ::-webkit-scrollbar {
   width: 20px;
@@ -33,7 +37,7 @@ details {
     color: darkseagreen;
     font-size: 15px;
     padding: 10px;
-    line-height: 5px;
+    line-height: auto;
 }
 
 summary {
@@ -138,13 +142,20 @@ a {
     background-color: darkseagreen;
 }
 
-.center {
-    display: block;
-    height: 50px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 100px;
-    margin-bottom: 100px;
+.position3 {
+    margin-left: 30%;
+}
+.position4 {
+    margin-left: 40%;
+}
+.position5 {
+    margin-left: 50%;
+}
+.position6 {
+    margin-left: 60%;
+}
+.position7 {
+    margin-left: 70%;
 }
 
 .project {
@@ -250,9 +261,6 @@ footer a {
     display: block;
 }
 
-
-
-
 .colleft {
     margin-right: 50%;
     padding-top: 50px;
@@ -266,3 +274,14 @@ footer a {
 }
 
 
+.ascii {
+    font-size: .7em;
+    color: darkseagreen;
+    padding: 150px;
+}
+
+.navigate {
+    font-size: 30px;
+    margin-bottom: 5%;
+    z-index: 1;
+}
