@@ -3,10 +3,6 @@ body {
     font-family: 'Lora', serif;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 /* width */
 ::-webkit-scrollbar {
   width: 20px;
@@ -281,7 +277,8 @@ footer a {
 }
 
 .navigate {
-    font-size: 30px;
-    margin-bottom: 5%;
+    font-size: 15px;
+    font-family: sans-serif;
+    line-height: 110px;
     z-index: 1;
 }
