@@ -259,15 +259,8 @@ img {
     width: 100%;
 }
 .ascii {
-    font-size: .7em;
+    font-size: .7vw;
     color: darkseagreen;
     padding: 0px;
     line-height: inherit;
-}
-
-.navigate {
-    font-size: 15px;
-    font-family: sans-serif;
-    line-height: 110px;
-    z-index: 1;
 }
