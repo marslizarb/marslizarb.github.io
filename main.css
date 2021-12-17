@@ -20,14 +20,10 @@ body {
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: wheat;
+    background: wheat;
 }
 
-.heading {
-    text-align: center;
-    padding: 50px;
-    color: darkseagreen;
-}
+/* navigation on the left */
 
 details {
     color: darkseagreen;
@@ -89,6 +85,7 @@ details[open] > summary {
     font-size: 20px;
     color: seagreen;
     background: seashell; 
+    
 }
 
 #rightcontent {
@@ -141,10 +138,7 @@ a {
 #left a:hover {
     color: seashell;
     background-color: darkseagreen;
-}
-
-.wrapper {
-    padding-bottom: 40px;
+    transition: .3s ease;
 }
 
 /* videos */
