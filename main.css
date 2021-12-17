@@ -135,6 +135,7 @@ a {
 
 #right a:hover {
     color: seagreen;
+    transition: .5s ease;
 }
 
 #left a:hover {
@@ -258,6 +259,12 @@ footer a {
 img {
     width: 100%;
 }
+
+img:hover {
+    opacity: 0.3;
+    transition: .5s ease;
+}
+
 .ascii {
     font-size: .7vw;
     color: darkseagreen;
