@@ -60,7 +60,7 @@ details[open] > summary {
     position: fixed;
     bottom: 0px;
     left: 0px;
-    overflow-y: auto;
+    overflow: auto;
     text-align: left;
     font-size: 20px;
     color: seashell;
@@ -84,7 +84,7 @@ details[open] > summary {
     position: fixed;
     bottom: 0px;
     right: 0px;
-    overflow-y: auto;
+    overflow: auto;
     text-align: left;
     font-size: 20px;
     color: seagreen;
@@ -142,29 +142,6 @@ a {
     background-color: darkseagreen;
 }
 
-.position3 {
-    margin-left: 30%;
-}
-.position4 {
-    margin-left: 40%;
-}
-.position5 {
-    margin-left: 50%;
-}
-.position6 {
-    margin-left: 60%;
-}
-.position7 {
-    margin-left: 70%;
-}
-
-.project {
-    display: block;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
 .wrapper {
     padding-bottom: 40px;
 }
@@ -210,7 +187,7 @@ footer a {
         width: 100%;
         top: 0px;
         position: absolute;
-        overflow-y: auto;
+        overflow: auto;
         text-align: left;
         font-size: 20px;
         color: wheat;
@@ -234,7 +211,7 @@ footer a {
         height: 100%;
         width: 100%;
         position: absolute;
-        overflow-y: auto;
+        overflow: auto;
         text-align: left;
         font-size: 20px;
         color: seagreen;
@@ -263,14 +240,19 @@ footer a {
 
 .colleft {
     margin-right: 50%;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    overflow: auto;
 }
 
 .colright {
     margin-left: 50%;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    overflow: auto;
+}
+
+.colmiddle {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    overflow: auto;
+    text-align: center;
 }
 
 img {
@@ -279,7 +261,8 @@ img {
 .ascii {
     font-size: .7em;
     color: darkseagreen;
-    padding: 150px;
+    padding: 0px;
+    line-height: inherit;
 }
 
 .navigate {
