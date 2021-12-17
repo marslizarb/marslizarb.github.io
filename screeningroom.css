@@ -17,12 +17,12 @@ body {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: white;
+  background: seashell;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: chartreuse;
+  background: seagreen;
 }
 
 .screen {
@@ -34,19 +34,19 @@ body {
 .text {
     margin: auto;
     width: 20%;
-    border: 1px solid white;
+    border: 1px solid seashell;
     padding: 40px;
 }
 
 h1 {
-    color: white;
+    color: seashell;
     font-family: 'Lora', serif;
     font-size: 27px;
     line-height: 37px;
 }
 
 p {
-    color: white;
+    color: seashell;
     font-family: 'Roboto', sans-serif;
     text-align: left;
     font-size: 17px;
@@ -54,17 +54,18 @@ p {
 }
 
 a {
-    color: chartreuse;
+    color: darkseagreen;
     text-decoration: none;
 }
 
 a:hover {
-    color: blue;
+    color: seagreen;
+    transition: .3s ease;
 }
 
 
 details {
-    color: white;
+    color: darkseagreen;
     font-size: 15px;
     padding: 10px;
 
