@@ -89,9 +89,9 @@ details[open] > summary {
 }
 
 #rightcontent {
-    padding-left: 100px;
-    padding-right: 100px;
-    padding-top: 60px;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 20px;
 }
 
 h1 {
