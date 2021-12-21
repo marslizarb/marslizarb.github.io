@@ -265,3 +265,11 @@ img:hover {
     padding: 0px;
     line-height: inherit;
 }
+
+.ascii a {
+    color: darkseagreen;
+}
+
+.ascii a:hover {
+    color: wheat;
+}
