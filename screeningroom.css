@@ -2,6 +2,7 @@ body {
     font-family: 'Roboto', sans-serif;
     font-family: 'Lora', serif;
     background-color: black;
+    color: whitesmoke;
     padding: 20px;
 }
 
@@ -17,56 +18,93 @@ body {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: seashell;
+  background: whitesmoke;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: seagreen;
+  background: darkgray;
 }
 
 .screen {
     margin-left: 300px;
     margin-right: 300px;
-    padding: 70px;
+    padding: 50px;
 }
+
+.screen input[type=checkbox] {
+  display: none
+}
+
+.screen img {
+  display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    transition: transform 0.3s ease;
+    cursor: zoom-in;
+    padding: 10px;
+}
+
+.screen input[type=checkbox]:checked~img {
+  transform: scale(1.2);
+  cursor: zoom-out
+}
+
 
 .text {
     margin: auto;
-    width: 20%;
-    border: 1px solid seashell;
-    padding: 40px;
+    width: 25%;
+    border: 1px solid whitesmoke;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: black;
+}
+
+.textFixed {
+    margin: auto;
+    width: 25%;
+    border: 1px solid whitesmoke;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: black;
+    position: fixed;
+    bottom: 40px;
+    left: 0;
+    right: 0;
 }
 
 h1 {
-    color: seashell;
     font-family: 'Lora', serif;
     font-size: 27px;
     line-height: 37px;
 }
 
 p {
-    color: seashell;
     font-family: 'Roboto', sans-serif;
     text-align: left;
-    font-size: 17px;
-    line-height: 25px;
+    font-size: 15px;
+    line-height: 24px;
 }
 
 a {
-    color: darkseagreen;
+    color: darkgray;
     text-decoration: none;
 }
 
 a:hover {
-    color: seagreen;
-    transition: .3s ease;
+    background-color: whitesmoke;
+    color: black;
 }
 
 
 details {
-    color: darkseagreen;
-    font-size: 15px;
+    color: darkgray;
+    font-size: 14px;
     padding: 10px;
 
 }
@@ -91,10 +129,4 @@ nav {
 nav p {
     font-size: 12px;
     text-align: center;
-}
-
-li {
-    font-family: 'Roboto', sans-serif;
-    font-size: 17px;
-    line-height: 35px;
 }
