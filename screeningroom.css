@@ -103,14 +103,15 @@ a:hover {
 
 
 details {
-    color: darkgray;
+    color: whitesmoke;
     font-size: 14px;
     padding: 10px;
 
 }
 
-summary {
+summary:hover {
     cursor: pointer;
+    color: darkgray;
 }
 
 details > summary {
