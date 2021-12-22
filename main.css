@@ -70,8 +70,8 @@ details[open] > summary {
 #leftcontent {
     padding-top: 20px;
     padding-bottom: 20px;
-    padding-left: 60px;
-    padding-right: 60px;
+    padding-left: 50px;
+    padding-right: 50px;
 }
 
 #right {
@@ -89,8 +89,8 @@ details[open] > summary {
 }
 
 #rightcontent {
-    padding-left: 60px;
-    padding-right: 60px;
+    padding-left: 50px;
+    padding-right: 50px;
     padding-top: 20px;
 }
 
