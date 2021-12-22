@@ -53,12 +53,13 @@ body {
 
 .text {
     margin: auto;
+    margin-top: 15px;
     width: 500px;
     border: 1px solid whitesmoke;
     padding-left: 40px;
     padding-right: 40px;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     background-color: black;
 }
 
@@ -68,8 +69,8 @@ body {
     border: 1px solid whitesmoke;
     padding-left: 40px;
     padding-right: 40px;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     background-color: black;
     position: fixed;
     bottom: 15px;
