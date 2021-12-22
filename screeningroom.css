@@ -27,9 +27,8 @@ body {
 }
 
 .screen {
-    margin-left: 300px;
-    margin-right: 300px;
-    padding: 50px;
+    margin-left: 15%;
+    margin-right: 15%;
 }
 
 .screen input[type=checkbox] {
@@ -54,41 +53,41 @@ body {
 
 .text {
     margin: auto;
-    width: 25%;
+    width: 500px;
     border: 1px solid whitesmoke;
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     background-color: black;
 }
 
 .textFixed {
     margin: auto;
-    width: 25%;
+    width: 500px;
     border: 1px solid whitesmoke;
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     background-color: black;
     position: fixed;
-    bottom: 40px;
+    bottom: 15px;
     left: 0;
     right: 0;
 }
 
 h1 {
     font-family: 'Lora', serif;
-    font-size: 27px;
-    line-height: 37px;
+    font-size: 20px;
+    line-height: 32px;
 }
 
 p {
     font-family: 'Roboto', sans-serif;
     text-align: left;
-    font-size: 15px;
-    line-height: 24px;
+    font-size: 13px;
+    line-height: 21px;
 }
 
 a {
@@ -104,7 +103,7 @@ a:hover {
 
 details {
     color: whitesmoke;
-    font-size: 14px;
+    font-size: 13px;
     padding: 10px;
 
 }
@@ -128,6 +127,6 @@ nav {
 }
 
 nav p {
-    font-size: 12px;
+    font-size: 10px;
     text-align: center;
 }
