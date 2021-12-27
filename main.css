@@ -10,41 +10,36 @@ body {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: seashell;
+  background: #022870;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: darkseagreen;
+  background: #000236;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: wheat;
+    background: #E93B07;
 }
 
 /* navigation on the left */
 
 details {
-    color: darkseagreen;
     font-size: 15px;
     padding: 5px;
     line-height: auto;
 }
 
-summary {
-    cursor: pointer;
-}
-
-details {
-    cursor: pointer;
-}
-
-
 details > summary {
     list-style-type: '◑ ';
-    color: wheat;
+    color: #022870;
 }
+
+details:hover {
+    cursor: pointer;
+}
+
 
 details[open] > summary {
     list-style-type: '◒ ';
@@ -59,12 +54,11 @@ details[open] > summary {
     overflow: auto;
     text-align: left;
     font-size: 20px;
-    color: seashell;
-    background: seagreen; 
+    background: #000015; 
 }
 
 #leftcontent details {
-    color: seashell;
+    color: #562A6B;
 }
 
 #leftcontent {
@@ -83,8 +77,7 @@ details[open] > summary {
     overflow: auto;
     text-align: left;
     font-size: 20px;
-    color: seagreen;
-    background: seashell; 
+    background: #022870; 
     
 }
 
@@ -116,7 +109,7 @@ a {
 }
 
 #leftcontent a {
-    color: wheat;
+    color: #022870;
     text-decoration: none;
 }
 
@@ -127,17 +120,16 @@ a {
 }
 
 #rightcontent a {
-    color: darkseagreen;
+    color: #000015;
 }
 
 #right a:hover {
-    color: seagreen;
+    color: #E93B07;
     transition: .5s ease;
 }
 
 #left a:hover {
-    color: seashell;
-    background-color: darkseagreen;
+    color: #E93B07;
     transition: .3s ease;
 }
 
@@ -164,11 +156,11 @@ footer {
     font-size: 10px;
     margin-top: 5%;
     margin-bottom: 1%;
-    color: darkseagreen;
+    color: #000015;
 }
 
 footer a {
-    color: seagreen;
+    color: #E93B07 ;
 }
 
 .lost { /* 404 page */
@@ -261,15 +253,6 @@ img:hover {
 
 .ascii {
     font-size: .7vw;
-    color: darkseagreen;
     padding: 0px;
     line-height: inherit;
-}
-
-.ascii a {
-    color: darkseagreen;
-}
-
-.ascii a:hover {
-    color: wheat;
 }
