@@ -131,3 +131,7 @@ nav p {
     font-size: 10px;
     text-align: center;
 }
+.credits, .credits p {
+    text-align: center;
+    line-height: inherit;
+}
