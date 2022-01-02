@@ -26,6 +26,10 @@ body {
   background: darkgray;
 }
 
+iframe {
+    z-index: -10;
+}
+
 .screen {
     margin-left: 15%;
     margin-right: 15%;
@@ -47,7 +51,7 @@ body {
 
 .screen input[type=checkbox]:checked~img {
     transform: scale(2);
-    cursor: zoom-out
+    cursor: zoom-out;
 }
 
 .text {
@@ -75,7 +79,6 @@ body {
     bottom: 15px;
     left: 0;
     right: 0;
-    z-index: 99;
 }
 
 h1 {
