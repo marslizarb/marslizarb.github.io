@@ -36,20 +36,19 @@ body {
 }
 
 .screen img {
-  display: block;
+    display: inline-block;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
+    width: 47.7%;
     transition: transform 0.3s ease;
     cursor: zoom-in;
     padding: 10px;
 }
 
 .screen input[type=checkbox]:checked~img {
-  transform: scale(2);
-  cursor: zoom-out
+    transform: scale(2);
+    cursor: zoom-out
 }
-
 
 .text {
     margin: auto;
