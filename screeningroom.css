@@ -115,7 +115,6 @@ a:hover {
     color: #000015;
 }
 
-
 details {
     color: lavender;
     font-size: 13px;
@@ -145,7 +144,36 @@ nav p {
     font-size: 10px;
     text-align: center;
 }
+
 .credits, .credits p {
     text-align: center;
     line-height: inherit;
+}
+
+
+
+.illoimage img {
+    width: 60%;
+    float: left;
+    margin: auto;
+    margin-top: 5px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.illotext {
+    width: 35%;
+    float: right;
+    margin: auto;
+    margin-top: 15px;
+    border: 1px solid lavender;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.illotext img {
+    width: 100%;
+    padding-top: 10px;
 }
