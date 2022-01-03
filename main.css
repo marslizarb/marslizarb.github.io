@@ -98,7 +98,6 @@ details a:hover {
 
 details {
     font-size: 15px;
-    padding: 5px;
     line-height: auto;
 }
 
@@ -233,7 +232,7 @@ img:hover {
     line-height: inherit;
 }
 
-@media all and (max-width: 900px) {
+@media all and (max-width: 1100px) {
     
     #left {
         height: 100%;
