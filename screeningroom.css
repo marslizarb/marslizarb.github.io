@@ -1,8 +1,18 @@
+/* PALETTE
+
+blue: #022870
+dark blue: #000236
+black: #000015
+red: #E93B07
+white: lavender
+
+*/
+
 body {
     font-family: 'Roboto', sans-serif;
     font-family: 'Lora', serif;
-    background-color: black;
-    color: whitesmoke;
+    background-color: #000015;
+    color: lavender;
     padding: 20px;
 }
 
@@ -13,17 +23,17 @@ body {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: black;
+  background: #000015;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: whitesmoke;
+  background: lavender;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: darkgray;
+  background: #022870;
 }
 
 iframe {
@@ -59,23 +69,23 @@ iframe {
     margin: auto;
     margin-top: 15px;
     width: 500px;
-    border: 1px solid whitesmoke;
+    border: 1px solid lavender;
     padding-left: 40px;
     padding-right: 40px;
     padding-top: 10px;
     padding-bottom: 10px;
-    background-color: black;
+    background-color: #000015;
 }
 
 .textFixed {
     margin: auto;
     width: 500px;
-    border: 1px solid whitesmoke;
+    border: 1px solid lavender;
     padding-left: 40px;
     padding-right: 40px;
     padding-top: 10px;
     padding-bottom: 10px;
-    background-color: black;
+    background-color: #000015;
     position: fixed;
     bottom: 15px;
     left: 0;
@@ -101,13 +111,13 @@ a {
 }
 
 a:hover {
-    background-color: whitesmoke;
-    color: black;
+    background-color: lavender;
+    color: #000015;
 }
 
 
 details {
-    color: whitesmoke;
+    color: lavender;
     font-size: 13px;
     padding: 10px;
 
@@ -115,7 +125,7 @@ details {
 
 summary:hover {
     cursor: pointer;
-    color: darkgray;
+    color: #022870;
 }
 
 details > summary {
