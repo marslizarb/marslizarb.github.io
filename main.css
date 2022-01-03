@@ -1,3 +1,13 @@
+/* PALETTE
+
+blue: #022870
+dark blue: #000236
+black: #000015
+red: #E93B07
+white: lavender
+
+*/
+
 body {
     font-family: 'Roboto', sans-serif;
     font-family: 'Lora', serif;
@@ -23,27 +33,20 @@ body {
     background: #E93B07;
 }
 
-/* navigation on the left */
+/* universal */
 
-details {
-    font-size: 15px;
-    padding: 5px;
-    line-height: auto;
+h1 {
+    line-height: normal;
+    font-family: 'Lora', serif;
+    font-size: 45px;
+    color: #E93B07;
 }
 
-details > summary {
-    list-style-type: '◑ ';
-    color: #022870;
+a {
+    text-decoration: none;
 }
 
-details:hover {
-    cursor: pointer;
-}
-
-
-details[open] > summary {
-    list-style-type: '◒ ';
-}
+/* left bar */
 
 #left {
     height: 100%;
@@ -58,7 +61,7 @@ details[open] > summary {
 }
 
 #leftcontent details {
-    color: #562A6B;
+    color: lavender;
 }
 
 #leftcontent {
@@ -67,6 +70,57 @@ details[open] > summary {
     padding-left: 50px;
     padding-right: 50px;
 }
+
+#left h1 {
+    color: #022870;
+
+}
+
+#left h1:hover {
+    color: lavender;
+    transition: .3s ease;
+}
+
+#left p {
+    font-family: sans-serif;
+    font-size: 17px;
+    line-height: 30px;
+}
+
+details a {
+    color: #E93B07;
+    text-decoration: none;
+}
+
+details a:hover {
+    text-decoration: underline;
+}
+
+details {
+    font-size: 15px;
+    padding: 5px;
+    line-height: auto;
+}
+
+details > summary {
+    list-style-type: '◑ ';
+    color: #E93B07;
+}
+
+details > summary:hover {
+    color: lavender;
+    transition: .3s ease;
+}
+
+details:hover {
+    cursor: pointer;
+}
+
+details[open] > summary {
+    list-style-type: '◒ ';
+}
+
+/* right bar */
 
 #right {
     height: 100%;
@@ -78,39 +132,21 @@ details[open] > summary {
     text-align: left;
     font-size: 20px;
     background: #022870; 
-    
+}
+
+#right h1 {
+    color: #000015;
+}
+
+#right h1:hover {
+    color: #E93B07;
+    transition: .3s ease;
 }
 
 #rightcontent {
     padding-left: 50px;
     padding-right: 50px;
     padding-top: 20px;
-}
-
-h1 {
-    line-height: normal;
-    font-family: 'Lora', serif;
-    font-size: 45px;
-}
-
-#bioimg {    
-    width: 100%; 
-    padding-top: 50px;
-}
-
-#left p {
-    font-family: sans-serif;
-    font-size: 17px;
-    line-height: 30px;
-}
-
-a {
-    text-decoration: none;
-}
-
-#leftcontent a {
-    color: #022870;
-    text-decoration: none;
 }
 
 #right p {
@@ -126,11 +162,6 @@ a {
 #right a:hover {
     color: #E93B07;
     transition: .5s ease;
-}
-
-#left a:hover {
-    color: #E93B07;
-    transition: .3s ease;
 }
 
 /* videos */
