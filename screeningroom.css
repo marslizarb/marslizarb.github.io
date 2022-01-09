@@ -13,7 +13,14 @@ body {
     font-family: 'Lora', serif;
     background-color: #000015;
     color: lavender;
+}
+
+.container {
     padding: 20px;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 /* width */
@@ -36,38 +43,11 @@ body {
   background: #022870;
 }
 
-iframe {
-    padding-bottom: 15px;
-}
-
-.screen {
-    margin-left: 15%;
-    margin-right: 15%;
-}
-
-.screen input[type=checkbox] {
-  display: none
-}
-
-.screen img {
-    display: inline-block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 48.7%;
-    transition: transform 0.3s ease;
-    cursor: zoom-in;
-    padding: 5px;
-}
-
-.screen input[type=checkbox]:checked~img {
-    transform: scale(2);
-    cursor: zoom-out;
-}
-
-.text {
+.title {
     margin: auto;
     margin-top: 15px;
-    width: 500px;
+    margin-bottom: 35px;
+    width: 80%;
     border: 1px solid lavender;
     padding-left: 40px;
     padding-right: 40px;
@@ -76,12 +56,28 @@ iframe {
     background-color: #000015;
 }
 
-.textFixed {
+.text {
+    width: 35%;
+    float: right;
     margin: auto;
-    width: 500px;
+    margin-top: 15px;
     border: 1px solid lavender;
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.text img {
+    width: 100%;
+    padding-top: 10px;
+}
+
+nav {
+    width: 100px;
+    border: 1px solid lavender;
+    padding-left: 20px;
+    padding-right: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
     background-color: #000015;
@@ -89,6 +85,44 @@ iframe {
     bottom: 15px;
     left: 0;
     right: 0;
+    z-index: 1;
+    margin: auto;
+}
+
+nav p {
+    font-size: 10px;
+    text-align: center;
+}
+
+.display img {
+    width: 60%;
+    float: left;
+    margin: auto;
+    margin-top: 5px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+.column {
+    float: left;
+    width: 50%;
+    padding: 15px;
+}
+
+/* Clear floats after image containers */
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.video {
+    width: 60%;
+    float: left;
+    margin: auto;
+    padding: 15px;
 }
 
 h1 {
@@ -106,7 +140,7 @@ p {
 
 a {
     color: lavender;
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 a:hover {
@@ -134,44 +168,9 @@ details[open] > summary {
     list-style-type: '◒ ';
 }
 
-nav {
-    margin: auto;
-}
 
-nav p {
-    font-size: 10px;
-    text-align: center;
-}
 
 .credits, .credits p {
     text-align: center;
     line-height: inherit;
-}
-
-
-
-.illoimage img {
-    width: 60%;
-    float: left;
-    margin: auto;
-    margin-top: 5px;
-    padding-right: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
-.illotext {
-    width: 35%;
-    float: right;
-    margin: auto;
-    margin-top: 15px;
-    border: 1px solid lavender;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-.illotext img {
-    width: 100%;
-    padding-top: 10px;
 }
