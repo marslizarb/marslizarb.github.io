@@ -59,8 +59,8 @@ body {
 .text {
     width: 35%;
     float: right;
-    margin: auto;
     margin-top: 15px;
+    margin-right: 15px;
     border: 1px solid lavender;
     padding-left: 20px;
     padding-right: 20px;
