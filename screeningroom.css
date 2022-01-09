@@ -37,7 +37,6 @@ body {
 }
 
 iframe {
-    z-index: -10;
     padding-bottom: 15px;
 }
 
@@ -106,13 +105,12 @@ p {
 }
 
 a {
-    color: darkgray;
+    color: lavender;
     text-decoration: none;
 }
 
 a:hover {
-    background-color: lavender;
-    color: #000015;
+    color: #E93B07;
 }
 
 details {
@@ -124,7 +122,7 @@ details {
 
 summary:hover {
     cursor: pointer;
-    color: #022870;
+    color: #E93B07;
 }
 
 details > summary {
