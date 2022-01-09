@@ -102,7 +102,7 @@ nav p {
 /* Three image containers (use 25% for four, and 50% for two, etc) */
 .column {
     float: left;
-    width: 50%;
+    width: 33.33333333333333333333333%;
     padding: 15px;
 }
 
@@ -168,4 +168,9 @@ details[open] > summary {
 .credits, .credits p {
     text-align: center;
     line-height: inherit;
+}
+
+hr {
+    border: 0;
+    margin: 65px;
 }
