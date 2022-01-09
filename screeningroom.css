@@ -57,15 +57,15 @@ body {
 }
 
 .text {
-    width: 35%;
+    width: 25%;
     float: right;
     margin-top: 15px;
     margin-right: 15px;
     border: 1px solid lavender;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 .text img {
@@ -94,14 +94,9 @@ nav p {
     text-align: center;
 }
 
-.display img {
-    width: 60%;
-    float: left;
-    margin: auto;
-    margin-top: 5px;
-    padding-right: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+.image img {
+    max-width: 70%;
+    padding: 15px;
 }
 
 /* Three image containers (use 25% for four, and 50% for two, etc) */
@@ -119,7 +114,7 @@ nav p {
 }
 
 .video {
-    width: 60%;
+    width: 70%;
     float: left;
     margin: auto;
     padding: 15px;
@@ -140,7 +135,7 @@ p {
 
 a {
     color: lavender;
-    text-decoration: underline;
+    text-underline-offset: 4px;
 }
 
 a:hover {
