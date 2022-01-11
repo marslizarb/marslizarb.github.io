@@ -167,7 +167,7 @@ details[open] > summary {
 
 .credits, .credits p {
     text-align: center;
-    line-height: inherit;
+    line-height: 21px;
 }
 
 hr {
