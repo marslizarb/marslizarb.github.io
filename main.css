@@ -29,29 +29,20 @@ a {
 /* table */
 
 table {
-    margin: auto;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    max-width: 1500px;
+    width: 100%;
 	position: relative;
     line-height: 25px;
     font-family: 'Roboto', sans-serif;
-    font-size: 16px;
+    font-size: 13.28px;
     color: lavender;
     border-collapse: collapse;
     text-align: center;
+    word-wrap: break-word;
 }
 
 th, td {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left: 40px;
-    padding-right: 40px;
+    padding: 5px;
     border: 1px solid lavender;
-}
-
-table img {
-    max-width: 70px;
 }
 
 table a {
