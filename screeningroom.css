@@ -26,26 +26,6 @@ body {
   box-sizing: border-box;
 }
 
-/* width */
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: #000015;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: lavender;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #022870;
-}
-
 .title {
     margin: auto;
     margin-top: 15px;
