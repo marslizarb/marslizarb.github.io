@@ -13,26 +13,6 @@ body {
     font-family: 'Lora', serif;
 }
 
-/* width */
-::-webkit-scrollbar {
-  width: 20px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: #022870;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #000236;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-    background: #E93B07;
-}
-
 /* universal */
 
 h1 {
@@ -44,6 +24,47 @@ h1 {
 
 a {
     text-decoration: none;
+}
+
+/* table */
+
+table {
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    max-width: 1500px;
+	position: relative;
+    line-height: 25px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: lavender;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+th, td {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    border: 1px solid lavender;
+}
+
+table img {
+    max-width: 70px;
+}
+
+table a {
+    color: lavender;
+}
+
+tr:hover {
+    background-color: #022870;
+}
+
+th {
+  background-color: lavender;
+  color: #022870;
 }
 
 /* left bar */
