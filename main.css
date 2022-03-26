@@ -85,7 +85,11 @@ th {
 
 #left h1 {
     color: #022870;
+}
 
+#left h5 {
+    color: lavender;
+    text-decoration-style: solid;
 }
 
 #left h1:hover {
