@@ -2,263 +2,786 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>marcie lacerte ☀ portfolio</title>
+    <title>marcie lacerte</title>
     <link rel="stylesheet" type="text/css" href="main.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="Marcie LaCerte, animation, experimental animation, editorial animation, motion graphics, new york animator, freelance animator, motion designer, marslizard" />
+    <meta name="keywords" content="Marcie LaCerte, animation, experimental animation, editorial animation, motion graphics, new york animator, freelance animator, motion designer, marslizard, new york city animator, independent filmmaker, director" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Xanh+Mono&display=swap" rel="stylesheet">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@600&family=Roboto&display=swap');
+</style>
+    <script type="text/javascript">
+// <![CDATA[
+var colour="#E93B07";
+var sparkles=120;
+
+/****************************
+*  Tinkerbell Magic Sparkle *
+* (c) 2005 mf2fm web-design *
+*  http://www.mf2fm.com/rv  *
+* DON'T EDIT BELOW THIS BOX *
+****************************/
+var x=ox=400;
+var y=oy=300;
+var swide=800;
+var shigh=600;
+var sleft=sdown=0;
+var tiny=new Array();
+var star=new Array();
+var starv=new Array();
+var starx=new Array();
+var stary=new Array();
+var tinyx=new Array();
+var tinyy=new Array();
+var tinyv=new Array();
+
+window.onload=function() { if (document.getElementById) {
+  var i, rats, rlef, rdow;
+  for (var i=0; i<sparkles; i++) {
+    var rats=createDiv(3, 3);
+    rats.style.visibility="hidden";
+    document.body.appendChild(tiny[i]=rats);
+    starv[i]=0;
+    tinyv[i]=0;
+    var rats=createDiv(5, 5);
+    rats.style.backgroundColor="transparent";
+    rats.style.visibility="hidden";
+    var rlef=createDiv(1, 5);
+    var rdow=createDiv(5, 1);
+    rats.appendChild(rlef);
+    rats.appendChild(rdow);
+    rlef.style.top="2px";
+    rlef.style.left="0px";
+    rdow.style.top="0px";
+    rdow.style.left="2px";
+    document.body.appendChild(star[i]=rats);
+  }
+  set_width();
+  sparkle();
+}}
+
+function sparkle() {
+  var c;
+  if (x!=ox || y!=oy) {
+    ox=x;
+    oy=y;
+    for (c=0; c<sparkles; c++) if (!starv[c]) {
+      star[c].style.left=(starx[c]=x)+"px";
+      star[c].style.top=(stary[c]=y)+"px";
+      star[c].style.clip="rect(0px, 5px, 5px, 0px)";
+      star[c].style.visibility="visible";
+      starv[c]=50;
+      break;
+    }
+  }
+  for (c=0; c<sparkles; c++) {
+    if (starv[c]) update_star(c);
+    if (tinyv[c]) update_tiny(c);
+  }
+  setTimeout("sparkle()", 40);
+}
+
+function update_star(i) {
+  if (--starv[i]==25) star[i].style.clip="rect(1px, 4px, 4px, 1px)";
+  if (starv[i]) {
+    stary[i]+=1+Math.random()*3;
+    if (stary[i]<shigh+sdown) {
+      star[i].style.top=stary[i]+"px";
+      starx[i]+=(i%5-2)/5;
+      star[i].style.left=starx[i]+"px";
+    }
+    else {
+      star[i].style.visibility="hidden";
+      starv[i]=0;
+      return;
+    }
+  }
+  else {
+    tinyv[i]=50;
+    tiny[i].style.top=(tinyy[i]=stary[i])+"px";
+    tiny[i].style.left=(tinyx[i]=starx[i])+"px";
+    tiny[i].style.width="2px";
+    tiny[i].style.height="2px";
+    star[i].style.visibility="hidden";
+    tiny[i].style.visibility="visible"
+  }
+}
+
+function update_tiny(i) {
+  if (--tinyv[i]==25) {
+    tiny[i].style.width="1px";
+    tiny[i].style.height="1px";
+  }
+  if (tinyv[i]) {
+    tinyy[i]+=1+Math.random()*3;
+    if (tinyy[i]<shigh+sdown) {
+      tiny[i].style.top=tinyy[i]+"px";
+      tinyx[i]+=(i%5-2)/5;
+      tiny[i].style.left=tinyx[i]+"px";
+    }
+    else {
+      tiny[i].style.visibility="hidden";
+      tinyv[i]=0;
+      return;
+    }
+  }
+  else tiny[i].style.visibility="hidden";
+}
+
+document.onmousemove=mouse;
+function mouse(e) {
+  set_scroll();
+  y=(e)?e.pageY:event.y+sdown;
+  x=(e)?e.pageX:event.x+sleft;
+}
+
+function set_scroll() {
+  if (typeof(self.pageYOffset)=="number") {
+    sdown=self.pageYOffset;
+    sleft=self.pageXOffset;
+  }
+  else if (document.body.scrollTop || document.body.scrollLeft) {
+    sdown=document.body.scrollTop;
+    sleft=document.body.scrollLeft;
+  }
+  else if (document.documentElement && (document.documentElement.scrollTop || document.documentElement.scrollLeft)) {
+    sleft=document.documentElement.scrollLeft;
+	sdown=document.documentElement.scrollTop;
+  }
+  else {
+    sdown=0;
+    sleft=0;
+  }
+}
+
+window.onresize=set_width;
+function set_width() {
+  if (typeof(self.innerWidth)=="number") {
+    swide=self.innerWidth;
+    shigh=self.innerHeight;
+  }
+  else if (document.documentElement && document.documentElement.clientWidth) {
+    swide=document.documentElement.clientWidth;
+    shigh=document.documentElement.clientHeight;
+  }
+  else if (document.body.clientWidth) {
+    swide=document.body.clientWidth;
+    shigh=document.body.clientHeight;
+  }
+}
+
+function createDiv(height, width) {
+  var div=document.createElement("div");
+  div.style.position="absolute";
+  div.style.height=height+"px";
+  div.style.width=width+"px";
+  div.style.overflow="hidden";
+  div.style.backgroundColor=colour;
+  return (div);
+}
+// ]]>
+</script>
+
 </head>
     
 <body> 
-    <div align="center" style="z-index:9;visibility:visible;"><a href="https://www.totallyfreecursors.com/" target="_blank" class="tfc"><img src="https://downloads.totallyfreecursors.com/public/CursorsLogo88-31.gif" border="0" width="88" height="31" alt="Free Daisy ani Cursors at www.totallyfreecursors.com" /></a></div><style>HTML,BODY{cursor: url("https://downloads.totallyfreecursors.com/cursor_files/daisyani.ani"), url("https://downloads.totallyfreecursors.com/thumbnails/daisyani.gif"), auto;}</style>
+    
     
 
     
 <div id="left">
     <div id="leftcontent">
-    <h1>Marcie LaCerte</h1>       
-        <p>Marcie is a Chinese-American experimental and editorial animator based in Manhattan. She is currently a Creative Culture fellow at the Jacob Burns Film Center and is working on a short film. Most recently, she worked as an animator for <i>Explained</i> on Netflix.<br><br>
-        She is interested in creating work that examines human psychology through a humorous, surreal lens. She is also interested in interactive fiction, sketch comedy, and filmmaking. In her free time, she enjoys thrift shopping and watching extremely long videos on YouTube about pop culture.<br><br>
-        Please send good content to <a href="mailto:marcielacerte@gmail.com">marcielacerte@gmail.com</a>.<br><br>
-            
-            SELECTED PRESS: <a href="https://www.cbc.ca/radio/asithappens/as-it-happens-thursday-edition-1.5927937/why-this-artist-animated-people-s-weird-pandemic-dreams-1.5928323">CBC Radio</a>, <a href="https://directorsnotes.com/2021/02/24/stevie-borrello-marcie-lacerte-meghan-mcdonough-invisible-monsters-and-tomato-soup/">Director's Notes</a>, <a href="https://www.newyorker.com/culture/the-new-yorker-documentary/the-mysteries-and-motifs-of-pandemic-dreams">The New Yorker</a>, <a href="https://game-curator.com/indie/an-afternoon-rippling/">Game Curator</a>, <a href="https://www.rockpapershotgun.com/2019/09/09/an-afternoon-rippling-wants-to-take-you-on-a-very-peculiar-hike/">Rock Paper Shotgun</a>, <a href="http://www.itsnicethat.com/articles/marcie-lacerte-summer-of-love-animation-240717" target="_blank">It's Nice That</a>, <a href="https://www.cartoonbrew.com/feature-film/200-artists-collaborated-on-a-remake-of-dreamworks-shrek-166803.html">Cartoon Brew</a>, <a href="http://girlsinfilm.net/videos/summer-of-love" target="_blank">Girls in Film</a><!--, <a href="http://www.sothetheorygoes.com/summer-of-love/" target="_blank">So The Theory Goes</a>--><br><br>
-            
-            BEHIND THE SCENES: <a href="https://docs.google.com/presentation/d/15BO8Cv0pFcE8fiY37k6Gq9ZgQ9wmRgFJSSO833-ub9A/edit"><i>Invisible Monsters and Tomato Soup</i></a>, <a href="https://docs.google.com/presentation/d/1VM_cIjjTwb659vOE1pc8qUvyTrpkL-hZnxbGqSm-0hU/edit#slide=id.p"><i>Everything you wanted to know about animal farts</i></a><br><br>
-            
-        <a href="https://marslizard.substack.com/p/coming-soon?r=wuic&utm_campaign=post&utm_medium=web&utm_source=copy">newsletter</a> / <a href="https://society6.com/marslizard">store</a> / <a target="_blank" href="https://vimeo.com/marcielacerte">vimeo</a> / <a target="_blank" href="http://instagram.com/marslizard">instagram</a> / <!--<a target="_blank" href="https://twitter.com/marslizarb">twitter</a> / --><a href="https://marcielizard.tumblr.com">tumblr</a> <!--/ <a href="https://workingnotworking.com/26046-marcie">working not working</a>--> / <a href="CV.html">CV and Artist's Statement</a></p>
         
-        
-        
-    <a href="https://vimeo.com/video/464562556"><img id="bioimg" src="gifs/juggle.gif"></a>
-    <a href="https://www.youtube.com/watch?v=eI9zc92lWi4"><img id="bioimg" src="gifs/lobby.gif"></a>
-    <img id="bioimg" src="gifs/sketchbookA.gif">
-    <a href="https://vimeo.com/362159042"><img id="bioimg" src="gifs/sketchbookB.gif"></a>
-    <a href="https://www.youtube.com/watch?v=Z6j0OC9q-Bc"><img id="bioimg" src="gifs/sketchbookC.gif"></a>
-    <a href="https://vimeo.com/263808097"><img id="bioimg" src="gifs/sol_boat.gif"></a>
-    <a href="https://vimeo.com/316190574"><img id="bioimg" src="gifs/qz_drunk.gif"></a>
-    <a href="https://vimeo.com/video/464562556"><img id="bioimg" src="gifs/wiggly.gif"></a>
-    <p><a href="thecluster.html">notebook</a></p>
-
-        
-
-
-
+    <a href="#rightcontent"><h1>Welcome to Marcie's Moving Image Catalog ✴</h1></a>
+        <details>
+            <summary>about me</summary>
+            <p>Marcie LaCerte is a Chinese-American animator and art director based in NYC. She is currently in production on an animated short film produced through the <a href="https://burnsfilmcenter.org/creative-culture-fellowship-program/">Creative Culture Fellowship</a> at the Jacob Burns Film Center.</p> 
+            <p>She works as a motion graphics designer, and her clients include Vox, PBS, NPR, and Quartz. Her films have been recognized by Vimeo Staff Picks, Ottawa International Animation Festival, GLAS, AFI Docs, and more. She has given talks at the CalArts Experimental Animation program, the Living Room Light Exchange (New York), and the Light Grey Art Lab Residency.</p>
+            <p>She is interested in making personal films that use humor, surrealism, and metaphor to explore themes of alienation and identity. Her work combines analog and digital techniques, and she enjoys experimenting with collage and stop motion. Beyond film, she is  interested in interactive storytelling and multimedia art. In her free time, she enjoys thrift shopping, listening to podcasts, and <a href="https://www.wortfm.org/new-domains-how-madison-became-the-home-of-shrekfest/">talking about Shrek</a>.</p>
+        </details>
+        <br>
+        <details>
+            <summary>contact me</summary>
+            <p>Email <a href="mailto:me@marslizard.net">me@marslizard.net</a> for commissions, collaborations, or questions!</p>
+        </details>
+        <br>
+        <details>
+            <summary>read (and listen) about my work</summary>
+            <p>
+                <a href="https://www.wortfm.org/new-domains-how-madison-became-the-home-of-shrekfest/">WORT-FM (2021)</a><br>
+                <a href="https://www.newyorker.com/culture/the-new-yorker-documentary/the-mysteries-and-motifs-of-pandemic-dreams">The New Yorker (2021)</a><br>
+                <a href="https://www.itsnicethat.com/articles/marcie-lacerte-invisible-monsters-and-tomato-soup-new-yorker-animation-180321">It's Nice That (2021)</a><br>
+                <a href="https://www.cbc.ca/radio/asithappens/as-it-happens-thursday-edition-1.5927937/why-this-artist-animated-people-s-weird-pandemic-dreams-1.5928323">CBC Radio (2021)</a><br>
+                <a href="https://directorsnotes.com/2021/02/24/stevie-borrello-marcie-lacerte-meghan-mcdonough-invisible-monsters-and-tomato-soup/">Director's Notes (2021)</a><br>
+                <a href="https://www.zippyframes.com/shorts/invisible-monsters-potato-soup">Zippy Frames (2021)</a><br>
+                <a href="https://www.stashmedia.tv/invisible-monsters-and-tomato-soup-or-how-i-learned-to-love-dreaming-during-covid/">Stash Media (2021)</a><br>
+                <a href="https://open.spotify.com/episode/5bzQGZ5R1irEwOUIwJ7kob?si=cd631b5c4b4e49e8">Edge Guard Cast (2019)</a><br>
+                <a href="https://game-curator.com/indie/an-afternoon-rippling/">Game Curator (2019)</a><br>
+                <a href="https://www.rockpapershotgun.com/2019/09/09/an-afternoon-rippling-wants-to-take-you-on-a-very-peculiar-hike/">Rock Paper Shotgun (2019)</a><br>
+                <a href="https://www.cartoonbrew.com/feature-film/200-artists-collaborated-on-a-remake-of-dreamworks-shrek-166803.html">Cartoon Brew (2018)</a><br>
+                <a href="http://www.itsnicethat.com/articles/marcie-lacerte-summer-of-love-animation-240717" target="_blank">It's Nice That (2017)</a><br>
+                <a href="http://girlsinfilm.net/videos/summer-of-love" target="_blank">Girls in Film (2017)</a><br>
+                <a href="http://www.sothetheorygoes.com/summer-of-love/" target="_blank">So The Theory Goes (2017)</a>
+            </p>
+        </details>
+        <br>
+        <details>
+            <summary>find me around the web</summary>
+            <p><a href="https://docs.google.com/document/d/12FpeJOo8_hZ4L8JjceKEtF_2qZkiRWsiGe_VQZDma44/edit?usp=sharing">resume</a> / <a href="https://marslizard.substack.com/p/coming-soon?r=wuic&utm_campaign=post&utm_medium=web&utm_source=copy">newsletter</a> / <a href="https://society6.com/marslizard">store</a> / <a target="_blank" href="http://instagram.com/marslizard">instagram</a> / <a target="_blank" href="https://twitter.com/marslizarb">twitter</a> / <a href="https://www.are.na/marcie-lacerte">are.na</a></p>
+        </details>
+        <br>
+        <details>
+            <summary>behind the scenes</summary>
+            <p>How I make mood boards (coming soon!)</p>
+            <p><a href="https://marslizard.notion.site/Process-Invisible-Monsters-and-Tomato-Soup-d3d6f07cb24c46b9a53e8b3da4c11aac">How we made <i>Invisible Monsters and Tomato Soup</i></a></p>
+            <p><a href="https://marslizard.notion.site/Process-Everything-You-Wanted-To-Know-About-Animal-Farts-e3129e16a3af4de3803769e54e9de9f5">How I animated <i>Everything You Need To Know About Animal Farts</i></a></p>
+            <p><a href="/chaos/">On Cultivating Chaos in Art</a></p>
+            <p>How to make money while doing personal projects: <i>An Afternoon Rippling</i> case study (coming soon!)</p>
+        </details><br>
+        <details>
+            <summary>browse the archives</summary>
+            <p><a href="/catalog.html">open if you must</a></p>
+        </details>
 
 
     </div>
 </div>
     
 <div id="right"> 
+    
     <div id="rightcontent">
-        <div class="wrapper" id="reel">
-        <div class="video">
-            <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/589996803?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;h=f53338129f" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Demo Reel 2021"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>        </div>  
+        
+
+        <div class="colleft" id="reel">
+            <a href="screen-demo.html"><h1>✴ demo reel ✴</h1></a>
+        </div>
+        
+        <div class="colright">
+            <img src="images/TPD_teaser.png"><h1><i>The Pleasure-Dome</i> (coming 2023)</h1>
+        </div>
+        
+                
+        <div class="ascii">
+            <pre>                                        
+            
+                                                    
+                                                    
+                                    -ˏˋ⋆ ̥ 　 ̣̮ ̥ 　  ͙ʰ͙eˡ͙ˡ͙o 　 ̥ 　 ̣̮ ̥ ⋆ˊˎ-
+                    
+            </pre>
+        </div>
+        
+        <div class="colright">
+            <a href="screen-giphy.html"><img src="images/giphy_3.gif"></a>
+        </div>
+                
+        
+        <div class="colmiddle" id="explained">
+            <a href="screen-explaineds3.html"><h1><i>Explained</i> on Netflix</h1></a>
+        </div>
+        
+        <div class="colleft">
+            <a href="screen-chasebliss.html"><img src="images/chasebliss_web.gif"></a>
+        </div>
+        
+       
+        
+
+        
+
+        
+<div class="ascii">
+        <pre>
+                                                                         '
+                                                            *          .
+                                                                   *       '
+                                                              *                *
+
+
+
+
+
+                                                   *   '*
+                                                           *
+                                                                *
+                                                                       *
+                                                               *
+                                                                     *
+        </pre>
+        </div>
+        
+        
+    
+        
+        <div class="ascii">
+            <a href="screen-monsters.html">
+            <pre>
+
+                                                                                  ▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒▒                                    
+                                                                          ▓▓██████▒▒▒▒▒▒    ▒▒                ██████▓▓                            
+                                                                      ▓▓██▒▒▒▒▒▒▒▒▒▒▒▒▓▓▓▓████████████▓▓▓▓▒▒▒▒      ▒▒██▓▓                        
+                                                                  ▒▒▓▓▒▒▒▒▒▒▒▒▓▓▓▓▒▒▒▒░░░░░░░░░░░░░░░░░░░░░░░░▒▒▒▒▒▒▒▒▒▒▒▒▓▓▒▒                    
+                                                                ▓▓▒▒▒▒▒▒▒▒▓▓▒▒▒▒▒▒    ▒▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓▒▒▒▒░░      ▒▒▓▓▒▒▒▒▒▒▒▒▓▓                  
+                                                                ▓▓▒▒▒▒██▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓▒▒▒▒  ▒▒        ▓▓▒▒▒▒▒▒      ▒▒██▒▒▒▒▓▓                  
+                                                                ██▒▒▒▒▒▒▒▒▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓████████▓▓▒▒▒▒▒▒▒▒    ▒▒▓▓▒▒▒▒▒▒▒▒██                  
+                                                                ▓▓▓▓▓▓▒▒▒▒▒▒▒▒▓▓▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓▒▒▒▒▒▒▒▒▒▒▓▓██▓▓                  
+                                                                ▓▓▓▓▓▓▓▓██▒▒▒▒▒▒▒▒▒▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒▒▒▒▒▒▒▒▒▒▒▒██▓▓▓▓▓▓▓▓                  
+                                                                ▓▓▓▓▓▓▓▓▒▒████▓▓▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓▓▓████▓▓▓▓▓▓▓▓▓▓                  
+                                                                ▓▓▓▓▓▓▓▓▒▒▓▓▓▓▒▒▒▒▓▓▓▓░░░░░░░░░░░░░░░░░░░░▓▓▓▓▓▓▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓                  
+                                                                ▓▓▓▓▓▓▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒░░▒▒    ░░░░░░▒▒▒▒▒▒▒▒▒▒▓▓▒▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓                  
+                                                                ▓▓▓▓▓▓▓▓▒▒▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒  ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓                  
+                                                                ▓▓▒▒▒▒▓▓▒▒▓▓▒▒▒▒▒▒▒▒▒▒▒▒      ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓▒▒▓▓▓▓▓▓▓▓▒▒▒▒▓▓                  
+                                                                ▓▓▒▒▒▒▒▒▒▒▓▓▒▒▒▒▒▒▒▒▒▒▒▒░░  ░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓▓▓▒▒▒▒▒▒▒▒▓▓                  
+                                                                ██▒▒▒▒  ▒▒      ▒▒▒▒▒▒▒▒      ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓                  
+                                                                ▓▓▒▒▒▒▒▒    ▒▒                        ▒▒    ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓                  
+                                                                ██▒▒▒▒  ▒▒                                ▒▒  ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒██                  
+                                                                ▓▓▒▒▒▒░░    ░░                        ░░  ░░░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓                  
+                                                                ▓▓▒▒▒▒  ▓▓▓▓▓▓                            ▒▒  ▒▒▒▒▒▒▒▒▓▓▓▓▓▓▒▒▓▓                  
+                                                                ▓▓▒▒▒▒▓▓    ▒▒        ▓▓▒▒▒▒          ▓▓    ▒▒██▒▒▒▒▒▒██▒▒▒▒██▓▓                  
+                                                                ▓▓▒▒▒▒▓▓░░  ░░      ▒▒░░░░░░▒▒        ▓▓  ░░░░██▒▒▒▒▒▒▓▓▒▒▒▒▓▓▓▓                  
+                                                                ▓▓▒▒▒▒▒▒▓▓▒▒░░      ▓▓      ▓▓        ▓▓    ░░██▒▒▒▒▒▒██▒▒▒▒▓▓▓▓                  
+                                                                ▓▓▒▒▒▒  ▒▒  ▓▓      ▓▓      ▓▓        ▓▓  ▒▒  ██▒▒▒▒▒▒▓▓▓▓▓▓▒▒▓▓                  
+                                                                ▓▓▒▒▒▒▒▒    ▓▓      ▓▓      ▓▓        ▓▓    ▒▒██▒▒▒▒▒▒██▒▒▒▒▒▒▓▓                  
+                                                                ▓▓▒▒▒▒▓▓▓▓▓▓        ▓▓      ▓▓        ▓▓  ▒▒  ██▒▒▒▒▒▒▓▓▒▒▒▒▒▒▓▓                  
+                                                                ▓▓▒▒▒▒▒▒  ░░░░        ▒▒▒▒▓▓          ▒▒▒▒▓▓▓▓▒▒▒▒▒▒▒▒▓▓▒▒▒▒▒▒▓▓                  
+                                                                ▓▓▒▒▒▒  ▒▒                                ▒▒  ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓                  
+                                                                ██▒▒▒▒▒▒    ▒▒                        ▒▒    ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒██                  
+                                                                ▓▓▒▒▒▒  ▒▒                                ▒▒  ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓                  
+                                                                ▓▓▓▓▓▓░░    ░░                        ░░    ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓▓▓▓▓                  
+                                                                ▓▓▓▓▓▓▓▓▓▓▒▒                              ▒▒  ▒▒▒▒▒▒▒▒▓▓▓▓▓▓▓▓▓▓                  
+                                                                ▓▓▓▓▓▓▓▓▒▒▓▓▒▒▒▒▒▒▒▒                        ▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓                  
+                                                                ▓▓▓▓▓▓▓▓▒▒▓▓▒▒▒▒▒▒▒▒░░    ░░░░▒▒▒▒▒▒▒▒▒▒▒▒▓▓▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓                  
+                                                              ▒▒▓▓▓▓▓▓▓▓▒▒▓▓▒▒▒▒▒▒▒▒      ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒▒                
+                                                              ▒▒▒▒▓▓▓▓▓▓▒▒▓▓▒▒▒▒▒▒▒▒▒▒  ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓██▒▒▒▒                
+                                                              ▒▒▒▒▒▒▒▒▓▓██▓▓▒▒▒▒▒▒▒▒    ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓▒▒▓▓▓▓▓▓▓▓██▓▓▒▒▒▒▒▒▒▒                
+                                                                ▒▒▒▒▒▒▒▒▒▒▓▓▓▓▓▓▓▓▒▒      ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓▒▒▒▒▒▒▒▒▒▒                  
+                                                                  ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒██████████████▓▓▓▓▓▓▓▓▓▓▓▓██▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒                    
+                                                                      ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒                        
+                                                                        ░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░░                          
+                                                                                  ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒                                    
+
+            </pre>
+            </a>
+        </div>
+                
+
+        
+        <div class="colleft">
+        <a href="screen-monsters.html"><img src="images/imats_lizards.gif"></a>
+        </div>
+        
+        <div class="colmiddle" id="monsters">
+            <a href="screen-monsters.html"><h1><i>Invisible Monsters and Tomato Soup</i> (2021)</h1></a>
+        </div>
+        
+        <div class="colright"><a href="screen-monsters.html"><img src="images/lobby.gif"></a></div>
+        
+        <div class="colleft">
+        <a href="screen-monsters.html"><img src="images/imats_flying.gif"></a>
+        </div>
+        
+        <div class="ascii">
+        <pre>
+                                       *✭˚･ﾟ✧*･ﾟ*✭˚･ﾟ✧*･ﾟ*
+                                                            
+                                                            
+                                                            
+        </pre>
+        </div>
+        
+                <div class="colright" id="illo">
+            <a href="screen-illos.html"><img src="images/Ketubah_final.png"></a>
+        </div> 
+        
+
+        
+        <div class="colleft">
+        <a href="screen-giphy.html"><img src="images/giphy_2.gif"></a>
+        </div>
+        
+               <div class="colright" id="illo">
+            <a href="screen-illos.html"><img src=images/gbs_tea.png></a>
+        </div>
+        
+ 
+        
+        <div class="ascii">
+            <a href="screen-coxswain.html">
+            <pre>
+            
+            
+                                                                                                    
+                                                                                        
+░░      ░░      ░░            ░░░░░░░░    ░░░░      ░░  ░░  ░░            ░░      ░░  ░░
+                      ░░                                          ░░                    
+                                                                                        
+                                                                                        
+                                                                                        
+                                            ██████████                                  
+                                          ██░░░░░░░░░░██                                
+                                        ██░░░░░░░░░░░░░░██                              
+                                      ██░░░░░░░░░░░░░░░░░░██                            
+                                      ██░░░░░░░░░░░░░░░░░░██                            
+                                      ██░░░░░░░░░░░░░░░░░░██                            
+                                      ██░░░░░░░░░░░░░░░░██                              
+                                    ░░██░░░░░░░░░░░░░░██                                
+                                    ██░░  ░░██████████                                  
+                                  ██░░  ████                                            
+        ░░      ░░            ████░░  ██            ░░      ░░            ░░      ░░    
+                      ░░    ██░░░░  ██                            ░░                    
+                              ████  ██                                                  
+                                  ██                                                    
+                                    ░░                                                  
+                                                                                        
+                                                                                        
+                                                                                        
+                                                                                        
+                                                                                        
+                                                                                        
+  ░░░░░░  ░░░░  ░░░░░░  ░░░░░░  ░░░░░░  ░░░░  ░░░░░░  ░░░░  ░░░░░░  ░░░░░░  ░░░░  ░░░░░░
+
+            </pre>
+                </a>
+        </div>
+                
+        <div class="colmiddle" id="coxswain"><a href="screen-coxswain.html"><h1><i>Coxswain's Chicken Kitchen</i> (2020)</h1></a></div>
+        
+        <div class="colright"><a href="screen-coxswain.html"><img src="images/chicken_1.gif"></a></div>
+        
+        <div class="colleft"><a href="screen-coxswain.html"><img src="images/chicken_2.gif"></a></div>
+        
+        
+
+        
+        
+        <div class="ascii">
+            <pre>
+                                                    
+                                                    
+                                                        ៚ ⋯⋯⋯ ˁᱸᲲᱸˀ ⋯⋯⋯⋯ ༄
+                                                    
+                                                    
+            </pre>
+        </div>
+        
+        <div class="colright" id="farts">
+            <a href="screen-farts.html"><img src="images/gbs_fart.gif"></a>
+        </div>
+        
+        
+        
+                
+    <div class="ascii">
+        <a href="screen-geocities.html">
+        <pre>
+        
+        
+        
+        
+                                        ██▓▓▓▓                                          
+                                    ████      ████                                      
+                                ▒▒▒▒▒▒░░      ░░░░▒▒▒▒                                  
+                            ▓▓▓▓░░░░              ░░▒▒▓▓██                              
+                        ████                            ▒▒██                            
+                    ████                            ▒▒▒▒    ██                          
+                ████                            ▒▒▒▒          ██                        
+            ████                            ▒▒▒▒  ████          ██                      
+        ▓▓▓▓                            ░░░░  ██▓▓▓▓▓▓██        ██                      
+      ██                            ▒▒▒▒░░████▓▓▓▓▓▓▓▓██    ▓▓  ██                      
+    ██  ▒▒▒▒                    ▒▒▒▒  ████▓▓▓▓▓▓▓▓▓▓▓▓██  ████  ██                      
+    ██      ░░░░            ░░░░  ████▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓██  ██░░  ██                      
+    ██          ▒▒▒▒    ▒▒▒▒  ████▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓██    ▒▒  ██                      
+    ██              ▒▒▒▒  ████▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓██  ▒▒    ██                      
+    ██                ░░██▓▓▓▓▓▓▓▓░░▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓██    ██  ██                      
+    ██                ░░██▓▓░░░░▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓██  ████  ██                      
+    ██                ░░██▓▓▓▓░░▓▓░░▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓██  ████  ██                      
+    ██                ░░██▓▓▓▓░░▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓██  ██    ██                      
+    ██                ░░██▓▓░░▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓██        ██                      
+    ██                ░░██▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓██        ██                      
+    ██                ░░██▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓████      ████                        
+    ██                ░░██▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓████      ████▒▒██                        
+    ██                ░░██▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓████      ████▒▒▒▒▒▒██████                    
+    ██                ░░██▓▓▓▓▓▓▓▓▓▓▓▓████      ████▒▒▒▒▒▒████      ██                  
+    ██                ░░██▓▓▓▓▓▓▓▓████      ████▒▒▒▒▒▒████      ██████                  
+    ████              ░░██▓▓▓▓████      ████▒▒▒▒▒▒████      ████      ██                
+      ██▓▓▓▓          ░░  ████      ▓▓▓▓▒▒▒▒▒▒████░░    ██▓▓    ▓▓██    ██              
+    ██▒▒▒▒▒▒▓▓▓▓      ░░        ██▓▓▒▒▒▒▒▒████      ▓▓██░░░░▓▓▓▓░░░░██  ░░██            
+    ██████▒▒▒▒▒▒████  ░░    ████▒▒▒▒▒▒████      ████    ████      ▒▒  ██    ██          
+    ██    ████▒▒▒▒▒▒████████▒▒▒▒▒▒████      ████    ████      ░░    ▒▒  ██    ██        
+    ██        ████▒▒▒▒▒▒▒▒▒▒▒▒████      ████    ████      ░░    ░░    ░░  ██    ██      
+    ██            ████████████      ████    ████      ░░    ░░    ▒▒    ░░  ██    ██    
+  ██                            ████    ████      ▒▒    ▒▒    ░░    ▒▒        ██    ██  
+  ██                        ████    ████      ░░    ░░    ░░    ░░        ████    ██████
+  ██                      ██  ██    ██    ░░    ░░    ░░    ░░        ▓▓██    ▓▓▓▓    ██
+  ████                  ██      ██    ██    ░░    ░░    ░░        ████  ░░▓▓▓▓        ██
+      ████              ██        ██    ██    ░░    ░░        ████    ████            ██
+          ████          ██          ██    ██    ░░        ████    ████            ████  
+          ░░░░▒▒▒▒      ██            ▒▒  ▒▒▒▒  ░░    ▒▒▒▒░░░░▒▒▒▒▒▒          ▒▒▒▒      
+                  ████  ██              ██  ░░▓▓  ████░░  ▓▓▓▓░░░░        ████          
+                      ████                ██    ██    ████            ████              
+                          ████              ██    ████            ████                  
+                              ████            ████            ████                      
+                                  ▓▓▓▓                    ▓▓▓▓                          
+                                      ▓▓▓▓            ▓▓▓▓                              
+                                      ░░░░▓▓▓▓    ████░░░░                              
+                                          ░░░░▓▓▓▓░░                                    
+                                  
+
+
+
+            </pre>
+            </a>
     </div>
+        
 
-        <img class="center" id="films" src="images/text/films.gif">
-
-        <div class="wrapper" id="tomato">
-        <h2>Invisible Monsters and Tomato Soup (2021)</h2>
-        <div class="video">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/eI9zc92lWi4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        
+        <div class="ascii">
+            <a href="screen-shrek.html">
+            <pre id="shrek">          
+                                                                                                      c,_.--.,y
+                                                                                                        7 a.a(
+                                                                                                       (   ,_Y)
+                                                                                                       :  '---;
+                                                                                                   ___.'\.  - (
+                                                                                                 .'"""S,._'--'_2..,_
+                                                                                                 |    ':::::=:::::  \
+                                                                                                 .     f== ;-,---.' T
+                                                                                                  Y.   r,-,_/_      |
+                                                                                                  |:\___.---' '---./
+                                                                                                  |'`             )
+                                                                                                   \             ,
+                                                                                                   ':;,.________.;L
+                                                                                                   /  '---------' |
+                                                                                                   |              \
+                                                                                                   L---'-,--.-'--,-'
+                                                                                                    T    /   \   Y
+                                                                                                    |   Y    ,   |
+                                                                                                    |   \    (   |
+                                                                                                    (   )     \,_L
+                                                                                                    7-./      )  `,
+                                                                                                   /  _(      '._  \
+                                                                                                 '---'           '--'
+        </pre>
+                </a>
         </div>
-            <p>A documentary about quarantine dreams. Co-directed with <a href="https://www.meghanemcdonough.com/">Meghan McDonough</a> and <a href="http://www.stevieborrello.com/">Stevie Borrello</a>.
-            </p>
+        
+                <div class="colleft" id="illo">
+            <a href="screen-illos.html"><img src=images/illo_frog.jpeg></a>
+        </div>
+        
+        <div class="ascii">
+            <pre>          
+        （ ͡° ͜ʖ ͡°)つ━━✫・*。
+         ⊂　　 ノ 　　　・゜+.
+         しーーＪ　　　°。+ *´¨)
+           .· ´. ; . ; . ; .☆´¨) ¸.·*¨)
+          (¸.·´ (¸.·’* (¸.·’* (¸.·’* (¸.·’* (¸.·’* 
+                                                  *¨)
+                                                    ·͙*̩̩͙˚̩̥̩̥*̩̩̥͙
+                                                        ✩　*̩̩̥͙˚̩̥̩̥*̩̩͙‧͙ 　　·͙*̩̩͙˚̩̥̩̥*̩̩̥͙　✩　
+                                                                             *̩̩̥͙˚̩̥̩̥ *̩̩͙‧͙ .
+                                                                                    ⭑･ﾟﾟ･*:   ༅｡.   ｡༅:*ﾟ
+                                                                                                      :*:✼✿
+                                                                                                            ✿✼  :*ﾟ:༅  ｡.｡༅:
+                                                                                                                      *･ﾟﾟ･   
+                                                                                                                             ⭑
 
-        <details>
-            <p><a href="https://docs.google.com/presentation/d/15BO8Cv0pFcE8fiY37k6Gq9ZgQ9wmRgFJSSO833-ub9A/edit?usp=sharing">Behind the scenes</a></p>
-        <p>SCREENINGS</p>
-            <p>
-                ANIMA (Córdoba International Animation Festival), 2021<br>
-                Walla Walla Movie Crush, 2021<br>
-                ANNY (Animation Nights New York), 2021<br>
-                AFI Docs, 2021<br>
-                Animatricks, 2021<br>
-                Fest Anca, 2021<br>
-                <a href="https://www.theotherartfair.com/virtual-editions/global-launch/girls-in-film/">Girls in Film x The Other Art Fair</a>, 2021
-                </p>
-                <p>PRESS</p>
-                <p>
-                    It's Nice That, <a href="https://www.itsnicethat.com/articles/marcie-lacerte-invisible-monsters-and-tomato-soup-new-yorker-animation-180321">Invisible Monsters and Tomato Soup documents 20 people’s weird pandemic dreams</a>, 2021<br>
-                    CBC Radio, <a href="https://www.cbc.ca/radio/asithappens/as-it-happens-thursday-edition-1.5927937/why-this-artist-animated-people-s-weird-pandemic-dreams-1.5928323">Why this artist animated people's weird pandemic dreams</a>, 2021<br>
-                    Director's Notes, <a href="https://directorsnotes.com/2021/02/24/stevie-borrello-marcie-lacerte-meghan-mcdonough-invisible-monsters-and-tomato-soup/">Take a Surreal Trip Through Our Collective COVID-19 Dreams in Intimate Animation ‘Invisible Monsters and Tomato Soup’</a>, 2021<br>
-                    The New Yorker, <a href="https://www.newyorker.com/culture/the-new-yorker-documentary/the-mysteries-and-motifs-of-pandemic-dreams">The Mysteries and Motifs of Pandemic Dreams</a>, 2021<br>
-                    Stash Media, <a href="https://www.stashmedia.tv/invisible-monsters-and-tomato-soup-or-how-i-learned-to-love-dreaming-during-covid/">“Invisible Monsters and Tomato Soup” or How I Learned to Love Dreaming During COVID</a>, 2021<br>
-                    Zippy Frames, <a href="https://www.zippyframes.com/index.php/shorts/invisible-monsters-potato-soup">Invisible Monsters and Tomato Soup by Meghan McDonough, Stevie Borrello and Marcie LaCerte</a>, 2021
-                </p>
-            </details>
-    </div>
 
-        <div class="wrapper" id="chicken">
-            <h2>Coxswain's Chicken Kitchen (2020)</h2>
-            <div class="video">
-                <iframe src="https://player.vimeo.com/video/464562556?title=0&byline=0&portrait=0" width="640" height="480" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-            </div>
-                <p>A deranged man advertises his delicious chicken.</p>
+            </pre>
+        </div> 
+        
 
-            <details>
-                <p>
-                    Davis Feminist Film Festival, 2021<br>
-                    Fest Anca, 2021<br>
-                    Toronto Animation Arts Festival International (TAAFI), 2021<br>
-                    <a href="https://www.maltadult.com/screenings">Malt Adult</a>, 2021<br>
-                    <a href="http://girlsinfilm.net/videos/mercury-retroanimade">Girls In Film</a>, 2020
-                </p>
-            </details>
-        </div>     
 
-        <div class="wrapper" id="summer">
-            <h2>Summer of Love (2017)</h2>
-            <div class="video">
-                <iframe src="https://player.vimeo.com/video/225479756?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-            </div>
-                <p>A girl goes out in the summertime looking for love.</p>
+        <div class="colright" id="afternoon">
+            <a href="/afternoon/"><img src="images/afternoon_car.gif"></a>
+        </div>
+        
+        
+        
+                <div class="colmiddle" id="afternoon">
+            <a href="/afternoon/"><h1><i>An Afternoon Rippling</i> (2019)</h1></a>
+        </div> 
+        
+        
 
-            <details>
-                <p>
-                    International Animated Film Festival ANIMATOR, 2021<br>
-                    Cartoon Brew Pick of the Day, 2018<br>
-                    Vimeo Staff Pick, 2017<br>
-                    Animation Nights New York (ANNY), 2019<br>
-                    GLAS Animation, 2018<br>
-                    Ae Film Fest, 2018<br>
-                    Locomoción Experimental Animation Festival, 2017<br>
-                    Lush Creative Showcase, 2017<br>
-                    Ladies With Lenses Screening, 2017<br>
-                    Malt Adult, 2017<br>
-                    Square Lake Film Festival, 2017<br>
-                    Istanbul Comics and Art Festival, 2017<br>
-                    Rimonim Art Gallery, 2017
-                </p>
-            </details>
+           
+        
+                
+
+        
+        <div class="ascii">
+            <a href=/afternoon>
+            <pre>         
+                     ___________________________________________
+                    |  _______________________________________  |
+                    | / .-----------------------------------. \ |
+                    | | | /\ :                        90 min| | |
+                    | | |/--\:....................... NR [ ]| | |
+                    | | `-----------------------------------' | |
+                    | |      //-\\   |         |   //-\\      | |
+                    | |     ||( )||  |_________|  ||( )||     | |
+                    | |      \\-//   :....:....:   \\-//      | |
+                    | |       _ _ ._  _ _ .__|_ _.._  _       | |
+                    | |      (_(_)| |(_(/_|  |_(_||_)(/_      | |
+                    | |                 4 Eva     |           | |
+                    | `______ ____________________ ____ ______' |
+                    |        /    []             []    \        |
+                    |       /  ()                   ()  \       |
+                    !______/_____________________________\______!
+            </pre>
+            </a>
+        </div>
+        
+               <div class="colright" id="afternoon">
+            <a href="/afternoon/"><img src="images/afternoon_twizzlers.png"></a>
         </div>         
-
-        <img class="center" id="explainers" src="images/text/explainers.gif">
         
-        <div class="wrapper" id="vox">
-            <h2>Explained, Season 3</h2>
-            <div class="video">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/lJHu-KCY9Fc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            <p>I worked as a motion designer for season three of <i>Explained</i> on Netflix. More coming soon!</p>
-        </div> 
-
-        <div class="wrapper" id="geocities">
-            <h2>The Early Web (2019)</h2>
-            <div class="video">
-                <iframe src="https://player.vimeo.com/video/349508768?color=fffb00&title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            <p>What's so great about the early internet? Co-produced with <a href="https://www.meghanemcdonough.com/">Meghan McDonough</a>.</p>
-            <details>
-                <p>Featured on <a href="https://qz.com/1663567/the-early-internet-is-breaking-meet-the-people-saving-it/">Quartz</a>.</p>
-            </details>
-        </div> 
-
-        <div class="wrapper" id="shrek">
-            <h2>The Shrek Fandom (2018)</h2>
-            <div class="video">
-                <iframe src="https://player.vimeo.com/video/300427556?color=76d212&title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            <p>An examination of the weird and wonderful Shrek fandom.</p>
-            <details>
-                <p>Featured on <a href="https://qz.com/quartzy/1460786/the-artists-behind-the-internets-most-misunderstood-fandom/">Quartz</a>, <a href="https://www.cartoonbrew.com/feature-film/200-artists-collaborated-on-a-remake-of-dreamworks-shrek-166803.html">Cartoon Brew</a>, <a href="https://www.vice.com/en_us/article/pa5gxk/shrek-remake-200-artists-scene-by-scene-shrek-retold-trailer-vgtrn">Vice</a>, <a href="https://twitter.com/sirfluffyfox/status/1064699982152957952">this tweet</a>.</p>
-            </details>
+                <div class="ascii">
+            <pre> 
+                                            .⋆｡⋆☂˚｡⋆｡˚☽˚｡⋆.
+                   
+            </pre>
         </div>
-
-        <img class="center" id="commissions" src="images/text/commissions.gif">
         
-        <div class="wrapper" id="fmri">
-            <h2>Giphy - Vaccine Spring (2021)</h2>
-            <div class="video">
-                <iframe src="https://player.vimeo.com/video/569991125" width="640" height="640" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-            </div>
-                <p>Created for <a href="https://giphy.com/marslizard/clips">Giphy Clips</a>. I was inspired by getting my COVID vaccine and seeing all the flowers outside.</p>
-        </div> 
-
-        <div class="wrapper" id="fmri">
-            <h2>NPR - The fMRI Machine (2019)</h2>
-            <div class="video">
-                <iframe src="https://player.vimeo.com/video/381202039?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-            </div>
-                <p>What does an fMRI machine think about? And what does it want? Created for <a href="https://www.npr.org/programs/invisibilia/">Invisibilia</a> and <a href="https://www.everythingisalive.com/">Everything is Alive</a>.</p>
-        </div> 
-
-        <div class="wrapper" id="marshmallow">
-            <h2>NPR - The Marshmallow Test (2018)</h2>
-            <div class="video">
-                <iframe src="https://player.vimeo.com/video/270422012?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-            </div>
-                <p>Is your personality fixed, or can you change who you are? Created for <a href="https://www.npr.org/programs/invisibilia/">Invisibilia</a>.</p>
-
-            <details>
-                <p>
-                    <a href="https://www.caveat.nyc/event/asian-american-film-thing-9-28-2019" target="_blank">Asian American Film Thing (Caveat)</a>, 2019<br>
-                    Video Consortium, 2019<br>
-                    Ottawa International Animation Festival, 2018
-                </p>
-            </details>
-        </div> 
-
-        <div class="wrapper" id="farts">
-            <h2>Great Big Story - Everything you wanted to know about animal farts (2020)</h2>
-            <div class="video">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/7b3O0gOeGfg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            <p>An animated exploration of Dani Rabaiotti's book <i>Does It Fart? A Definitive Guide to Animal Flatulence</i>.</p>
-            <details>
-                <p><a href="https://docs.google.com/presentation/d/1VM_cIjjTwb659vOE1pc8qUvyTrpkL-hZnxbGqSm-0hU/edit?usp=sharing">Behind the scenes</a>, and my storyboard process below:</p>
-                <div class="video">
-                    <iframe src="https://player.vimeo.com/video/434879589?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-                </div>
-            </details>
-        </div>         
-
-        <div class="wrapper" id="sol">
-            <h2>The School of Life (2018)</h2>
-            <div class="video">
-                <iframe width="750" height="422" src="https://player.vimeo.com/video/281311818" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-            </div>
-            <br>
-             <div class="video">
-                <iframe src="https://player.vimeo.com/video/263808097?color=ef7700" width="750" height="422" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-            </div>
-        </div> 
-
-        <img class="center" id="interactive" src="images/text/interactive.gif">
-
-        <div class="wrapper" id="afternoon">
-            <h1>An Afternoon Rippling (2019)</h1>
-            <a href="/afternoon/"><img class="project" src="images/interiorcar.png"></a>
-            <p>A text-based 2D adventure game. <a href="https://marslizard.itch.io/anafternoonrippling/devlog/98813/an-afternoon-rippling-now-playable">Play it now!</a></p>
-            <details>
-                <p><a href="/afternoon/index.html">Website</a></p>
-            </details>
+        <div class="ascii">
+            <a href="screen-fmri.html">
+                <pre>
+                
+                
+                
+                
+                
+                                                                              ░░▓▓▓▓▓▓▓▓▓▓▓▓░░▒▒▒▒▓▓▓▓░░                                          
+                                                                        ██████▒▒██▓▓▓▓▒▒▒▒░░██▒▒▒▒▒▒▓▓▒▒██████                                    
+                                                                  ██████▒▒▒▒▒▒▒▒████▒▒▒▒████▒▒▒▒░░██▒▒▒▒▓▓▒▒▓▓████                                
+                                                                ██▒▒▒▒░░████▒▒██▒▒▒▒▒▒██▒▒▒▒░░▒▒░░██████▓▓▒▒██▓▓▓▓██                              
+                                                            ████▒▒▓▓▒▒░░░░░░▒▒██░░▒▒██▒▒▒▒░░▒▒████▒▒▒▒▒▒▒▒██▓▓██▒▒▒▒████                          
+                                                          ██▒▒██▒▒▒▒██▒▒▒▒▒▒██▒▒░░▒▒██▒▒░░▒▒▒▒▒▒▒▒▒▒██▓▓▓▓██▒▒▒▒▒▒▒▒██▓▓▒▒                        
+                                                      ████▒▒▓▓██▒▒░░░░██▓▓▒▒▒▒██▒▒▒▒▓▓██░░▒▒██▓▓▓▓██▒▒░░██▒▒██▒▒░░██▒▒▒▒▓▓██                      
+                                                    ██▒▒▓▓▒▒██▓▓██▒▒▒▒▒▒██▓▓██░░████▓▓██▒▒░░▒▒████▒▒▒▒██▒▒▒▒▒▒░░████░░▒▒▒▒▓▓██                    
+                                                    ██▒▒▒▒▒▒▒▒▓▓▒▒████░░▒▒██▒▒░░░░▒▒▒▒██░░░░▒▒██▒▒▒▒░░██░░▒▒████░░░░████▒▒▓▓▒▒██                  
+                                                  ▓▓▓▓██▒▒░░▒▒▒▒▒▒██░░░░▒▒██▒▒░░▒▒▒▒██▒▒▒▒▒▒▒▒██▒▒░░▓▓▒▒░░▓▓▓▓▓▓▒▒░░░░▒▒██▒▒▓▓▒▒▓▓                
+                                                ██▒▒▒▒▒▒▓▓▒▒░░▒▒██▒▒░░▒▒▒▒██░░▒▒▒▒██░░▒▒▒▒████▓▓▒▒░░██░░░░██▓▓████▒▒▒▒▒▒▓▓██▒▒▓▓██                
+                                                ██▒▒██▓▓██░░▒▒▒▒██░░▒▒▓▓██████░░▒▒██░░████▓▓██▒▒░░██▒▒░░▒▒████▒▒▓▓██▒▒▒▒▓▓████▒▒████              
+                                              ██▒▒▓▓▒▒▓▓██░░██▒▒░░▒▒████▓▓░░░░██▒▒██░░▒▒▓▓▒▒██▓▓▒▒██▒▒▒▒▒▒██▒▒▒▒░░▓▓██▓▓██▒▒▓▓██▒▒▓▓██            
+                                              ██▒▒▒▒▒▒████▒▒▒▒██▒▒██▒▒██░░▒▒▒▒▒▒░░██░░▒▒▒▒██▒▒▒▒▓▓▒▒██▒▒██▒▒▓▓▒▒████▒▒██▒▒▒▒██▒▒▒▒▒▒██            
+                                              ████░░██░░▒▒██▒▒▒▒██▒▒▒▒██░░▒▒██▓▓▒▒▒▒██▒▒░░▓▓▓▓████▓▓▓▓▓▓▓▓▓▓██▒▒░░░░▒▒██░░██▓▓██▓▓██▓▓██          
+                                            ██▓▓▒▒▒▒██▒▒░░░░██▒▒██▒▒░░▓▓██▒▒▓▓██▓▓▒▒██▓▓▓▓████▓▓▓▓██████████▒▒▒▒░░▒▒▒▒██░░▒▒▒▒██▒▒██▓▓██          
+                                            ██▒▒▓▓▓▓████▒▒▒▒▒▒▓▓██░░░░▒▒██▒▒▓▓██▓▓▒▒▓▓▓▓██▒▒░░▒▒▒▒░░▒▒░░░░░░▒▒▒▒████▒▒▒▒██▓▓▓▓▓▓▓▓██▒▒██          
+                                            ██▒▒▒▒██░░░░██████▒▒██░░▒▒▒▒▓▓██▒▒▒▒██▓▓██████░░▒▒██░░▒▒░░▒▒████████▒▒░░▒▒▒▒██░░░░▒▒▒▒▒▒▓▓██          
+                                            ██▒▒▓▓░░░░▒▒▒▒██▓▓░░▒▒██▓▓▒▒▒▒░░▒▒▓▓████▓▓▓▓██░░▒▒██▓▓▒▒████▒▒░░░░░░░░▒▒▒▒██░░▒▒▒▒████▓▓▓▓██          
+                                            ████▓▓▒▒░░▒▒██▓▓▒▒░░░░██▒▒▓▓██▒▒▓▓██▓▓▒▒▓▓██▒▒▒▒██▓▓████░░░░▒▒████████▒▒▓▓▓▓██▒▒██▓▓▒▒██▓▓██          
+                                            ██▒▒▓▓▒▒▒▒▓▓██▒▒░░▒▒▒▒░░▒▒▒▒▓▓████░░▒▒▒▒▓▓▒▒██▓▓▓▓▓▓▒▒▒▒░░▒▒▓▓░░░░▒▒▓▓▓▓▓▓▓▓██▒▒▒▒▒▒▓▓▓▓▓▓            
+                                            ██▓▓░░██▒▒▒▒██▒▒██▓▓██▒▒░░░░██▓▓▒▒░░████▓▓▒▒░░▒▒██▒▒██▒▒▒▒░░░░░░▒▒▒▒████▒▒██▒▒██████▒▒██              
+                                            ██▓▓░░░░██▒▒▒▒██▒▒▒▒▒▒██████▓▓▒▒████▒▒▓▓▒▒░░░░░░██░░▓▓██▒▒▒▒▒▒▒▒▓▓██▒▒██▒▒▒▒▒▒██▓▓▓▓██                
+                                            ██▓▓██░░▒▒▒▒░░██░░▒▒▒▒▒▒▓▓██▒▒██▒▒▒▒░░▒▒░░██▒▒▒▒▒▒██░░▓▓██████████▓▓▓▓▓▓▓▓▒▒██████████                
+                                            ░░████▓▓▒▒▓▓▒▒▒▒▓▓██▒▒▓▓▓▓▒▒▒▒██░░░░▒▒▒▒▒▒▓▓▓▓▒▒▒▒▒▒▒▒▓▓▓▓▓▓▒▒▒▒▒▒████████▓▓▒▒▓▓▓▓▓▓██                
+                                                ██▒▒▒▒██▓▓▒▒▒▒▒▒▓▓▓▓██▒▒██▒▒░░████▓▓▓▓▒▒██████████▓▓▒▒░░░░░░▒▒██▓▓▓▓▒▒▓▓▓▓▒▒▓▓▓▓██                
+                                                ██▓▓▒▒▒▒██▓▓▓▓▓▓██████░░██░░░░▒▒▒▒████████░░▒▒▒▒▒▒▒▒▒▒▓▓▓▓████▓▓▓▓▓▓▓▓▒▒▒▒██▓▓▓▓██                
+                                                  ██▓▓▓▓▓▓██████    ██▒▒▒▒▒▒░░░░▒▒▒▒▒▒▓▓░░▒▒▒▒▓▓▓▓████████▓▓▓▓▓▓▓▓▓▓▒▒▓▓██▓▓▒▒██                  
+                                                    ██████          ██▓▓██▒▒▒▒▒▒▒▒▒▒██▒▒▒▒▓▓▓▓████▓▓▓▓▒▒▒▒▓▓▓▓▒▒▓▓▓▓████▒▒▓▓▓▓██                  
+                                                                      ██▓▓▓▓▓▓██▓▓██▒▒▓▓██████▒▒▒▒████▓▓▓▓██████████▓▓▓▓▓▓▒▒██                    
+                                                                        ██████▓▓▓▓██▓▓████  ██▓▓▒▒▒▒▒▒████▒▒▓▓▒▒▓▓▒▒▒▒▒▒▓▓██                      
+                                                                        ░░░░  ▓▓██████░░    ░░▓▓▓▓░░▒▒██▓▓▒▒▓▓▓▓▒▒▓▓▒▒████░░                      
+                                                                                                ██▓▓░░▒▒██████████████                            
+                                                                                                  ██▒▒░░▓▓██                                      
+                                                                                                    ▓▓▒▒▒▒██                                      
+                                                                                                    ██▒▒▒▒██                                      
+                                                                                                      ████                                        
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               </pre>
+            </a>
         </div>
-
-        <div class="wrapper" id="chaos">
-        <h1>On Cultivating Chaos (2019)</h1>
-        <a href="chaos/Chaos.html"><img class="project" src="gifs/chaos-mood-board_fast.gif"></a>
-        <p>A personal theory of aesthetics, created for the Light Grey Art Lab Residency.</p>
-            <details>
-                <p><a href="chaos/Chaos.html">Website</a></p>
-            </details>
-</div>
         
-        <div class="wrapper" id="internetbio">
-            <h1>Social Media Bio Generator (2016)</h1>
-            <a href="/internetbio/"><img class="project" src="images/bio.png"></a>
-            <p>In need of a new description for your favorite social media profile? Generate your own three-part bio here!!</p>
-            <details>
-                <p><a href="/internetbio/index.html">Website</a></p>
-            </details>
-        </div>
 
-        <footer>website created by me (2021). <a href="archive/index.html">here</a> is an older version</footer>
+        
+        
+        <div class="colleft">
+            <a href="screen-marshmallow.html">
+            <img src="images/npr_loop.gif">
+            </a>
+        
+        </div>    
+        
+        
+
+        
+
+
+        
+        <div class="ascii">
+            <a href="screen-summeroflove.html">
+            <pre>
+            
+            
+            
+            
+            
+            
+                                            KOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOK
+                                            0kkkkkOOOOOOOOOOOOkkkkkkkkkkkkkkkkkkkkkkOkkkkkOkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk0
+                                            0kkkkOkkkkkkkOOOkkkkkkkkkkOOkkkkkkkkkkkkkOkkOkkdlccokkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk0
+                                            0kkkOkkkkkkkkkkkkkkkkkkkkkOOkkkkkkkOkkkkkkkkdl:,''',:ldkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkO
+                                            0kOkkkkkkkkkkkkkOOOOkkkkkkOOOkkkkkkkkkkxdoc:,''''''''',;:oxkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkO
+                                            0kkkkkkkkkkkkkkkkkkkkkkkkkOOOkkOkkOkkxo;''.'''''''''''''.';cdkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk0
+                                            0kkkkkkkkkkkkkkkkkkkkkkkkkOOOkkOkxdlc;'..''''''''''''''''''',:ldkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkO
+                                            0kkkkkkkkkkOkkkOkkkkkkkkkkkOkkxoc;''''''''''''''''''......''''',:ldkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkO
+                                            0kkkkkkkkkOOOkkkkkkkkkkkkkkxl;,''''''''''''...'''''''''........'.',:lxkkkkkkkkkkkkkkkkkkkkkkkkkkkkk0
+                                            0kkkkkkkkkkOkkkkkkkkkkkkkdl;'.'''''...'''''..'''''''''''''''..''''''',:dkkkkkkkkkkkkkkkkkkkkkkkkkkk0
+                                            0kkkkkkkkkOOOkkkkkkOkkkdc,...''.................''''''''''''''''''''''.,:ldxkkkkkkkkkkkkkkkkkkkkkkk0
+                                            0kkkkkkkkkkkkkkOOkkkxo:'....''....''............''''''''''''.....'....''..':dkkkkkkkkkkkkkkkkkkkkkkO
+                                            0kOOOkkkOOOkkkkOOkd:,.......'''''''''.''.....'''''..'''...'''''...''........,cdkkkkkkkkkkkkkkkkkkkkO
+                                            0kOOOOOOOkkOkkOOxc,.................'.......''''''................''''........':dkkkkkkkkkkkkkkkkkk0
+                                            0kkkkkkOOkkkkOko;.........................''''....''............................':ldkkkkkkkkkkkkkkkO
+                                            0kkkkkkkkOOkxo:'......................'''''''''..........'''.......................,:oxkkkkkkkkkkkkO
+                                            0kOkkkkkxdlc;'..'............''''''''..........'''............'''..............'...'.';coxkkkkkkkkkO
+                                            0kkOOkdc,''...................''''............................'''''.....................',;cdkkkkkk0
+                                            0kkkxl,..''..................''.........''''''..............''....'...''....................';cdkkkO
+                                            Ooc;,...'........''.........''.............''''................................................':ldO
+                                            x'................................................................................''.'............,d
+                                            x'.....................................................................................'..........'d
+                                            x;,,,,,,,,,,,,,,;;;,,,,,,,,,,;;;;;;;;;;;,,,,,,',,,,,,,,,,,;;;;,,,,;;,,,,;;,,,,,,,,,,,;;;,,,,,,,,,;;x
+                                            OxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxdO
+                                            0kkkkkkkkkkkdoolodolooooooooooodooooodoloooooolloddoloooooooodddddoloooddddlloooloooooodkkkkkkkkkkxO
+                                            0kkkkkkkkkkkxdolodooooooodooooodoooooddooodooooooddooodoooooodddddoooooddddllooooodoooodkkkkkkkkkkkO
+                                            0kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk0
+                                            XKKK00KKKKKK000000KK0000KKKK0KKKKKKKK0KKKK00000K000000000KKKK0KKK00KK00K0K00000K00KKK0000000000000KK
+            </pre>                   
+            </a>
+        </div>
+        
+                        <div class="colmiddle" id="summer"><a href="screen-summeroflove.html"><h1><i>Summer of Love</i> (2017)</h1></a></div>
+
+        
+                <div class="colleft">
+            <a href="screen-summeroflove.html"><img src="images/summer_1.gif"></a>
+        </div>
+                    
+
+        
+    
+        
+
+        
 
     </div>
     
-</div>
+
+            <footer>website created by me (2021). <a href="archive/archive_2016-to-2021/">here</a> is an older version</footer>
+
+    </div>
 
 </body>
 

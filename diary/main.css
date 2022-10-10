@@ -13,7 +13,7 @@ body {
 }
 
 ul {
-    list-style: none;
+    list-style: circle;
     font-family: 'Roboto', monospace;
 }
 
