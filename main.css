@@ -26,6 +26,12 @@ a {
     text-decoration: none;
 }
 
+#log {
+    margin: 50px;
+    background-color: #022870;
+    color: lavender;
+}
+
 /* table */
 
 table {
@@ -214,8 +220,6 @@ footer a {
     margin-bottom: 20%;
 }
 
-
-
 .colleft {
     margin-right: 50%;
     overflow: auto;
@@ -277,3 +281,7 @@ img:hover {
         display: none;
 
 }
+
+
+
+
