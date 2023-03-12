@@ -1,476 +1,550 @@
-
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>marcie lacerte</title>
     <link rel="stylesheet" type="text/css" href="main.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="Marcie LaCerte, animation, experimental animation, editorial animation, motion graphics, new york animator, freelance animator, motion designer, marslizard, new york city animator, independent filmmaker, director" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Lora:wght@600&family=Roboto&display=swap');
-</style>
-        <script type="text/javascript">
-// <![CDATA[
-var colour="#E93B07";
-var sparkles=120;
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lora:wght@600&family=Roboto&display=swap');
 
-/****************************
-*  Tinkerbell Magic Sparkle *
-* (c) 2005 mf2fm web-design *
-*  http://www.mf2fm.com/rv  *
-* DON'T EDIT BELOW THIS BOX *
-****************************/
-var x=ox=400;
-var y=oy=300;
-var swide=800;
-var shigh=600;
-var sleft=sdown=0;
-var tiny=new Array();
-var star=new Array();
-var starv=new Array();
-var starx=new Array();
-var stary=new Array();
-var tinyx=new Array();
-var tinyy=new Array();
-var tinyv=new Array();
+    </style>
+    <script type="text/javascript">
+        // <![CDATA[
+        var colour = "#E93B07";
+        var sparkles = 120;
 
-window.onload=function() { if (document.getElementById) {
-  var i, rats, rlef, rdow;
-  for (var i=0; i<sparkles; i++) {
-    var rats=createDiv(3, 3);
-    rats.style.visibility="hidden";
-    document.body.appendChild(tiny[i]=rats);
-    starv[i]=0;
-    tinyv[i]=0;
-    var rats=createDiv(5, 5);
-    rats.style.backgroundColor="transparent";
-    rats.style.visibility="hidden";
-    var rlef=createDiv(1, 5);
-    var rdow=createDiv(5, 1);
-    rats.appendChild(rlef);
-    rats.appendChild(rdow);
-    rlef.style.top="2px";
-    rlef.style.left="0px";
-    rdow.style.top="0px";
-    rdow.style.left="2px";
-    document.body.appendChild(star[i]=rats);
-  }
-  set_width();
-  sparkle();
-}}
+        /****************************
+         *  Tinkerbell Magic Sparkle *
+         * (c) 2005 mf2fm web-design *
+         *  http://www.mf2fm.com/rv  *
+         * DON'T EDIT BELOW THIS BOX *
+         ****************************/
+        var x = ox = 400;
+        var y = oy = 300;
+        var swide = 800;
+        var shigh = 600;
+        var sleft = sdown = 0;
+        var tiny = new Array();
+        var star = new Array();
+        var starv = new Array();
+        var starx = new Array();
+        var stary = new Array();
+        var tinyx = new Array();
+        var tinyy = new Array();
+        var tinyv = new Array();
 
-function sparkle() {
-  var c;
-  if (x!=ox || y!=oy) {
-    ox=x;
-    oy=y;
-    for (c=0; c<sparkles; c++) if (!starv[c]) {
-      star[c].style.left=(starx[c]=x)+"px";
-      star[c].style.top=(stary[c]=y)+"px";
-      star[c].style.clip="rect(0px, 5px, 5px, 0px)";
-      star[c].style.visibility="visible";
-      starv[c]=50;
-      break;
-    }
-  }
-  for (c=0; c<sparkles; c++) {
-    if (starv[c]) update_star(c);
-    if (tinyv[c]) update_tiny(c);
-  }
-  setTimeout("sparkle()", 40);
-}
+        window.onload = function() {
+            if (document.getElementById) {
+                var i, rats, rlef, rdow;
+                for (var i = 0; i < sparkles; i++) {
+                    var rats = createDiv(3, 3);
+                    rats.style.visibility = "hidden";
+                    document.body.appendChild(tiny[i] = rats);
+                    starv[i] = 0;
+                    tinyv[i] = 0;
+                    var rats = createDiv(5, 5);
+                    rats.style.backgroundColor = "transparent";
+                    rats.style.visibility = "hidden";
+                    var rlef = createDiv(1, 5);
+                    var rdow = createDiv(5, 1);
+                    rats.appendChild(rlef);
+                    rats.appendChild(rdow);
+                    rlef.style.top = "2px";
+                    rlef.style.left = "0px";
+                    rdow.style.top = "0px";
+                    rdow.style.left = "2px";
+                    document.body.appendChild(star[i] = rats);
+                }
+                set_width();
+                sparkle();
+            }
+        }
 
-function update_star(i) {
-  if (--starv[i]==25) star[i].style.clip="rect(1px, 4px, 4px, 1px)";
-  if (starv[i]) {
-    stary[i]+=1+Math.random()*3;
-    if (stary[i]<shigh+sdown) {
-      star[i].style.top=stary[i]+"px";
-      starx[i]+=(i%5-2)/5;
-      star[i].style.left=starx[i]+"px";
-    }
-    else {
-      star[i].style.visibility="hidden";
-      starv[i]=0;
-      return;
-    }
-  }
-  else {
-    tinyv[i]=50;
-    tiny[i].style.top=(tinyy[i]=stary[i])+"px";
-    tiny[i].style.left=(tinyx[i]=starx[i])+"px";
-    tiny[i].style.width="2px";
-    tiny[i].style.height="2px";
-    star[i].style.visibility="hidden";
-    tiny[i].style.visibility="visible"
-  }
-}
+        function sparkle() {
+            var c;
+            if (x != ox || y != oy) {
+                ox = x;
+                oy = y;
+                for (c = 0; c < sparkles; c++)
+                    if (!starv[c]) {
+                        star[c].style.left = (starx[c] = x) + "px";
+                        star[c].style.top = (stary[c] = y) + "px";
+                        star[c].style.clip = "rect(0px, 5px, 5px, 0px)";
+                        star[c].style.visibility = "visible";
+                        starv[c] = 50;
+                        break;
+                    }
+            }
+            for (c = 0; c < sparkles; c++) {
+                if (starv[c]) update_star(c);
+                if (tinyv[c]) update_tiny(c);
+            }
+            setTimeout("sparkle()", 40);
+        }
 
-function update_tiny(i) {
-  if (--tinyv[i]==25) {
-    tiny[i].style.width="1px";
-    tiny[i].style.height="1px";
-  }
-  if (tinyv[i]) {
-    tinyy[i]+=1+Math.random()*3;
-    if (tinyy[i]<shigh+sdown) {
-      tiny[i].style.top=tinyy[i]+"px";
-      tinyx[i]+=(i%5-2)/5;
-      tiny[i].style.left=tinyx[i]+"px";
-    }
-    else {
-      tiny[i].style.visibility="hidden";
-      tinyv[i]=0;
-      return;
-    }
-  }
-  else tiny[i].style.visibility="hidden";
-}
+        function update_star(i) {
+            if (--starv[i] == 25) star[i].style.clip = "rect(1px, 4px, 4px, 1px)";
+            if (starv[i]) {
+                stary[i] += 1 + Math.random() * 3;
+                if (stary[i] < shigh + sdown) {
+                    star[i].style.top = stary[i] + "px";
+                    starx[i] += (i % 5 - 2) / 5;
+                    star[i].style.left = starx[i] + "px";
+                } else {
+                    star[i].style.visibility = "hidden";
+                    starv[i] = 0;
+                    return;
+                }
+            } else {
+                tinyv[i] = 50;
+                tiny[i].style.top = (tinyy[i] = stary[i]) + "px";
+                tiny[i].style.left = (tinyx[i] = starx[i]) + "px";
+                tiny[i].style.width = "2px";
+                tiny[i].style.height = "2px";
+                star[i].style.visibility = "hidden";
+                tiny[i].style.visibility = "visible"
+            }
+        }
 
-document.onmousemove=mouse;
-function mouse(e) {
-  set_scroll();
-  y=(e)?e.pageY:event.y+sdown;
-  x=(e)?e.pageX:event.x+sleft;
-}
+        function update_tiny(i) {
+            if (--tinyv[i] == 25) {
+                tiny[i].style.width = "1px";
+                tiny[i].style.height = "1px";
+            }
+            if (tinyv[i]) {
+                tinyy[i] += 1 + Math.random() * 3;
+                if (tinyy[i] < shigh + sdown) {
+                    tiny[i].style.top = tinyy[i] + "px";
+                    tinyx[i] += (i % 5 - 2) / 5;
+                    tiny[i].style.left = tinyx[i] + "px";
+                } else {
+                    tiny[i].style.visibility = "hidden";
+                    tinyv[i] = 0;
+                    return;
+                }
+            } else tiny[i].style.visibility = "hidden";
+        }
 
-function set_scroll() {
-  if (typeof(self.pageYOffset)=="number") {
-    sdown=self.pageYOffset;
-    sleft=self.pageXOffset;
-  }
-  else if (document.body.scrollTop || document.body.scrollLeft) {
-    sdown=document.body.scrollTop;
-    sleft=document.body.scrollLeft;
-  }
-  else if (document.documentElement && (document.documentElement.scrollTop || document.documentElement.scrollLeft)) {
-    sleft=document.documentElement.scrollLeft;
-	sdown=document.documentElement.scrollTop;
-  }
-  else {
-    sdown=0;
-    sleft=0;
-  }
-}
+        document.onmousemove = mouse;
 
-window.onresize=set_width;
-function set_width() {
-  if (typeof(self.innerWidth)=="number") {
-    swide=self.innerWidth;
-    shigh=self.innerHeight;
-  }
-  else if (document.documentElement && document.documentElement.clientWidth) {
-    swide=document.documentElement.clientWidth;
-    shigh=document.documentElement.clientHeight;
-  }
-  else if (document.body.clientWidth) {
-    swide=document.body.clientWidth;
-    shigh=document.body.clientHeight;
-  }
-}
+        function mouse(e) {
+            set_scroll();
+            y = (e) ? e.pageY : event.y + sdown;
+            x = (e) ? e.pageX : event.x + sleft;
+        }
 
-function createDiv(height, width) {
-  var div=document.createElement("div");
-  div.style.position="absolute";
-  div.style.height=height+"px";
-  div.style.width=width+"px";
-  div.style.overflow="hidden";
-  div.style.backgroundColor=colour;
-  return (div);
-}
-// ]]>
-</script>
+        function set_scroll() {
+            if (typeof(self.pageYOffset) == "number") {
+                sdown = self.pageYOffset;
+                sleft = self.pageXOffset;
+            } else if (document.body.scrollTop || document.body.scrollLeft) {
+                sdown = document.body.scrollTop;
+                sleft = document.body.scrollLeft;
+            } else if (document.documentElement && (document.documentElement.scrollTop || document.documentElement.scrollLeft)) {
+                sleft = document.documentElement.scrollLeft;
+                sdown = document.documentElement.scrollTop;
+            } else {
+                sdown = 0;
+                sleft = 0;
+            }
+        }
+
+        window.onresize = set_width;
+
+        function set_width() {
+            if (typeof(self.innerWidth) == "number") {
+                swide = self.innerWidth;
+                shigh = self.innerHeight;
+            } else if (document.documentElement && document.documentElement.clientWidth) {
+                swide = document.documentElement.clientWidth;
+                shigh = document.documentElement.clientHeight;
+            } else if (document.body.clientWidth) {
+                swide = document.body.clientWidth;
+                shigh = document.body.clientHeight;
+            }
+        }
+
+        function createDiv(height, width) {
+            var div = document.createElement("div");
+            div.style.position = "absolute";
+            div.style.height = height + "px";
+            div.style.width = width + "px";
+            div.style.overflow = "hidden";
+            div.style.backgroundColor = colour;
+            return (div);
+        }
+        // ]]>
+
+    </script>
 
 </head>
-    
-<body style="background-color: #000236"> 
-    
-<table>
-    <tr>
-        <th><h1>👀</h1></th>
-        <th>title</th>
-        <th>year</th>
-        <th>genre</th>
-        <th>role</th>
-        <th>production</th>
-      </tr> 
-    
-    <tr>
-      <td><h1>🌳</h1></td>
-      <td>The Pleasure-Dome</td>
-      <td>in production</td>
-      <td>animation</td>
-      <td>director</td>
-      <td>independent</td>
-    </tr>
-    
-    <tr>
-        <td><a target="_blank" href="https://www.youtube.com/watch?v=pqjcmZlh6tE&t"><h1>🧬</h1></a></td>
-        <td>A Question of Sex</td>
-        <td>in production</td>
-        <td>video docuseries</td>
-        <td>animator</td>
-        <td>commission</td>
-    </tr> 
-    
-    <tr>
-        <td><a target="_blank" href="https://www.youtube.com/watch?v=8IbjOTsjgEc"><h1>👻</h1></a></td>
-        <td>Neutrinos &amp; the mystery of the universe's matter</td>
-        <td>2022</td>
-        <td>documentary</td>
-        <td>animator</td>
-        <td>commission</td>
-    </tr>
-    
-    <tr>
-      <td><a target="_blank" href="https://www.youtube.com/watch?v=Jq-9l-Kd_GE"><h1>☁️</h1></a></td>
-      <td>What To Do U</td>
-      <td>2022</td>
-      <td>video series</td>
-      <td>art director, animator</td>
-      <td>commission</td>
-    </tr>  
-    
-    <tr>
-      <td><a href="/screen-chasebliss.html"><h1>✏️</h1></a></td>
-      <td>Logo for Chase Bliss Audio</td>
-      <td>2022</td>
-      <td>logo</td>
-      <td>animator</td>
-      <td>commission</td>
-    </tr>    
-  
-    
-    <tr>
-      <td><a href="/screen-monsters.html"><h1>🥫</h1></a></td>
-      <td>Invisible Monsters and Tomato Soup</td>
-      <td>2020 - 2021</td>
-      <td>animated documentary</td>
-      <td>co-director, animator</td>
-      <td>independent</td>
-  </tr>  
-    
-    <tr>
-        <td><a href="/screen-giphy.html"><h1>🌸</h1></a></td>
-        <td id="title">Vaccine Spring</td>
-        <td>2021</td>
-        <td>animation</td>
-        <td>director</td>
-        <td>commission</td>
-  </tr>  
-    
-    <tr>
-        <td><a href="/screen-explaineds3.html"><h1>📒</h1></a></td>
-        <td id="title">Explained</td>
-        <td>2020 - 2021</td>
-        <td>TV docuseries</td>
-        <td>commission</td>
-  </tr> 
-    
-    <tr>
-        <td><a target="_blank" href="https://www.youtube.com/watch?v=eofwvtDcbJg"><h1>😭</h1></a></td>
-        <td id="title">The Trump Who Cried Hoax</td>
-        <td>2020</td>
-        <td>animation</td>
-        <td>animator</td>
-        <td>commission</td>
-    </tr>
-       
-    <tr>
-        <td><a href="/screen-coxswain.html"><h1>🍗</h1></a></td>
-        <td id="title">Coxswain's Chicken Kitchen</td>
-        <td>2020</td>
-        <td>animation</td>
-        <td>director</td>
-        <td>independent</td>
-    </tr>
-    
-    <tr>
-        <td><a href="/screen-farts.html"><h1>💨</h1></a></td>
-        <td id="title">Everything You Wanted to Know About Animal Farts</td>
-        <td>2020</td>
-        <td>animation</td>
-        <td>commission</td>
-    </tr> 
-    
-    <tr>
-        <td><a href="/screen-fmri.html"><h1>🧠</h1></a></td>
-        <td id="title">The fMRI Machine</td>
-        <td>2020</td>
-        <td>animation</td>
-        <td>animator</td>
-        <td>commission</td>
-    </tr> 
-    
-    <tr>
-        <td><a href="/afternoon"><h1>📼</h1></a></td>
-        <td id="title">An Afternoon Rippling</td>
-        <td>2016 - 2019</td>
-        <td>game</td>
-        <td>creator</td>
-        <td>independent</td>
-    </tr>
-    
-    <tr>
-        <td><a href="/chaos"><h1>🌀</h1></a></td>
-        <td id="title">On Chaos</td>
-        <td>2019</td>
-        <td>interactive essay</td>
-        <td>creator</td>
-        <td>commission</td>
-    </tr> 
-    
-    <tr>
-        <td><a href="https://www.youtube.com/playlist?list=PLWHhRzSHrMU9Ag-GWVyjdR8DXA00_suuC"><h1>💸</h1></a></td>
-        <td id="title">Quartz News</td>
-        <td>2018 - 2019</td>
-        <td>video docuseries</td>
-        <td>animator</td>
-        <td>commission</td>
-    </tr> 
-    
-    <tr>
-        <td><a href="/screen-geocities.html"><h1>🌐</h1></a></td>
-        <td id="title">The Early Web</td>
-        <td>2019</td>
-        <td>documentary</td>
-        <td>co-producer, animator</td>
-        <td>commission</td>
-    </tr>
-    
-    <tr>
-        <td><a href="https://www.youtube.com/watch?v=p_JSa89OKBQ"><h1>🍭</h1></a></td>
-        <td id="title">The secret life of kids on YouTube</td>
-        <td>2018</td>
-        <td>documentary</td>
-        <td>co-producer, animator</td>
-        <td>commission</td>
-    </tr>  
-    
-    <tr>
-        <td><a href="/screen-shrek.html"><h1>👹</h1></a></td>
-        <td id="title">The Shrek Fandom</td>
-        <td>2018</td>
-        <td>documentary</td>
-        <td>producer</td>
-        <td>commission</td>
-    </tr>
-    
-    <tr>
-        <td><a href="/screen-marshmallow.html"><h1>🍽️</h1></a></td>
-        <td id="title">The Marshmallow Test</td>
-        <td>2018</td>
-        <td>documentary</td>
-        <td>producer</td>
-        <td>commission</td>
-    </tr> 
-    
-    <tr>
-        <td><a href="https://vimeo.com/marcielacerte/couplestherapy"><h1>🧑‍🤝‍🧑</h1></a></td>
-        <td id="title">What We Might Learn In Couples Therapy</td>
-        <td>2018</td>
-        <td>documentary</td>
-        <td>animator</td>
-        <td>commission</td>
-    </tr>   
-    
-    <tr>
-        <td><a href="https://vimeo.com/marcielacerte/peoplepleasing"><h1>🦢</h1></a></td>
-        <td id="title">How To Stop Being A People Pleaser</td>
-        <td>2018</td>
-        <td>documentary</td>
-        <td>animator</td>
-        <td>commission</td>
-    </tr>  
-    
-    <tr>
-        <td><a href="https://www.youtube.com/watch?v=O5FBJyqfoLM"><h1>📍</h1></a></td>
-        <td id="title">Why Cities Are Still So Segregated</td>
-        <td>2018</td>
-        <td>documentary</td>
-        <td>animator</td>
-        <td>commission</td>
-    </tr>  
-    
-    <tr>
-        <td><a href="https://www.youtube.com/watch?v=usztq2uS4l0"><h1>🍄</h1></a></td>
-        <td id="title">How To Find Morels</td>
-        <td>2018</td>
-        <td>documentary</td>
-        <td>animator</td>
-        <td>commission</td>
-    </tr>  
-    
-    <tr>
-        <td><a href="https://www.youtube.com/watch?v=pnpHJdOKbcU"><h1>❄️</h1></a></td>
-        <td id="title">Winter Foraging</td>
-        <td>2018</td>
-        <td>documentary</td>
-        <td>commission</td>
-    </tr>   
-    
-    <tr>
-        <td><a href="https://www.youtube.com/watch?v=z1xwtvP9Vls"><h1>🌱</h1></a></td>
-        <td id="title">Foraging a Wild Lunch</td>
-        <td>2017</td>
-        <td>documentary</td>
-        <td>commission</td>
-    </tr> 
-    
-    <tr>
-        <td><a href="/screen-summeroflove.html"><h1>🩱</h1></a></td>
-        <td id="title">Summer of Love</td>
-        <td>2017</td>
-        <td>animation</td>
-        <td>director</td>
-        <td>independent</td>
-    </tr> 
-    
-    <tr>
-        <td><a href="https://kelseymaher.itch.io/neo-noboru"><h1>🏙️</h1></a></td>
-        <td id="title">Neo Noboru</td>
-        <td>2017</td>
-        <td>game</td>
-        <td>co-creator, illustrator</td>
-        <td>independent</td>
-    </tr> 
-    
-    <tr>
-        <td><a href="/internetbio/"><h1>💗</a></td>
-        <td id="title">Social Media Bio Generator</td>
-        <td>2016</td>
-        <td>website</td>
-        <td>creator</td>
-        <td>independent</td>
-    </tr> 
-    
-    <tr>
-        <td><a href="/finalfieri.pdf"><h1>🔥</h1></a></td>
-        <td id="title">The Final Fieri</td>
-        <td>2016</td>
-        <td>zine</td>
-        <td>co-organizer, illustrator</td>
-        <td>independent</td>
-    </tr> 
-    
-    <tr>
-        <td><a href="https://vimeo.com/160387698/1932497de4"><h1>🍡</h1></a></td>
-        <td id="title">The Little Ships</td>
-        <td>2016</td>
-        <td>animation</td>
-        <td>director</td>
-        <td>schoolwork</td>
-    </tr> 
-    
-    <tr>
-        <td><a href="https://vimeo.com/139313609"><h1>🤸</h1></a></td>
-        <td id="title">Thporth!</td>
-        <td>2015</td>
-        <td>animation</td>
-        <td>schoolwork</td>
-    </tr> 
-<!--    
+
+<body style="background-color: #000236">
+
+    <table>
+        <tr>
+            <th>
+                <h1>👀</h1>
+            </th>
+            <th>title</th>
+            <th>year</th>
+            <th>genre</th>
+            <th>role</th>
+            <th>client</th>
+        </tr>
+
+        <tr>
+            <td>
+                <h1>🌳</h1>
+            </td>
+            <td>The Pleasure-Dome</td>
+            <td>in production</td>
+            <td>animation</td>
+            <td>director</td>
+            <td>independent</td>
+        </tr>
+
+        <tr>
+            <td>
+                    <h1>💿</h1>
+                </td>
+            <td>Chasing Moons</td>
+            <td>2023</td>
+            <td>album cover</td>
+            <td>illustrator</td>
+            <td>Alex Wakim</td>
+        </tr>
+
+        <tr>
+            <td><a target="_blank" href="https://www.youtube.com/watch?v=pqjcmZlh6tE&t">
+                    <h1>🧬</h1>
+                </a></td>
+            <td>A Question of Sex</td>
+            <td>2022</td>
+            <td>video docuseries</td>
+            <td>animator</td>
+            <td>Scientific American</td>
+        </tr>
+
+        <tr>
+            <td><a target="_blank" href="https://www.youtube.com/watch?v=8IbjOTsjgEc">
+                    <h1>👻</h1>
+                </a></td>
+            <td>Neutrinos &amp; the mystery of the universe's matter</td>
+            <td>2022</td>
+            <td>documentary</td>
+            <td>animator</td>
+            <td>Science News</td>
+        </tr>
+
+        <tr>
+            <td><a target="_blank" href="https://www.youtube.com/watch?v=Jq-9l-Kd_GE">
+                    <h1>☁️</h1>
+                </a></td>
+            <td>What To Do U</td>
+            <td>2022</td>
+            <td>video series</td>
+            <td>art director, animator</td>
+            <td>Potential Energy Coalition</td>
+        </tr>
+
+        <tr>
+            <td><a href="/screen-chasebliss.html">
+                    <h1>✏️</h1>
+                </a></td>
+            <td>Logo</td>
+            <td>2022</td>
+            <td>logo</td>
+            <td>animator</td>
+            <td>Chase Bliss Audio</td>
+        </tr>
+
+
+        <tr>
+            <td><a href="/screen-monsters.html">
+                    <h1>🥫</h1>
+                </a></td>
+            <td>Invisible Monsters and Tomato Soup</td>
+            <td>2020 - 2021</td>
+            <td>animated documentary</td>
+            <td>co-director, animator</td>
+            <td>independent</td>
+        </tr>
+
+        <tr>
+            <td><a href="/screen-giphy.html">
+                    <h1>🌸</h1>
+                </a></td>
+            <td id="title">Vaccine Spring</td>
+            <td>2021</td>
+            <td>animation</td>
+            <td>director</td>
+            <td>Giphy</td>
+        </tr>
+
+        <tr>
+            <td><a href="/screen-explaineds3.html">
+                    <h1>📒</h1>
+                </a></td>
+            <td id="title">Explained</td>
+            <td>2020 - 2021</td>
+            <td>TV docuseries</td>
+            <td>Vox x Netflix</td>
+        </tr>
+
+        <tr>
+            <td><a target="_blank" href="https://www.youtube.com/watch?v=eofwvtDcbJg">
+                    <h1>😭</h1>
+                </a></td>
+            <td id="title">The Trump Who Cried Hoax</td>
+            <td>2020</td>
+            <td>animation</td>
+            <td>animator</td>
+            <td>Rope Line Media</td>
+        </tr>
+
+        <tr>
+            <td><a href="/screen-coxswain.html">
+                    <h1>🍗</h1>
+                </a></td>
+            <td id="title">Coxswain's Chicken Kitchen</td>
+            <td>2020</td>
+            <td>animation</td>
+            <td>director</td>
+            <td>independent</td>
+        </tr>
+
+        <tr>
+            <td><a href="/screen-farts.html">
+                    <h1>💨</h1>
+                </a></td>
+            <td id="title">Everything You Wanted to Know About Animal Farts</td>
+            <td>2020</td>
+            <td>animation</td>
+            <td>Great Big Story</td>
+        </tr>
+
+        <tr>
+            <td><a href="/screen-fmri.html">
+                    <h1>🧠</h1>
+                </a></td>
+            <td id="title">The fMRI Machine</td>
+            <td>2020</td>
+            <td>animation</td>
+            <td>animator</td>
+            <td>Invisibilia x NPR</td>
+        </tr>
+
+        <tr>
+            <td><a href="/afternoon">
+                    <h1>📼</h1>
+                </a></td>
+            <td id="title">An Afternoon Rippling</td>
+            <td>2016 - 2019</td>
+            <td>game</td>
+            <td>creator</td>
+            <td>independent</td>
+        </tr>
+
+        <tr>
+            <td><a href="/chaos">
+                    <h1>🌀</h1>
+                </a></td>
+            <td id="title">On Chaos</td>
+            <td>2019</td>
+            <td>interactive essay</td>
+            <td>creator</td>
+            <td>independent</td>
+        </tr>
+
+        <tr>
+            <td><a href="https://www.youtube.com/playlist?list=PLWHhRzSHrMU9Ag-GWVyjdR8DXA00_suuC">
+                    <h1>💸</h1>
+                </a></td>
+            <td id="title">Quartz News</td>
+            <td>2018 - 2019</td>
+            <td>video docuseries</td>
+            <td>animator</td>
+            <td>Quartz</td>
+        </tr>
+
+        <tr>
+            <td><a href="/screen-geocities.html">
+                    <h1>🌐</h1>
+                </a></td>
+            <td id="title">The Early Web</td>
+            <td>2019</td>
+            <td>documentary</td>
+            <td>co-producer, animator</td>
+            <td>Quartz</td>
+        </tr>
+
+        <tr>
+            <td><a href="https://www.youtube.com/watch?v=p_JSa89OKBQ">
+                    <h1>🍭</h1>
+                </a></td>
+            <td id="title">The secret life of kids on YouTube</td>
+            <td>2018</td>
+            <td>documentary</td>
+            <td>co-producer, animator</td>
+            <td>Quartz</td>
+        </tr>
+
+        <tr>
+            <td><a href="/screen-shrek.html">
+                    <h1>👹</h1>
+                </a></td>
+            <td id="title">The Shrek Fandom</td>
+            <td>2018</td>
+            <td>documentary</td>
+            <td>producer</td>
+            <td>Quartz</td>
+        </tr>
+
+        <tr>
+            <td><a href="/screen-marshmallow.html">
+                    <h1>🍽️</h1>
+                </a></td>
+            <td id="title">The Marshmallow Test</td>
+            <td>2018</td>
+            <td>documentary</td>
+            <td>producer</td>
+            <td>NPR</td>
+        </tr>
+
+        <tr>
+            <td><a href="https://vimeo.com/marcielacerte/couplestherapy">
+                    <h1>🧑‍🤝‍🧑</h1>
+                </a></td>
+            <td id="title">What We Might Learn In Couples Therapy</td>
+            <td>2018</td>
+            <td>documentary</td>
+            <td>animator</td>
+            <td>The School of Life</td>
+        </tr>
+
+        <tr>
+            <td><a href="https://vimeo.com/marcielacerte/peoplepleasing">
+                    <h1>🦢</h1>
+                </a></td>
+            <td id="title">How To Stop Being A People Pleaser</td>
+            <td>2018</td>
+            <td>documentary</td>
+            <td>animator</td>
+            <td>The School of Life</td>
+        </tr>
+
+        <tr>
+            <td><a href="https://www.youtube.com/watch?v=O5FBJyqfoLM">
+                    <h1>📍</h1>
+                </a></td>
+            <td id="title">Why Cities Are Still So Segregated</td>
+            <td>2018</td>
+            <td>documentary</td>
+            <td>animator</td>
+            <td>NPR</td>
+        </tr>
+
+        <tr>
+            <td><a href="https://www.youtube.com/watch?v=usztq2uS4l0">
+                    <h1>🍄</h1>
+                </a></td>
+            <td id="title">How To Find Morels</td>
+            <td>2018</td>
+            <td>documentary</td>
+            <td>animator</td>
+            <td>NPR</td>
+        </tr>
+
+        <tr>
+            <td><a href="https://www.youtube.com/watch?v=pnpHJdOKbcU">
+                    <h1>❄️</h1>
+                </a></td>
+            <td id="title">Winter Foraging</td>
+            <td>2018</td>
+            <td>documentary</td>
+            <td>NPR</td>
+        </tr>
+
+        <tr>
+            <td><a href="https://www.youtube.com/watch?v=z1xwtvP9Vls">
+                    <h1>🌱</h1>
+                </a></td>
+            <td id="title">Foraging a Wild Lunch</td>
+            <td>2017</td>
+            <td>documentary</td>
+            <td>NPR</td>
+        </tr>
+
+        <tr>
+            <td><a href="/screen-summeroflove.html">
+                    <h1>🩱</h1>
+                </a></td>
+            <td id="title">Summer of Love</td>
+            <td>2017</td>
+            <td>animation</td>
+            <td>director</td>
+            <td>independent</td>
+        </tr>
+
+        <tr>
+            <td><a href="https://kelseymaher.itch.io/neo-noboru">
+                    <h1>🏙️</h1>
+                </a></td>
+            <td id="title">Neo Noboru</td>
+            <td>2017</td>
+            <td>game</td>
+            <td>co-creator, illustrator</td>
+            <td>independent</td>
+        </tr>
+
+        <tr>
+            <td><a href="/internetbio/">
+                    <h1>💗
+                </a></td>
+            <td id="title">Social Media Bio Generator</td>
+            <td>2016</td>
+            <td>website</td>
+            <td>creator</td>
+            <td>independent</td>
+        </tr>
+
+        <tr>
+            <td><a href="/finalfieri.pdf">
+                    <h1>🔥</h1>
+                </a></td>
+            <td id="title">The Final Fieri</td>
+            <td>2016</td>
+            <td>zine</td>
+            <td>co-organizer, illustrator</td>
+            <td>independent</td>
+        </tr>
+
+        <tr>
+            <td><a href="https://vimeo.com/160387698/1932497de4">
+                    <h1>🍡</h1>
+                </a></td>
+            <td id="title">The Little Ships</td>
+            <td>2016</td>
+            <td>animation</td>
+            <td>director</td>
+            <td>independent</td>
+        </tr>
+
+        <tr>
+            <td><a href="https://vimeo.com/139313609">
+                    <h1>🤸</h1>
+                </a></td>
+            <td id="title">Thporth!</td>
+            <td>2015</td>
+            <td>animation</td>
+            <td>director</td>
+            <td>independent</td>
+        </tr>
+        <!--    
     <tr>
         <td><a href="https://vimeo.com/manage/videos/127663098?embedded=true&source=vimeo_logo&owner=5899045"><h1>💭</h1></a></td>
         <td id="title">Dissociate (unfinished)</td>
@@ -486,20 +560,22 @@ function createDiv(height, width) {
         <td>animation</td>
         <td>independent</td>
     </tr> -->
-    
-    <tr>
-        <td><a href="http://marslizard.net/encyclopedia/"><h1>📙</h1></a></td>
-        <td id="title">The Complete Encyclopaedia of Humanity</td>
-        <td>2015</td>
-        <td>website</td>
-        <td>creator</td>
-        <td>schoolwork</td>
-    </tr>
-    
-</table>
-    
-    
-    
+
+        <tr>
+            <td><a href="http://marslizard.net/encyclopedia/">
+                    <h1>📙</h1>
+                </a></td>
+            <td id="title">The Complete Encyclopaedia of Humanity</td>
+            <td>2015</td>
+            <td>website</td>
+            <td>creator</td>
+            <td>independent</td>
+        </tr>
+
+    </table>
+
+
+
 </body>
 
 </html>
