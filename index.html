@@ -7,292 +7,295 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="Marcie LaCerte, animation, experimental animation, editorial animation, motion graphics, new york animator, freelance animator, motion designer, marslizard, new york city animator, independent filmmaker, director" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Lora:wght@600&family=Roboto&display=swap');
-</style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lora:wght@600&family=Roboto&display=swap');
+    </style>
     <script type="text/javascript">
-// <![CDATA[
-var colour="#E93B07";
-var sparkles=120;
+        // <![CDATA[
+        var colour = "#E93B07";
+        var sparkles = 120;
 
-/****************************
-*  Tinkerbell Magic Sparkle *
-* (c) 2005 mf2fm web-design *
-*  http://www.mf2fm.com/rv  *
-* DON'T EDIT BELOW THIS BOX *
-****************************/
-var x=ox=400;
-var y=oy=300;
-var swide=800;
-var shigh=600;
-var sleft=sdown=0;
-var tiny=new Array();
-var star=new Array();
-var starv=new Array();
-var starx=new Array();
-var stary=new Array();
-var tinyx=new Array();
-var tinyy=new Array();
-var tinyv=new Array();
+        /****************************
+         *  Tinkerbell Magic Sparkle *
+         * (c) 2005 mf2fm web-design *
+         *  http://www.mf2fm.com/rv  *
+         * DON'T EDIT BELOW THIS BOX *
+         ****************************/
+        var x = ox = 400;
+        var y = oy = 300;
+        var swide = 800;
+        var shigh = 600;
+        var sleft = sdown = 0;
+        var tiny = new Array();
+        var star = new Array();
+        var starv = new Array();
+        var starx = new Array();
+        var stary = new Array();
+        var tinyx = new Array();
+        var tinyy = new Array();
+        var tinyv = new Array();
 
-window.onload=function() { if (document.getElementById) {
-  var i, rats, rlef, rdow;
-  for (var i=0; i<sparkles; i++) {
-    var rats=createDiv(3, 3);
-    rats.style.visibility="hidden";
-    document.body.appendChild(tiny[i]=rats);
-    starv[i]=0;
-    tinyv[i]=0;
-    var rats=createDiv(5, 5);
-    rats.style.backgroundColor="transparent";
-    rats.style.visibility="hidden";
-    var rlef=createDiv(1, 5);
-    var rdow=createDiv(5, 1);
-    rats.appendChild(rlef);
-    rats.appendChild(rdow);
-    rlef.style.top="2px";
-    rlef.style.left="0px";
-    rdow.style.top="0px";
-    rdow.style.left="2px";
-    document.body.appendChild(star[i]=rats);
-  }
-  set_width();
-  sparkle();
-}}
+        window.onload = function() {
+            if (document.getElementById) {
+                var i, rats, rlef, rdow;
+                for (var i = 0; i < sparkles; i++) {
+                    var rats = createDiv(3, 3);
+                    rats.style.visibility = "hidden";
+                    document.body.appendChild(tiny[i] = rats);
+                    starv[i] = 0;
+                    tinyv[i] = 0;
+                    var rats = createDiv(5, 5);
+                    rats.style.backgroundColor = "transparent";
+                    rats.style.visibility = "hidden";
+                    var rlef = createDiv(1, 5);
+                    var rdow = createDiv(5, 1);
+                    rats.appendChild(rlef);
+                    rats.appendChild(rdow);
+                    rlef.style.top = "2px";
+                    rlef.style.left = "0px";
+                    rdow.style.top = "0px";
+                    rdow.style.left = "2px";
+                    document.body.appendChild(star[i] = rats);
+                }
+                set_width();
+                sparkle();
+            }
+        }
 
-function sparkle() {
-  var c;
-  if (x!=ox || y!=oy) {
-    ox=x;
-    oy=y;
-    for (c=0; c<sparkles; c++) if (!starv[c]) {
-      star[c].style.left=(starx[c]=x)+"px";
-      star[c].style.top=(stary[c]=y)+"px";
-      star[c].style.clip="rect(0px, 5px, 5px, 0px)";
-      star[c].style.visibility="visible";
-      starv[c]=50;
-      break;
-    }
-  }
-  for (c=0; c<sparkles; c++) {
-    if (starv[c]) update_star(c);
-    if (tinyv[c]) update_tiny(c);
-  }
-  setTimeout("sparkle()", 40);
-}
+        function sparkle() {
+            var c;
+            if (x != ox || y != oy) {
+                ox = x;
+                oy = y;
+                for (c = 0; c < sparkles; c++)
+                    if (!starv[c]) {
+                        star[c].style.left = (starx[c] = x) + "px";
+                        star[c].style.top = (stary[c] = y) + "px";
+                        star[c].style.clip = "rect(0px, 5px, 5px, 0px)";
+                        star[c].style.visibility = "visible";
+                        starv[c] = 50;
+                        break;
+                    }
+            }
+            for (c = 0; c < sparkles; c++) {
+                if (starv[c]) update_star(c);
+                if (tinyv[c]) update_tiny(c);
+            }
+            setTimeout("sparkle()", 40);
+        }
 
-function update_star(i) {
-  if (--starv[i]==25) star[i].style.clip="rect(1px, 4px, 4px, 1px)";
-  if (starv[i]) {
-    stary[i]+=1+Math.random()*3;
-    if (stary[i]<shigh+sdown) {
-      star[i].style.top=stary[i]+"px";
-      starx[i]+=(i%5-2)/5;
-      star[i].style.left=starx[i]+"px";
-    }
-    else {
-      star[i].style.visibility="hidden";
-      starv[i]=0;
-      return;
-    }
-  }
-  else {
-    tinyv[i]=50;
-    tiny[i].style.top=(tinyy[i]=stary[i])+"px";
-    tiny[i].style.left=(tinyx[i]=starx[i])+"px";
-    tiny[i].style.width="2px";
-    tiny[i].style.height="2px";
-    star[i].style.visibility="hidden";
-    tiny[i].style.visibility="visible"
-  }
-}
+        function update_star(i) {
+            if (--starv[i] == 25) star[i].style.clip = "rect(1px, 4px, 4px, 1px)";
+            if (starv[i]) {
+                stary[i] += 1 + Math.random() * 3;
+                if (stary[i] < shigh + sdown) {
+                    star[i].style.top = stary[i] + "px";
+                    starx[i] += (i % 5 - 2) / 5;
+                    star[i].style.left = starx[i] + "px";
+                } else {
+                    star[i].style.visibility = "hidden";
+                    starv[i] = 0;
+                    return;
+                }
+            } else {
+                tinyv[i] = 50;
+                tiny[i].style.top = (tinyy[i] = stary[i]) + "px";
+                tiny[i].style.left = (tinyx[i] = starx[i]) + "px";
+                tiny[i].style.width = "2px";
+                tiny[i].style.height = "2px";
+                star[i].style.visibility = "hidden";
+                tiny[i].style.visibility = "visible"
+            }
+        }
 
-function update_tiny(i) {
-  if (--tinyv[i]==25) {
-    tiny[i].style.width="1px";
-    tiny[i].style.height="1px";
-  }
-  if (tinyv[i]) {
-    tinyy[i]+=1+Math.random()*3;
-    if (tinyy[i]<shigh+sdown) {
-      tiny[i].style.top=tinyy[i]+"px";
-      tinyx[i]+=(i%5-2)/5;
-      tiny[i].style.left=tinyx[i]+"px";
-    }
-    else {
-      tiny[i].style.visibility="hidden";
-      tinyv[i]=0;
-      return;
-    }
-  }
-  else tiny[i].style.visibility="hidden";
-}
+        function update_tiny(i) {
+            if (--tinyv[i] == 25) {
+                tiny[i].style.width = "1px";
+                tiny[i].style.height = "1px";
+            }
+            if (tinyv[i]) {
+                tinyy[i] += 1 + Math.random() * 3;
+                if (tinyy[i] < shigh + sdown) {
+                    tiny[i].style.top = tinyy[i] + "px";
+                    tinyx[i] += (i % 5 - 2) / 5;
+                    tiny[i].style.left = tinyx[i] + "px";
+                } else {
+                    tiny[i].style.visibility = "hidden";
+                    tinyv[i] = 0;
+                    return;
+                }
+            } else tiny[i].style.visibility = "hidden";
+        }
 
-document.onmousemove=mouse;
-function mouse(e) {
-  set_scroll();
-  y=(e)?e.pageY:event.y+sdown;
-  x=(e)?e.pageX:event.x+sleft;
-}
+        document.onmousemove = mouse;
 
-function set_scroll() {
-  if (typeof(self.pageYOffset)=="number") {
-    sdown=self.pageYOffset;
-    sleft=self.pageXOffset;
-  }
-  else if (document.body.scrollTop || document.body.scrollLeft) {
-    sdown=document.body.scrollTop;
-    sleft=document.body.scrollLeft;
-  }
-  else if (document.documentElement && (document.documentElement.scrollTop || document.documentElement.scrollLeft)) {
-    sleft=document.documentElement.scrollLeft;
-	sdown=document.documentElement.scrollTop;
-  }
-  else {
-    sdown=0;
-    sleft=0;
-  }
-}
+        function mouse(e) {
+            set_scroll();
+            y = (e) ? e.pageY : event.y + sdown;
+            x = (e) ? e.pageX : event.x + sleft;
+        }
 
-window.onresize=set_width;
-function set_width() {
-  if (typeof(self.innerWidth)=="number") {
-    swide=self.innerWidth;
-    shigh=self.innerHeight;
-  }
-  else if (document.documentElement && document.documentElement.clientWidth) {
-    swide=document.documentElement.clientWidth;
-    shigh=document.documentElement.clientHeight;
-  }
-  else if (document.body.clientWidth) {
-    swide=document.body.clientWidth;
-    shigh=document.body.clientHeight;
-  }
-}
+        function set_scroll() {
+            if (typeof(self.pageYOffset) == "number") {
+                sdown = self.pageYOffset;
+                sleft = self.pageXOffset;
+            } else if (document.body.scrollTop || document.body.scrollLeft) {
+                sdown = document.body.scrollTop;
+                sleft = document.body.scrollLeft;
+            } else if (document.documentElement && (document.documentElement.scrollTop || document.documentElement.scrollLeft)) {
+                sleft = document.documentElement.scrollLeft;
+                sdown = document.documentElement.scrollTop;
+            } else {
+                sdown = 0;
+                sleft = 0;
+            }
+        }
 
-function createDiv(height, width) {
-  var div=document.createElement("div");
-  div.style.position="absolute";
-  div.style.height=height+"px";
-  div.style.width=width+"px";
-  div.style.overflow="hidden";
-  div.style.backgroundColor=colour;
-  return (div);
-}
-// ]]>
-</script>
+        window.onresize = set_width;
+
+        function set_width() {
+            if (typeof(self.innerWidth) == "number") {
+                swide = self.innerWidth;
+                shigh = self.innerHeight;
+            } else if (document.documentElement && document.documentElement.clientWidth) {
+                swide = document.documentElement.clientWidth;
+                shigh = document.documentElement.clientHeight;
+            } else if (document.body.clientWidth) {
+                swide = document.body.clientWidth;
+                shigh = document.body.clientHeight;
+            }
+        }
+
+        function createDiv(height, width) {
+            var div = document.createElement("div");
+            div.style.position = "absolute";
+            div.style.height = height + "px";
+            div.style.width = width + "px";
+            div.style.overflow = "hidden";
+            div.style.backgroundColor = colour;
+            return (div);
+        }
+        // ]]>
+    </script>
 
 </head>
-    
-<body> 
-    
-    
 
-    
-<div id="left">
-    <div id="leftcontent">
-        
-    <a href="#rightcontent"><h1>Welcome to Marcie's Moving Image Catalog ✴</h1></a>
-        <details>
-            <summary>about me</summary>
-            <p>Marcie LaCerte is a mixed Chinese-American animation director and art director based in NYC, originally from Minnesota. She is currently in production on a ten-minute animated film produced through the <a href="https://burnsfilmcenter.org/creative-culture-fellowship-program/">Creative Culture Fellowship</a> at the Jacob Burns Film Center.</p> 
-            <p>She works as a motion graphics designer in journalism, and her clients include Vox, PBS, NPR, Quartz, and Scientific American. Her films have been recognized by The New Yorker, Vimeo Staff Picks, Ottawa International Animation Festival, GLAS, AFI Docs, and more. She has given talks at the CalArts Experimental Animation program, the Living Room Light Exchange (New York), Bethany Arts Community, and the Light Grey Art Lab Residency.</p>
-            <p>She is interested in making personal films that use surrealism and satire to explore themes of identity, memory, and alienation. Beyond film, she is also interested in interactive multimedia art. In her free time, she enjoys listening to podcasts, designing websites for friends, and <a href="https://www.wortfm.org/new-domains-how-madison-became-the-home-of-shrekfest/">talking about Shrek</a>.</p>
-        </details>
-        <br>
-        <details>
-            <summary>contact me</summary>
-            <p>Email <a href="mailto:me@marslizard.net">me@marslizard.net</a> for commissions, collaborations, or questions!</p>
-        </details>
-        <br>
-        <details>
-            <summary>read (and listen) about my work</summary>
-            <p>
-                <a href="https://www.wortfm.org/new-domains-how-madison-became-the-home-of-shrekfest/">WORT-FM (2021)</a><br>
-                <a href="https://www.newyorker.com/culture/the-new-yorker-documentary/the-mysteries-and-motifs-of-pandemic-dreams">The New Yorker (2021)</a><br>
-                <a href="https://www.itsnicethat.com/articles/marcie-lacerte-invisible-monsters-and-tomato-soup-new-yorker-animation-180321">It's Nice That (2021)</a><br>
-                <a href="https://www.cbc.ca/radio/asithappens/as-it-happens-thursday-edition-1.5927937/why-this-artist-animated-people-s-weird-pandemic-dreams-1.5928323">CBC Radio (2021)</a><br>
-                <a href="https://directorsnotes.com/2021/02/24/stevie-borrello-marcie-lacerte-meghan-mcdonough-invisible-monsters-and-tomato-soup/">Director's Notes (2021)</a><br>
-                <a href="https://www.zippyframes.com/shorts/invisible-monsters-potato-soup">Zippy Frames (2021)</a><br>
-                <a href="https://www.stashmedia.tv/invisible-monsters-and-tomato-soup-or-how-i-learned-to-love-dreaming-during-covid/">Stash Media (2021)</a><br>
-                <a href="https://open.spotify.com/episode/5bzQGZ5R1irEwOUIwJ7kob?si=cd631b5c4b4e49e8">Edge Guard Cast (2019)</a><br>
-                <a href="https://game-curator.com/indie/an-afternoon-rippling/">Game Curator (2019)</a><br>
-                <a href="https://www.rockpapershotgun.com/2019/09/09/an-afternoon-rippling-wants-to-take-you-on-a-very-peculiar-hike/">Rock Paper Shotgun (2019)</a><br>
-                <a href="https://www.cartoonbrew.com/feature-film/200-artists-collaborated-on-a-remake-of-dreamworks-shrek-166803.html">Cartoon Brew (2018)</a><br>
-                <a href="http://www.itsnicethat.com/articles/marcie-lacerte-summer-of-love-animation-240717" target="_blank">It's Nice That (2017)</a><br>
-                <a href="http://girlsinfilm.net/videos/summer-of-love" target="_blank">Girls in Film (2017)</a><br>
-                <a href="http://www.sothetheorygoes.com/summer-of-love/" target="_blank">So The Theory Goes (2017)</a>
-            </p>
-        </details>
-        <br>
-        <details>
-            <summary>find me on the web</summary>
-            <p><a href="https://www.dropbox.com/scl/fi/xnkqw1xwn1i1h1ezdfd80/2022-10-CV_MLaCerte.gdoc?dl=0&rlkey=t4r7lx6rgx3ik9yviewt9wnz1">CV</a> / <a href="http://tinyletter.com/marslizard">newsletter</a> / <a href="https://www.are.na/marcie-lacerte">are.na</a></p>
-        </details>
-        <br>
-        <details>
-            <summary>behind the scenes</summary>
-            <p>How I make mood boards (coming soon!)</p>
-            <p><a href="https://marslizard.notion.site/Process-Invisible-Monsters-and-Tomato-Soup-d3d6f07cb24c46b9a53e8b3da4c11aac">How we made <i>Invisible Monsters and Tomato Soup</i></a></p>
-            <p><a href="https://marslizard.notion.site/Process-Everything-You-Wanted-To-Know-About-Animal-Farts-e3129e16a3af4de3803769e54e9de9f5">How I animated <i>Everything You Need To Know About Animal Farts</i></a></p>
-            <!--<p><a href="/chaos/">On Cultivating Chaos in Art</a></p>-->
-            <p>How to make money while doing personal projects: <i>An Afternoon Rippling</i> case study (coming soon!)</p>
-        </details><br>
-        <details>
-            <summary>browse the archives</summary>
-            <p><a href="/catalog.html">📁</a></p>
-            <p><a href="/log.html">🪵</a></p>
-        </details>
+<body>
 
 
+
+
+    <div id="left">
+        <div id="leftcontent">
+
+            <a href="#rightcontent">
+                <h1>Welcome to Marcie's Moving Image Catalog ✴</h1>
+            </a>
+            <details>
+                <summary>about me</summary>
+                <p>Marcie LaCerte is a mixed Chinese-American animation director and art director based in NYC, originally from Minnesota. She is currently in production on a ten-minute animated film produced through the <a href="https://burnsfilmcenter.org/creative-culture-fellowship-program/">Creative Culture Fellowship</a> at the Jacob Burns Film Center.</p>
+                <p>She works as a motion graphics designer in journalism, and her clients include Vox, PBS, NPR, Quartz, and Scientific American. Her films have been recognized by The New Yorker, Vimeo Staff Picks, Ottawa International Animation Festival, GLAS, AFI Docs, and more. She has given talks at the CalArts Experimental Animation program, the Living Room Light Exchange (New York), Bethany Arts Community, and the Light Grey Art Lab Residency.</p>
+                <p>She is interested in making personal films that use surrealism and satire to explore themes of identity, memory, and alienation. Beyond film, she is also interested in interactive multimedia art. In her free time, she enjoys listening to podcasts, designing websites for friends, and <a href="https://www.wortfm.org/new-domains-how-madison-became-the-home-of-shrekfest/">talking about Shrek</a>.</p>
+            </details>
+            <br>
+            <details>
+                <summary>contact me</summary>
+                <p>Email <a href="mailto:me@marslizard.net">me@marslizard.net</a> for commissions, collaborations, or questions!</p>
+            </details>
+            <br>
+            <details>
+                <summary>read (and listen) about my work</summary>
+                <p>
+                    <a href="https://www.wortfm.org/new-domains-how-madison-became-the-home-of-shrekfest/">WORT-FM (2021)</a><br>
+                    <a href="https://www.newyorker.com/culture/the-new-yorker-documentary/the-mysteries-and-motifs-of-pandemic-dreams">The New Yorker (2021)</a><br>
+                    <a href="https://www.itsnicethat.com/articles/marcie-lacerte-invisible-monsters-and-tomato-soup-new-yorker-animation-180321">It's Nice That (2021)</a><br>
+                    <a href="https://www.cbc.ca/radio/asithappens/as-it-happens-thursday-edition-1.5927937/why-this-artist-animated-people-s-weird-pandemic-dreams-1.5928323">CBC Radio (2021)</a><br>
+                    <a href="https://directorsnotes.com/2021/02/24/stevie-borrello-marcie-lacerte-meghan-mcdonough-invisible-monsters-and-tomato-soup/">Director's Notes (2021)</a><br>
+                    <a href="https://www.zippyframes.com/shorts/invisible-monsters-potato-soup">Zippy Frames (2021)</a><br>
+                    <a href="https://www.stashmedia.tv/invisible-monsters-and-tomato-soup-or-how-i-learned-to-love-dreaming-during-covid/">Stash Media (2021)</a><br>
+                    <a href="https://open.spotify.com/episode/5bzQGZ5R1irEwOUIwJ7kob?si=cd631b5c4b4e49e8">Edge Guard Cast (2019)</a><br>
+                    <a href="https://game-curator.com/indie/an-afternoon-rippling/">Game Curator (2019)</a><br>
+                    <a href="https://www.rockpapershotgun.com/2019/09/09/an-afternoon-rippling-wants-to-take-you-on-a-very-peculiar-hike/">Rock Paper Shotgun (2019)</a><br>
+                    <a href="https://www.cartoonbrew.com/feature-film/200-artists-collaborated-on-a-remake-of-dreamworks-shrek-166803.html">Cartoon Brew (2018)</a><br>
+                    <a href="http://www.itsnicethat.com/articles/marcie-lacerte-summer-of-love-animation-240717" target="_blank">It's Nice That (2017)</a><br>
+                    <a href="http://girlsinfilm.net/videos/summer-of-love" target="_blank">Girls in Film (2017)</a><br>
+                    <a href="http://www.sothetheorygoes.com/summer-of-love/" target="_blank">So The Theory Goes (2017)</a>
+                </p>
+            </details>
+            <br>
+            <details>
+                <summary>find me on the web</summary>
+                <p><a href="https://www.dropbox.com/scl/fi/xnkqw1xwn1i1h1ezdfd80/2022-10-CV_MLaCerte.gdoc?dl=0&rlkey=t4r7lx6rgx3ik9yviewt9wnz1">CV</a> / <a href="http://tinyletter.com/marslizard">newsletter</a> / <a href="https://www.are.na/marcie-lacerte">are.na</a></p>
+            </details>
+            <br>
+            <details>
+                <summary>behind the scenes</summary>
+                <p>How I make mood boards (coming soon!)</p>
+                <p><a href="https://marslizard.notion.site/Process-Invisible-Monsters-and-Tomato-Soup-d3d6f07cb24c46b9a53e8b3da4c11aac">How we made <i>Invisible Monsters and Tomato Soup</i></a></p>
+                <p><a href="https://marslizard.notion.site/Process-Everything-You-Wanted-To-Know-About-Animal-Farts-e3129e16a3af4de3803769e54e9de9f5">How I animated <i>Everything You Need To Know About Animal Farts</i></a></p>
+                <!--<p><a href="/chaos/">On Cultivating Chaos in Art</a></p>-->
+                <p>How to make money while doing personal projects: <i>An Afternoon Rippling</i> case study (coming soon!)</p>
+            </details><br>
+            <details>
+                <summary>browse the archives</summary>
+                <p><a href="/catalog.html">📁</a></p>
+                <p><a href="/log.html">🪵</a></p>
+            </details>
+
+
+        </div>
     </div>
-</div>
-    
-<div id="right"> 
-    
-    <div id="rightcontent">
-        
 
-        <div class="colleft" id="reel">
-            <a href="screen-demo.html"><h1>✴ demo reel ✴</h1></a>
-        </div>
-        
-        <div class="colright">
-            <img src="images/TPD_v2.png"><h1><i>The Pleasure-Dome</i> (coming 2023)</h1>
-        </div>
-        
-                
-        <div class="ascii">
-            <pre>                                        
-            
-                                                    
-                                                    
+    <div id="right">
+
+        <div id="rightcontent">
+
+
+            <div class="colleft" id="reel">
+                <a href="screen-demo.html">
+                    <h1>✴ demo reel ✴</h1>
+                </a>
+            </div>
+
+            <div class="colright">
+                <img src="images/TPD_v2.png">
+                <h1><i>The Pleasure-Dome</i> (coming 2023)</h1>
+            </div>
+
+
+            <div class="ascii">
+                <pre>
+
+
+
                                     -ˏˋ⋆ ̥ 　 ̣̮ ̥ 　  ͙ʰ͙eˡ͙ˡ͙o 　 ̥ 　 ̣̮ ̥ ⋆ˊˎ-
                     
             </pre>
-        </div>
-        
-        <div class="colright">
-            <a href="screen-giphy.html"><img src="images/giphy_3.gif"></a>
-        </div>
-                
-        
-        <div class="colmiddle" id="explained">
-            <a href="screen-explaineds3.html"><h1><i>Explained</i> on Netflix</h1></a>
-        </div>
-        
-        <div class="colleft">
-            <a href="screen-chasebliss.html"><img src="images/chasebliss_web.gif"></a>
-        </div>
-        
-       
-        
+            </div>
 
-        
+            <div class="colright">
+                <a href="screen-giphy.html"><img src="images/giphy_3.gif"></a>
+            </div>
 
-        
-<div class="ascii">
-        <pre>
+
+            <div class="colmiddle" id="explained">
+                <a href="screen-explaineds3.html">
+                    <h1><i>Explained</i> on Netflix</h1>
+                </a>
+            </div>
+
+            <div class="colleft">
+                <a href="screen-chasebliss.html"><img src="images/chasebliss_web.gif"></a>
+            </div>
+
+
+
+
+
+
+
+            <div class="ascii">
+                <pre>
                                                                          '
                                                             *          .
                                                                    *       '
@@ -309,14 +312,14 @@ function createDiv(height, width) {
                                                                *
                                                                      *
         </pre>
-        </div>
-        
-        
-    
-        
-        <div class="ascii">
-            <a href="screen-monsters.html">
-            <pre>
+            </div>
+
+
+
+
+            <div class="ascii">
+                <a href="screen-monsters.html">
+                    <pre>
 
                                                                                   ▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒▒                                    
                                                                           ▓▓██████▒▒▒▒▒▒    ▒▒                ██████▓▓                            
@@ -362,57 +365,59 @@ function createDiv(height, width) {
                                                                                   ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒                                    
 
             </pre>
-            </a>
-        </div>
-                
+                </a>
+            </div>
 
-        
-        <div class="colleft">
-        <a href="screen-monsters.html"><img src="images/imats_lizards.gif"></a>
-        </div>
-        
-        <div class="colmiddle" id="monsters">
-            <a href="screen-monsters.html"><h1><i>Invisible Monsters and Tomato Soup</i> (2021)</h1></a>
-        </div>
-        
-        <div class="colright"><a href="screen-monsters.html"><img src="images/lobby.gif"></a></div>
-        
-        <div class="colleft">
-        <a href="screen-monsters.html"><img src="images/imats_flying.gif"></a>
-        </div>
-        
-        <div class="ascii">
-        <pre>
+
+
+            <div class="colleft">
+                <a href="screen-monsters.html"><img src="images/imats_lizards.gif"></a>
+            </div>
+
+            <div class="colmiddle" id="monsters">
+                <a href="screen-monsters.html">
+                    <h1><i>Invisible Monsters and Tomato Soup</i> (2021)</h1>
+                </a>
+            </div>
+
+            <div class="colright"><a href="screen-monsters.html"><img src="images/lobby.gif"></a></div>
+
+            <div class="colleft">
+                <a href="screen-monsters.html"><img src="images/imats_flying.gif"></a>
+            </div>
+
+            <div class="ascii">
+                <pre>
                                        *✭˚･ﾟ✧*･ﾟ*✭˚･ﾟ✧*･ﾟ*
                                                             
                                                             
                                                             
         </pre>
-        </div>
-        
-                <div class="colright" id="illo">
-            <a href="screen-illos.html"><img src="images/Ketubah_final.png"></a>
-        </div> 
-        
+            </div>
 
-        
-        <div class="colleft">
-        <a href="screen-giphy.html"><img src="images/giphy_2.gif"></a>
-        </div>
-        
-               <div class="colright" id="illo">
-            <a href="screen-illos.html"><img src=images/gbs_tea.png></a>
-        </div>
-        
- 
-        
-        <div class="ascii">
-            <a href="screen-coxswain.html">
-            <pre>
-            
-            
-                                                                                                    
-                                                                                        
+            <div class="colright" id="illo">
+                <a href="screen-illos.html"><img src="images/Ketubah_final.png"></a>
+            </div>
+
+
+
+            <div class="colleft">
+                <a href="screen-giphy.html"><img src="images/giphy_2.gif"></a>
+            </div>
+
+            <div class="colright" id="illo">
+                <a href="screen-illos.html"><img src=images/gbs_tea.png></a>
+            </div>
+
+
+
+            <div class="ascii">
+                <a href="screen-coxswain.html">
+                    <pre>
+
+
+
+
 ░░      ░░      ░░            ░░░░░░░░    ░░░░      ░░  ░░  ░░            ░░      ░░  ░░
                       ░░                                          ░░                    
                                                                                         
@@ -443,42 +448,44 @@ function createDiv(height, width) {
 
             </pre>
                 </a>
-        </div>
-                
-        <div class="colmiddle" id="coxswain"><a href="screen-coxswain.html"><h1><i>Coxswain's Chicken Kitchen</i> (2020)</h1></a></div>
-        
-        <div class="colright"><a href="screen-coxswain.html"><img src="images/chicken_1.gif"></a></div>
-        
-        <div class="colleft"><a href="screen-coxswain.html"><img src="images/chicken_2.gif"></a></div>
-        
-        
+            </div>
 
-        
-        
-        <div class="ascii">
-            <pre>
-                                                    
-                                                    
+            <div class="colmiddle" id="coxswain"><a href="screen-coxswain.html">
+                    <h1><i>Coxswain's Chicken Kitchen</i> (2020)</h1>
+                </a></div>
+
+            <div class="colright"><a href="screen-coxswain.html"><img src="images/chicken_1.gif"></a></div>
+
+            <div class="colleft"><a href="screen-coxswain.html"><img src="images/chicken_2.gif"></a></div>
+
+
+
+
+
+            <div class="ascii">
+                <pre>
+
+
                                                         ៚ ⋯⋯⋯ ˁᱸᲲᱸˀ ⋯⋯⋯⋯ ༄
                                                     
                                                     
             </pre>
-        </div>
-        
-        <div class="colright" id="farts">
-            <a href="screen-farts.html"><img src="images/gbs_fart.gif"></a>
-        </div>
-        
-        
-        
-                
-    <div class="ascii">
-        <a href="screen-geocities.html">
-        <pre>
-        
-        
-        
-        
+            </div>
+
+            <div class="colright" id="farts">
+                <a href="screen-farts.html"><img src="images/gbs_fart.gif"></a>
+            </div>
+
+
+
+
+            <div class="ascii">
+                <a href="screen-geocities.html">
+                    <pre>
+
+
+
+
                                         ██▓▓▓▓                                          
                                     ████      ████                                      
                                 ▒▒▒▒▒▒░░      ░░░░▒▒▒▒                                  
@@ -531,14 +538,14 @@ function createDiv(height, width) {
 
 
             </pre>
-            </a>
-    </div>
-        
+                </a>
+            </div>
 
-        
-        <div class="ascii">
-            <a href="screen-shrek.html">
-            <pre id="shrek">          
+
+
+            <div class="ascii">
+                <a href="screen-shrek.html">
+                    <pre id="shrek">
                                                                                                       c,_.--.,y
                                                                                                         7 a.a(
                                                                                                        (   ,_Y)
@@ -564,14 +571,14 @@ function createDiv(height, width) {
                                                                                                  '---'           '--'
         </pre>
                 </a>
-        </div>
-        
-                <div class="colleft" id="illo">
-            <a href="screen-illos.html"><img src=images/illo_frog.jpeg></a>
-        </div>
-        
-        <div class="ascii">
-            <pre>          
+            </div>
+
+            <div class="colleft" id="illo">
+                <a href="screen-illos.html"><img src=images/illo_frog.jpeg></a>
+            </div>
+
+            <div class="ascii">
+                <pre>
         （ ͡° ͜ʖ ͡°)つ━━✫・*。
          ⊂　　 ノ 　　　・゜+.
          しーーＪ　　　°。+ *´¨)
@@ -589,30 +596,32 @@ function createDiv(height, width) {
 
 
             </pre>
-        </div> 
-        
+            </div>
 
 
-        <div class="colright" id="afternoon">
-            <a href="/afternoon/"><img src="images/afternoon_car.gif"></a>
-        </div>
-        
-        
-        
-                <div class="colmiddle" id="afternoon">
-            <a href="/afternoon/"><h1><i>An Afternoon Rippling</i> (2019)</h1></a>
-        </div> 
-        
-        
 
-           
-        
-                
+            <div class="colright" id="afternoon">
+                <a href="/afternoon/"><img src="images/afternoon_car.gif"></a>
+            </div>
 
-        
-        <div class="ascii">
-            <a href=/afternoon>
-            <pre>         
+
+
+            <div class="colmiddle" id="afternoon">
+                <a href="/afternoon/">
+                    <h1><i>An Afternoon Rippling</i> (2019)</h1>
+                </a>
+            </div>
+
+
+
+
+
+
+
+
+            <div class="ascii">
+                <a href=/afternoon>
+                    <pre>
                      ___________________________________________
                     |  _______________________________________  |
                     | / .-----------------------------------. \ |
@@ -630,28 +639,28 @@ function createDiv(height, width) {
                     |       /  ()                   ()  \       |
                     !______/_____________________________\______!
             </pre>
-            </a>
-        </div>
-        
-               <div class="colright" id="afternoon">
-            <a href="/afternoon/"><img src="images/afternoon_twizzlers.png"></a>
-        </div>         
-        
-                <div class="ascii">
-            <pre> 
+                </a>
+            </div>
+
+            <div class="colright" id="afternoon">
+                <a href="/afternoon/"><img src="images/afternoon_twizzlers.png"></a>
+            </div>
+
+            <div class="ascii">
+                <pre>
                                             .⋆｡⋆☂˚｡⋆｡˚☽˚｡⋆.
                    
             </pre>
-        </div>
-        
-        <div class="ascii">
-            <a href="screen-fmri.html">
-                <pre>
-                
-                
-                
-                
-                
+            </div>
+
+            <div class="ascii">
+                <a href="screen-fmri.html">
+                    <pre>
+
+
+
+
+
                                                                               ░░▓▓▓▓▓▓▓▓▓▓▓▓░░▒▒▒▒▓▓▓▓░░                                          
                                                                         ██████▒▒██▓▓▓▓▒▒▒▒░░██▒▒▒▒▒▒▓▓▒▒██████                                    
                                                                   ██████▒▒▒▒▒▒▒▒████▒▒▒▒████▒▒▒▒░░██▒▒▒▒▓▓▒▒▓▓████                                
@@ -703,34 +712,34 @@ function createDiv(height, width) {
                
                
                </pre>
-            </a>
-        </div>
-        
-
-        
-        
-        <div class="colleft">
-            <a href="screen-marshmallow.html">
-            <img src="images/npr_loop.gif">
-            </a>
-        
-        </div>    
-        
-        
-
-        
+                </a>
+            </div>
 
 
-        
-        <div class="ascii">
-            <a href="screen-summeroflove.html">
-            <pre>
-            
-            
-            
-            
-            
-            
+
+
+            <div class="colleft">
+                <a href="screen-marshmallow.html">
+                    <img src="images/npr_loop.gif">
+                </a>
+
+            </div>
+
+
+
+
+
+
+
+            <div class="ascii">
+                <a href="screen-summeroflove.html">
+                    <pre>
+
+
+
+
+
+
                                             KOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOK
                                             0kkkkkOOOOOOOOOOOOkkkkkkkkkkkkkkkkkkkkkkOkkkkkOkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk0
                                             0kkkkOkkkkkkkOOOkkkkkkkkkkOOkkkkkkkkkkkkkOkkOkkdlccokkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk0
@@ -759,31 +768,31 @@ function createDiv(height, width) {
                                             0kkkkkkkkkkkxdolodooooooodooooodoooooddooodooooooddooodoooooodddddoooooddddllooooodoooodkkkkkkkkkkkO
                                             0kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk0
                                             XKKK00KKKKKK000000KK0000KKKK0KKKKKKKK0KKKK00000K000000000KKKK0KKK00KK00K0K00000K00KKK0000000000000KK
-            </pre>                   
-            </a>
+            </pre>
+                </a>
+            </div>
+
+            <div class="colmiddle" id="summer"><a href="screen-summeroflove.html">
+                    <h1><i>Summer of Love</i> (2017)</h1>
+                </a></div>
+
+
+            <div class="colleft">
+                <a href="screen-summeroflove.html"><img src="images/summer_1.gif"></a>
+            </div>
+
+
+
+
+
+
+
+
         </div>
-        
-                        <div class="colmiddle" id="summer"><a href="screen-summeroflove.html"><h1><i>Summer of Love</i> (2017)</h1></a></div>
 
-        
-                <div class="colleft">
-            <a href="screen-summeroflove.html"><img src="images/summer_1.gif"></a>
-        </div>
-                    
 
-        
-    
-        
-
-        
+        <footer>website created by me (2021). <a href="archive/archive_2016-to-2021/">here</a> is an older version</footer>
 
     </div>
-    
 
-            <footer>website created by me (2021). <a href="archive/archive_2016-to-2021/">here</a> is an older version</footer>
-
-    </div>
-
-</body>
-
-</html>
+</body></html>
