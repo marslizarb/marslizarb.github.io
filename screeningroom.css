@@ -1,18 +1,26 @@
 /* PALETTE
 
+OLD 2023
 blue: #022870
 dark blue: #000236
 black: #000015
 red: #E93B07
 white: lavender
+--
+NEW 2024
+green: #3CB371
+lilac: #C8A2C8
+crimson: #DC143C
+canary: #FFFF99
+dark purple: #301934
 
 */
 
 body {
     font-family: 'Roboto', sans-serif;
     font-family: 'Lora', serif;
-    background-color: #000015;
-    color: lavender;
+    background-color: black;
+    color: #C8A2C8;
 }
 
 .container {
@@ -23,7 +31,7 @@ body {
 }
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 .title {
@@ -31,12 +39,12 @@ body {
     margin-top: 15px;
     margin-bottom: 35px;
     width: 80%;
-    border: 1px solid lavender;
+    border: 1px solid #C8A2C8;
     padding-left: 40px;
     padding-right: 40px;
     padding-top: 10px;
     padding-bottom: 10px;
-    background-color: #000015;
+    background-color: black;
 }
 
 .text {
@@ -44,7 +52,7 @@ body {
     float: right;
     margin-top: 15px;
     margin-right: 15px;
-    border: 1px solid lavender;
+    border: 1px solid #C8A2C8;
     padding-left: 40px;
     padding-right: 40px;
     padding-top: 15px;
@@ -58,12 +66,12 @@ body {
 
 nav {
     width: 100px;
-    border: 1px solid lavender;
+    border: 1px solid #C8A2C8;
     padding-left: 10px;
     padding-right: 10px;
     padding-top: 5px;
     padding-bottom: 5px;
-    background-color: #000015;
+    background-color: black;
     position: fixed;
     bottom: 15px;
     left: 0;
@@ -117,23 +125,23 @@ p {
 }
 
 a {
-    color: lavender;
+    color: #C8A2C8;
     text-underline-offset: 4px;
 }
 
 a:hover {
-    color: #E93B07;
+    color: #3CB371;
 }
 
 details {
-    color: lavender;
+    color: #C8A2C8;
     font-size: 13px;
     padding: 10px;
 }
 
 summary:hover {
     cursor: pointer;
-    color: #E93B07;
+    color: #3CB371;
 }
 
 details > summary {
@@ -145,7 +153,8 @@ details[open] > summary {
     list-style-type: '◒ ';
 }
 
-.credits, .credits p {
+.credits,
+.credits p {
     text-align: center;
     line-height: 21px;
 }
