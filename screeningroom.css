@@ -38,7 +38,7 @@ body {
     margin: auto;
     margin-top: 15px;
     margin-bottom: 35px;
-    width: 80%;
+    width: 98%;
     border: 1px solid #C8A2C8;
     padding-left: 40px;
     padding-right: 40px;
@@ -47,8 +47,13 @@ body {
     background-color: black;
 }
 
+.title h1,
+.title h4 {
+    text-align: center;
+}
+
 .text {
-    width: 25%;
+    width: 28%;
     float: right;
     margin-top: 15px;
     margin-right: 15px;
@@ -94,7 +99,7 @@ nav p {
 .column {
     float: left;
     width: 33.33333333333333333333333%;
-    padding: 15px;
+    padding: 14px;
 }
 
 /* Clear floats after image containers */
@@ -122,6 +127,10 @@ p {
     text-align: left;
     font-size: 13px;
     line-height: 21px;
+}
+
+h4 {
+    line-height: 0;
 }
 
 a {
