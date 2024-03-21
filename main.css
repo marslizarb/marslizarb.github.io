@@ -248,6 +248,10 @@ footer a {
     text-align: center;
 }
 
+h4 {
+    line-height: 0;
+}
+
 img {
     width: 100%;
 }
