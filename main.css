@@ -250,6 +250,7 @@ footer a {
 
 h4 {
     line-height: 0;
+    color: #FFFF99;
 }
 
 img {
@@ -258,7 +259,7 @@ img {
 
 img:hover {
     opacity: 0;
-    transition: 1s ease;
+    transition: 1s;
 }
 
 #border img {
