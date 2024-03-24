@@ -126,12 +126,12 @@ th:hover {
 }
 
 details a {
-    color: #FFFF99;
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 details a:hover {
-    text-decoration: underline;
+    color: #f5b5e3;
+    transition: .2s ease;
 }
 
 details {
@@ -157,11 +157,7 @@ details:hover {
     cursor: pointer;
 }
 
-details[open] > summary {
-    list-style-type: '◒ ';
-}
-
-/* right bar */
+/* main page */
 
 #right {
     height: 100%;
@@ -242,8 +238,9 @@ footer a:hover {
     color: #f5b5e3;
 }
 
+/* 404 page */
+
 .lost {
-    /* 404 page */
     margin-top: 20%;
     margin-bottom: 20%;
 }
@@ -264,6 +261,8 @@ footer a:hover {
     overflow: auto;
     text-align: center;
 }
+
+/* sub headings */
 
 h4 {
     line-height: 0;
@@ -300,7 +299,7 @@ img:hover {
         overflow: auto;
         text-align: left;
         color: #301934;
-        background: #f5b5e3;
+        background: #3CB371;
     }
 
     #leftcontent {
