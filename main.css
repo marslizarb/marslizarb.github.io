@@ -127,6 +127,8 @@ th:hover {
 
 details a {
     text-decoration: underline;
+    color: #301934;
+    text-underline-offset: 5px;
 }
 
 #archives a {
