@@ -129,6 +129,12 @@ details a {
     text-decoration: underline;
 }
 
+#archives a {
+    text-decoration: none;
+    color: #FFFF99;
+}
+
+#archives a:hover,
 details a:hover {
     color: #f5b5e3;
     transition: .2s ease;
@@ -140,8 +146,12 @@ details {
 }
 
 details > summary {
-    list-style-type: none;
+    list-style-type: '◑ ';
     color: #FFFF99;
+}
+
+details[open] > summary {
+    list-style-type: '◒ ';
 }
 
 details > summary:hover {
@@ -246,25 +256,28 @@ footer a:hover {
 }
 
 .colleft {
+    padding-bottom: 50px;
     margin-right: 50%;
     overflow: auto;
 }
 
 .colright {
+    padding-bottom: 50px;
     margin-left: 50%;
     overflow: auto;
 }
 
 .colmiddle {
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 50px;
+    padding-bottom: 50px;
     overflow: auto;
     text-align: center;
 }
 
 /* sub headings */
 
-h4 {
+h4,
+h5 {
     line-height: 0;
     color: #FFFF99;
 }
@@ -317,6 +330,12 @@ img:hover {
     #right {
         display: none;
 
+    }
+
+    th,
+    td {
+        padding: 5px;
+        font-size: 12px;
     }
 
 }
