@@ -140,6 +140,8 @@ a {
 
 a:hover {
     color: #3CB371;
+    transition: .2s ease;
+
 }
 
 details {
@@ -151,6 +153,8 @@ details {
 summary:hover {
     cursor: pointer;
     color: #3CB371;
+    transition: .2s ease;
+
 }
 
 details > summary {
