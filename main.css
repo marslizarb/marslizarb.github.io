@@ -44,6 +44,8 @@ a {
 
 table {
     width: 100%;
+    margin-left: auto;
+    margin-right: auto;
     position: relative;
     line-height: 25px;
     font-family: 'Roboto', sans-serif;
@@ -336,8 +338,12 @@ img:hover {
 
     th,
     td {
-        padding: 5px;
-        font-size: 12px;
+        padding-top: 0;
+        padding-bottom: 0;
+        font-size: 10px;
+        line-height: 17px;
     }
+
+
 
 }
