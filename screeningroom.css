@@ -122,6 +122,13 @@ nav p {
     padding: 14px;
 }
 
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+.column1 {
+    float: left;
+    width: 100%;
+    padding: 14px;
+}
+
 /* Clear floats after image containers */
 .row::after {
     content: "";
