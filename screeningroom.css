@@ -93,6 +93,28 @@ ul {
     padding-top: 10px;
 }
 
+.table img {
+    transition: transform 0.3s ease-in-out;
+    width: 100%;
+}
+
+.table img:hover {
+    cursor: zoom-in;
+}
+
+.table img:active {
+    -webkit-transform: scale(.8);
+    /* or some other value */
+    transform: scale(.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    box-shadow: -0px 0px 200px 10px black;
+}
+
 nav {
     width: 100px;
     border: 1px solid #C8A2C8;
@@ -105,7 +127,7 @@ nav {
     bottom: 15px;
     left: 0;
     right: 0;
-    z-index: 1;
+    z-index: 2;
     margin: auto;
 }
 
@@ -178,7 +200,7 @@ a {
 
 a:hover {
     color: #3CB371;
-    transition: .2s ease;
+    transition: .2s ease-in-out;
 
 }
 
@@ -192,7 +214,7 @@ details {
 summary:hover {
     cursor: pointer;
     color: #3CB371;
-    transition: .2s ease;
+    transition: .2s ease-in-out;
 
 }
 
