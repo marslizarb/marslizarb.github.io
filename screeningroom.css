@@ -136,10 +136,6 @@ nav p {
     text-align: center;
 }
 
-.image img {
-    max-width: 70%;
-    padding: 15px;
-}
 
 /* Three image containers (use 25% for four, and 50% for two, etc) */
 .column {
@@ -169,11 +165,16 @@ nav p {
     display: table;
 }
 
-.video {
+.video,
+.image {
     width: 70%;
     float: left;
     margin: auto;
     padding: 1%;
+}
+
+.image img {
+    max-width: 100%;
 }
 
 h1 {
