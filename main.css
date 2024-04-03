@@ -300,6 +300,11 @@ img:hover {
     width: 98%;
 }
 
+#about img {
+    border: 2px solid #301934;
+    width: 98%;
+}
+
 .ascii {
     font-size: .7vw;
     padding: 0px;
