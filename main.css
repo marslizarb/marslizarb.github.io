@@ -191,7 +191,6 @@ details:hover {
 
 #right h1:hover {
     color: #f5b5e3;
-    ;
     transition: .2s ease;
 }
 
@@ -303,6 +302,10 @@ img:hover {
 #about img {
     border: 2px solid #301934;
     width: 98%;
+}
+
+#about img:hover {
+    opacity: 100%;
 }
 
 .ascii {
