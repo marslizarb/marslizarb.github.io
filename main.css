@@ -44,8 +44,8 @@ a {
 
 table {
     width: 100%;
-    margin-left: auto;
-    margin-right: auto;
+    left: auto;
+    right: auto;
     position: relative;
     line-height: 25px;
     font-family: 'Roboto', sans-serif;
