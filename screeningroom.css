@@ -68,17 +68,32 @@ ul {
     margin-top: 15px;
     margin-bottom: 35px;
     width: 98%;
-    border: 1px solid #C8A2C8;
+    border: 0px solid #C8A2C8;
     padding-left: 40px;
     padding-right: 40px;
     padding-top: 10px;
     padding-bottom: 10px;
     background-color: black;
+    text-align: center;
+    line-height: 100px;
 }
 
 .title h1,
-.title h4 {
+.title h4,
+.title p {
     text-align: center;
+}
+
+.title h1 {
+    font-size: 120px;
+}
+
+.title h4 {
+    font-size: 50px;
+}
+
+.title p {
+    font-size: 15px;
 }
 
 .text,
