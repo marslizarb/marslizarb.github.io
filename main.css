@@ -314,7 +314,7 @@ img:hover {
     line-height: inherit;
 }
 
-@media all and (max-width: 1100px) {
+@media all and (max-width: 1080px) {
 
     #left {
         height: 100%;
