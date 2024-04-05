@@ -52,6 +52,10 @@ body {
     padding: 1%;
 }
 
+.image img {
+    width: 100%;
+}
+
 hr {
     border: none;
     padding: 100px;
@@ -221,9 +225,7 @@ nav p {
 }
 
 
-.image img {
-    width: 100%;
-}
+
 
 h1 {
     font-family: 'Lora', serif;
