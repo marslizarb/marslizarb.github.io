@@ -29,7 +29,7 @@ body {
     padding-right: 10%;
     padding-top: 15px;
     padding-bottom: 30px;
-    overflow: auto;
+    overflow: hidden;
 }
 
 * {
@@ -54,7 +54,7 @@ body {
 
 hr {
     border: none;
-    padding: 60px;
+    padding: 100px;
 }
 
 ul {
@@ -67,7 +67,7 @@ ul {
     margin: auto;
     margin-top: 15px;
     margin-bottom: 35px;
-    width: 98%;
+    width: 50%;
     border: 0px solid #C8A2C8;
     padding-left: 40px;
     padding-right: 40px;
@@ -114,15 +114,46 @@ ul {
     border: 1px solid #C8A2C8;
 }
 
-
 .text img {
     width: 100%;
 }
 
 #centered {
-    width: 100%;
+    float: none;
+    left: 0;
+    right: 0;
+    width: 98%;
+    padding: 0;
+    text-align: center;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+.expand {
+    border: 1px solid #C8A2C8;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    display: flex;
+    width: 98%;
+    overflow: hidden;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+.expand summary {
+    font-size: 20px;
     text-align: center;
 }
+
+.expanded {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
 
 .table img {
     transition: transform 0.3s ease-in-out;
@@ -190,7 +221,6 @@ nav p {
 }
 
 
-
 .image img {
     width: 100%;
 }
@@ -223,11 +253,18 @@ a:hover {
 
 }
 
-details {
+.expand details {
     color: #C8A2C8;
-    font-size: 13px;
+    font-size: 18px;
     padding: 10px;
     width: 100%;
+    text-align: center;
+}
+
+.expand details img {
+    width: 100%;
+    max-width: 800px;
+    margin: 0;
 }
 
 summary:hover {
@@ -240,6 +277,7 @@ summary:hover {
 details > summary {
     list-style-type: '◑ ';
     font-family: 'Lora', serif;
+    font-size: 13px;
 }
 
 details[open] > summary {
@@ -253,7 +291,87 @@ details[open] > summary {
     width: 100%;
 }
 
-@media all and (max-width: 1080px) {
+
+
+
+@media all and (min-width: 1080px) and (max-width: 1920px) {
+
+    .container {
+        padding-left: 15%;
+        padding-right: 15%;
+        padding-top: 15px;
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    .text,
+    .subtext,
+    .expand {
+        float: center;
+        padding-left: 40px;
+        padding-right: 40px;
+        margin: auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        overflow: inherit;
+        text-align: left;
+        width: 100%;
+    }
+
+    .text,
+    .subtext {
+        padding-bottom: 20px;
+
+    }
+
+    #centered {
+        margin: 0;
+        width: 100%;
+    }
+
+    .video,
+    .image {
+        width: 100%;
+        float: center;
+        margin: auto;
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    .column,
+    .column2 {
+        padding: 0;
+        padding-top: 20px;
+    }
+
+    #left {
+        padding: 0;
+        padding-top: 5px;
+        padding-right: 5px;
+        padding-bottom: 5px;
+    }
+
+    #middle {
+        padding-top: 5px;
+        padding-left: 2.5px;
+        padding-right: 2.5px;
+        padding-bottom: 5px;
+    }
+
+    #right {
+        padding: 0;
+        padding-top: 5px;
+        padding-left: 5px;
+        padding-bottom: 5px;
+    }
+
+
+
+}
+
+@media all and (min-width: 0px) and (max-width: 1080px) {
 
     .container {
         padding-left: 10px;
@@ -263,18 +381,31 @@ details[open] > summary {
         overflow: auto;
     }
 
+    .title {
+        width: 100%;
+    }
+
+    .title h1 {
+        font-size: 50px;
+        line-height: auto;
+    }
+
+    .title h4 {
+        font-size: 25px;
+    }
 
     .text,
-    .subtext {
-        width: 100%;
+    .subtext,
+    .expand {
         float: center;
         padding-left: 40px;
         padding-right: 40px;
-        padding-bottom: 20px;
         margin: auto;
         margin-top: 20px;
         margin-bottom: 20px;
         overflow: inherit;
+        text-align: left;
+        width: 100%;
     }
 
     .video,
@@ -299,58 +430,6 @@ details[open] > summary {
 
     #hide {
         display: none;
-    }
-
-}
-
-
-@media all and (min-width: 1080px) and (max-width: 1920px) {
-
-    .container {
-        padding-left: 15%;
-        padding-right: 15%;
-        padding-top: 15px;
-        padding-bottom: 30px;
-        overflow: auto;
-    }
-
-    .text,
-    .subtext {
-        float: center;
-        padding-left: 40px;
-        padding-right: 40px;
-        padding-bottom: 20px;
-        margin: auto;
-        margin-top: 20px;
-        margin-bottom: 20px;
-        overflow: inherit;
-        text-align: left;
-        width: 100%;
-    }
-
-    .video,
-    .image {
-        width: 100%;
-        float: center;
-        margin: auto;
-        padding-left: 0;
-        padding-right: 0;
-        padding-top: 5px;
-        padding-bottom: 5px;
-    }
-
-    .column,
-    .column2 {
-        padding: 0;
-        padding-top: 20px;
-    }
-
-    #left {
-        padding-right: 10px;
-    }
-
-    #right {
-        padding-left: 10px;
     }
 
 }
