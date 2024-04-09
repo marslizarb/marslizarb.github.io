@@ -131,6 +131,7 @@ ul {
     text-align: center;
     margin-left: 1%;
     margin-right: 1%;
+    margin-bottom: 20px;
 }
 
 .expand {
@@ -410,6 +411,10 @@ details[open] > summary {
         width: 100%;
     }
 
+    .subtext h4 {
+        text-align: center;
+    }
+
     .video,
     .image {
         width: 100%;
@@ -427,7 +432,9 @@ details[open] > summary {
 
     .column,
     .column2 {
-        display: none;
+        width: 100%;
+        padding: 0;
+        padding-bottom: 20px;
     }
 
     #hide {
