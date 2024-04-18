@@ -149,9 +149,10 @@ details {
     line-height: auto;
 }
 
-details > summary {
+details > summary, details > summary a {
     list-style-type: '◑ ';
     color: #FFFF99;
+    text-decoration: none;
 }
 
 details[open] > summary {
