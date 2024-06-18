@@ -35,9 +35,13 @@ a {
 }
 
 #log {
-    margin: 50px;
-    background-color: #3CB371;
-    color: #301934;
+    background-color: #301934;
+    color: #3CB371;
+    width: 100%;
+    max-width: 1080px;
+    left: 0;
+    right: 0;
+    margin: auto;
 }
 
 /* catalog */
