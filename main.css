@@ -35,13 +35,22 @@ a {
 }
 
 #log {
-    background-color: #301934;
-    color: #3CB371;
+    background-color: #f5b5e3;
+    color: #E52B50;
     width: 100%;
     max-width: 1080px;
     left: 0;
     right: 0;
     margin: auto;
+}
+
+#log summary {
+    color: #301934;
+}
+
+#log summary:hover,
+#log details a:hover {
+    color: #FFFF99;
 }
 
 /* catalog */
@@ -153,7 +162,8 @@ details {
     line-height: auto;
 }
 
-details > summary, details > summary a {
+details > summary,
+details > summary a {
     list-style-type: '◑ ';
     color: #FFFF99;
     text-decoration: none;
